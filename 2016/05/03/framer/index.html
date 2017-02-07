@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="在进入正题之前先来看看经过了好几个版本更迭的Framer Studio现在已经变成什么样了。当然你也可以自己&amp;lt;!--more--&amp;gt;登入人家的官网看看 framerjs.com，（如果你认真看完，文章的最后你将会得到一个超大！超大！超大的奖励哦！）
+
+*添加了insert功能。以往这些操作都需要又代码完成，每次加个图片什么的都需要亲手重头码起，设计师都是讨厌重复劳动的人，于是乎现在就有了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Framer Studio入门教程——基础概念">
+<meta property="og:url" content="http://yoursite.com/2016/05/03/framer/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="在进入正题之前先来看看经过了好几个版本更迭的Framer Studio现在已经变成什么样了。当然你也可以自己&amp;lt;!--more--&amp;gt;登入人家的官网看看 framerjs.com，（如果你认真看完，文章的最后你将会得到一个超大！超大！超大的奖励哦！）
+
+*添加了insert功能。以往这些操作都需要又代码完成，每次加个图片什么的都需要亲手重头码起，设计师都是讨厌重复劳动的人，于是乎现在就有了">
+<meta property="og:image" content="http://7xrjhy.com1.z0.glb.clouddn.com/sframercover.png">
+<meta property="og:updated_time" content="2016-05-14T07:11:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Framer Studio入门教程——基础概念">
+<meta name="twitter:description" content="在进入正题之前先来看看经过了好几个版本更迭的Framer Studio现在已经变成什么样了。当然你也可以自己&amp;lt;!--more--&amp;gt;登入人家的官网看看 framerjs.com，（如果你认真看完，文章的最后你将会得到一个超大！超大！超大的奖励哦！）
+
+*添加了insert功能。以往这些操作都需要又代码完成，每次加个图片什么的都需要亲手重头码起，设计师都是讨厌重复劳动的人，于是乎现在就有了">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Framer Studio入门教程——基础概念</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/05/24/productthinking/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/05/01/framerjs/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/05/03/framer/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/05/03/framer/&text=Framer Studio入门教程——基础概念"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/05/03/framer/&is_video=false&description=Framer Studio入门教程——基础概念"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio入门教程——基础概念&body=Check out this article: http://yoursite.com/2016/05/03/framer/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/05/03/framer/&name=Framer Studio入门教程——基础概念&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">这一段可能很没趣，但是这都是你你必须要知道的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">你是不是看到了很多 '. '</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">缩进</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">Framer最重要的三个基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">图层（Layer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">事件(Event)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">状态（State）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">下面来动真格了，准备好了没</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Framer Studio入门教程——基础概念
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-05-03T12:18:14.000Z" itemprop="datePublished">2016-05-03</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/分享/">分享</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="http://7xrjhy.com1.z0.glb.clouddn.com/sframercover.png" rel="gallery_ciyvb1bt90056tm7xhils1idh">
+        <img src="http://7xrjhy.com1.z0.glb.clouddn.com/sframercover.png" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p>在进入正题之前先来看看经过了好几个版本更迭的Framer Studio现在已经变成什么样了。当然你也可以自己&lt;!--more--&gt;登入人家的官网看看 <a href="http://framerjs.com/" target="_blank" rel="external">framerjs.com</a>，（如果你认真看完，文章的最后你将会得到一个超大！超大！超大的奖励哦！）</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/insert.gif" alt="insert">
+*添加了insert功能。以往这些操作都需要又代码完成，每次加个图片什么的都需要亲手重头码起，设计师都是讨厌重复劳动的人，于是乎现在就有了这个。还添加了类似于Pixate等其他原型制作软件的参数面板，真的不要太开心。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/edit.gif" alt="edit">
+*我们还可以直接在模拟器上面直接对我们的layer进行一些操作。</p>
+<p>因为大多数设计师朋友都没有计算机编程的基础，所以Framer这个用代码来实现效果的怪胎看起来很难用，我以前也是这样认为的，但是伙计你猜怎么着，经过几个疗程的学习之后，我觉得Framer根本不难学，代码并不是挡在你跟Framer前面的最大障碍。对于不熟悉的事物人们总是会有这样或者那样的错觉，也许你觉得代码很难也是一个错觉，一旦大家小小地改变一下自己的观念，你就会发现Framer的无尽的可能性。而且<strong>漂亮的女生总是比较难追的，强大的工具也总是比较难学的。</strong>，所以接下来我就从最基本最重要的几个概念着手来带大家上车吧。</p>
+<h3>这一段可能很没趣，但是这都是你你必须要知道的</h3>
+<p>在一切有趣的事情开始之前总是会有一段没那么有趣的节奏，然而这些都是一些必要基本现代编程知识。我们知道Framer是用编程语言来实现效果的，这种编程语言叫做<a href="http://coffeescript.org/" target="_blank" rel="external">Coffeescript</a>（强推，大家读完这篇文章之后可以去看看）,是我们经常听见的JavaScript（JS）的简化版，相比于JS，CoffeeScript在大多数时候会更易读一些，写起来也利落一些。如果你学过JS的话，那么CoffeeScript也会更加容易上手一些。</p>
+<p>这个教程为完全没有变成基础的同学而来，所以下面我开始介绍一些最基本的现代编程知识，如果你懂，那么下面这一段可以跳过啦。</p>
+<h3>赋值</h3>
+<p>‘=’号，在编程中可不是“等于”的意思，它是赋值的意思，也就是将右边的这个”12“赋予给左边的这个&quot;number&quot;，当出现赋值的时候，我们要从右边往左边读</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = 12</span><br></pre></td></tr></table></figure></p>
+<p>那么上面的这段的结果就是，x的值是12。</p>
+<h3>变量</h3>
+<p>关于上面的那个例子，你可能会问这个'x'是什么。这个'x'我们称之为变量。简单来讲，只要我们对'x'赋值，那么他的值就会变化。比如说本来我们上边的'x'的值是12，如果我们下面再对它进行&quot;x = 10&quot;那么他的值将会变为10而不再是12，我们暂且可以把它理解为一个装数值或者数据的容器。在CoffeeScript里面，你可以在任何地方生命你的变量，也可以任意设定你的变量的名字，但是要记住的是，变量名的第一个字不能是数字。</p>
+<p>不像别的计算机编程语言，CoffeeScript无需给出变量的数据类型，只要你声明了你的变量，你就可以对他赋上任何的值，整数、小数、字符等等，你都能直接装进这个容器。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opacityValue = 1        #&#25972;&#25968;&#10;scaleValue = 1.2        #&#23567;&#25968;&#10;howOld = &#34;I am 12.&#34;     #&#23383;&#31526;</span><br></pre></td></tr></table></figure></p>
+<h3>你是不是看到了很多 '. '</h3>
+<p>或许大家都尝试过在Framer里面导入自己sketch项目，那么我们将会得到下面这行代码。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/triangle.png" alt="triangle"></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example = Framer.Importer.load(&#34;imported/example@2x&#34;)</span><br></pre></td></tr></table></figure></p>
+<p>或许我们能够把'.'这个符号想做是'的'的意思。假如我们想选定第一个三角形，那么我的代码可以写成这样。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.triangle1</span><br></pre></td></tr></table></figure></p>
+<p>那么上面这行代码的中文意思大概就是：“选定导入的example里面<strong>的</strong>triangle1”。然而这行代码是不完整的，直接就这样写出来会报错。这样选定了之后你肯定还想要做些什么，比如说想将这些三角形的属性都做一些什么样的改变。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.triangle1.scale = 1.2&#10;example.triangle2.opacity = 0.5&#10;example.triangle3.rotation = 90</span><br></pre></td></tr></table></figure></p>
+<p>在导入了sketch的文件之后你可以直接复制这段代码粘贴到Framer的窗口里面，立即看看效果。</p>
+<p>另外假如我们想要对所有三角形都做同样的一个操作那么我们可以这样：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.triangle.scale = 1.5</span><br></pre></td></tr></table></figure></p>
+<h3>缩进</h3>
+<p>大家看到的代码是不是都分了好多行，一段一段的，这不仅让代码的可读性更高（所以我们有代码写得好看这一说），其实还是一项语法的要求。在CoffeeScript里面，我们需要用缩进来阐明代码的结构。在其他语言里面，比如说JS，使用的是{}，而CoffeeScript里面使用的则是缩进，可以按键盘上的TAB键来打出这个缩进。一般来说，被缩进的那一行从属于另外一个等级更高的一行语句。听起来有些复杂，但是你一会就会习惯的。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.trangle1.animate&#10;&#9;properties:&#10;&#9;&#9;rotation: 90&#10;&#9;&#9;scale: 1.9&#10;&#9;&#9;opacity: 0.7</span><br></pre></td></tr></table></figure></p>
+<p>以上这行代码设定了一个自动播放的小动画，我们可以看到第一行没有缩进，第二行缩进了一格，而下面具体的属性的设定则缩进了两格。如果你要问为什么，我只能说这是规定（懵逼脸）。上面说的只是CoffeeScript的一些最最基本的东西，更多更多的知识还等着你去挖掘，但是我想你已经感觉得到代码其实就是那么一回事。</p>
+<p>好吧，有些无趣的部分已经说完了，我想你肯定等不及想要做一些炫酷的动效了。接下来我们将配合一个实用的例子来讲解Framer整个软件最紧要的三个基本东西。</p>
+<h1>Framer最重要的三个基本概念</h1>
+<p>就像Photoshop的图层，Origami和Form的节点（Patch）概念一样，Framer也有属于自己的三个最基础概念，差不多可以说Framer做出来的一切效果都是基于对这三个概念的运用。</p>
+<p>回想一下，交互设计范畴的动效好像就是：你对界面上的某个原件进行了某种操作，然后界面给出了相应的反应。根据这句话总结一下，我们就能够得到Framer的这三个最基本概念，分别是：事件（event）、图层（layer）和状态（states）。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/threeconcept.gif" alt="threeconcept"></p>
+<p>在日后使用Framer的过程中你将会不断地使用这几个概念，三个如此基本的东西将能够构成一切你需要的效果。下面我们仔细谈谈这几个概念。</p>
+<h3>图层（Layer）</h3>
+<p>图层大概可以理解为Framer里面你能够之间看见的视觉元素，你可以用代码来构建出一个图层。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layer = new Layer</span><br></pre></td></tr></table></figure></p>
+<p>在目前的版本，你还能够点击最左上角的Insert按钮来进行这个操作，我建议你都试试看。
+但是在现实使用中，我大多数时候都不用代码来直接构建界面（如果你能请收下我的膝盖）。这不符合WYSIWYG原则。一般情况下，我会在Sketch中构建界面，然后进行导入，一切layer都搞定了，这样才是最简单的办法。Framer擅长的是做交互设计，关于视觉这一块我们还是留给Sketch吧。（Framer对PSD的支持不是太好，所以请尽量用Sketch以避免一些无法理解的bug的出现。）</p>
+<p>当导入之后你发现界面上有点东西不对，你可以立刻回到Sketch里面进行修改，然后再导入一次，Framer中的界面就能够相应地实时更新。</p>
+<p>注意，我的意思并不是我们永远都不需要在Framer里面声明一个界面。有时候直接用代码构建才具有更高的效率。</p>
+<p><strong>请下载这个Sketch文件，我们的实操要正式开始了。</strong><a href="http://pan.baidu.com/s/1o86EKRo" target="_blank" rel="external">http://pan.baidu.com/s/1o86EKRo</a></p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/import.png" alt="import"></p>
+<p>首先，请在Sketch中打开你刚下载好的文件，然后在Framer的左上角找到Import按钮。一定要在Sketch运行的时候你才能导入Sketch的项目。导入之后你应该看到下面这行代码。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox = Framer.Importer.load(&#34;imported/framer101_inbox@2x&#34;)</span><br></pre></td></tr></table></figure></p>
+<p>这是一个变量，如果你还记得的话，所以它左边的名字你可以随便命。</p>
+<p>好了，现在我们就能够对导入的这些视觉元素，也就是所说的图层（layer）进行许许多多的操作了。例如：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.scale = 1.2&#10;inbox.overlay.opacity = 0.5</span><br></pre></td></tr></table></figure></p>
+<h3>事件(Event)</h3>
+<p>现在Layer已经导入，要开始想想我们要对上面的元素添加什么样的操作事件了。当你对你的这些个Layer元素添加上了监听事件的功能，它就会开始对你规定的某种交互方式，比如说，单击、双击等等操作进行监听。</p>
+<p>Framer提供非常多的监听事件，不吹不黑，比我目前玩过原型制作软件都要细致，细致到比如有&quot;触碰完成前&quot;、&quot;触碰完成后&quot;，这样的细致的功能封装让大家在做原型的时候能够有更加广大的空间，不会感到束手束脚。</p>
+<p>监听事件添加的代码看起来是这样的：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.onClick -&#62;&#10;&#9;inbox.fab.scale = 2</span><br></pre></td></tr></table></figure></p>
+<p>用中文来说一遍：对于在inbox中的fab这个图层添加一个单击（onClick）的监听事件，当监听到用户单击了fab按钮，让fab按钮变为原来的两倍大小。
+就是那么简单。</p>
+<p>下面来展示一下Framer对于事件的细致的封装。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.onTouchStart -&#62;&#10;&#9;inbox.fab.opacity = 0&#10;&#9;&#10;inbox.fab.onTouchEnd -&#62;&#10;&#9;inbox.fab.opacity =1</span><br></pre></td></tr></table></figure></p>
+<p>复制到你们的Framer里面尝试一下吧，也试试自己来将上面这行代码翻译成中文。</p>
+<p>这里又出现了个新的标记（-&gt;）箭头。我也不知道为什么对layer添加一个监听事件一定要这样写，但语法上面来说就是这样的规定的。我也建议大家对这些规定性的东西不要太介怀，现代计算机编程语言各有各自的规定，这不是什么值得我们花时间研究是知识，不要把事情搞得太复杂。另外需要说的是，或你在网上看到的，或是在官网下载的一些Example，你会看到别人的Event是这样写的：<code>on Event.Click, -&gt;</code>这是旧版本的写法，比较冗长一些。虽然是旧版本的写法，但是在现版本还是能用的。</p>
+<p>这里给大家一个小贴士，加入你对自己添加的事件是否被触发没有信心，你可以这样写来检查一下。这个小技巧你会经常用到的。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.onClick -&#62;&#10;&#9;print &#34;clicked&#34;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/print.png" alt="print"></p>
+<h3>状态（State）</h3>
+<p>来到我们的最后一个基本概念。目前我们已经能够让指定的元素对我们的操作时间有所响应，但是能够做到的还是非常有限的，这时候我们需要的是让元素有更多的状态，更多的变化，这时候我们需要的就是状态了。</p>
+<p>在Framer中，状态可以说是承载一切layer的不同形式的容器。状态之间的切换构成了我们动画。在Sketch直接导入的项目可以视为所有layer的原始状态，此时你要做的就是设定另外一个状态，并使用监听时间来触发他们。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.states.add&#10;&#9;bigger:&#10;&#9;&#9;scale: 1.5</span><br></pre></td></tr></table></figure></p>
+<p>在项目里面添加这行代码，我们为fab添加了一个名为bigger的状态，他的具体参数是 <code>scale:1.5</code>。来理清一下思路，现在我们有第一个状态，就是导入sketch的最原始的状态，而bigger是我们的第二个状态。接下来我们用一个<code>onClick</code>事件让它从初始状态切换到我们的bigger状态。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.onClick -&#62;&#10;&#9;inbox.fab.states.next()</span><br></pre></td></tr></table></figure></p>
+<p>动画出来了！然而我们现在的肯定还想控制一下动画的运动曲线，让他看起来更优雅一些。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.states.animationOptions = curve: &#34;spring(500, 15, 0)&#34;</span><br></pre></td></tr></table></figure></p>
+<p>这行代码让我们的动画有了一些小小的弹性。</p>
+<p>此时我们代码整体看起来应该是这样的:</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Import file &#34;framer101_inbox&#34;&#10;inbox = Framer.Importer.load(&#34;imported/framer101_inbox@1x&#34;)&#10;&#10;# &#28155;&#21152;&#29366;&#24577;&#10;inbox.fab.states.add&#10;&#9;bigger:&#10;&#9;&#9;scale: 1.2&#10;&#10;# &#28155;&#21152;&#21160;&#30011;&#26354;&#32447;&#10;inbox.fab.states.animationOptions = curve: &#34;spring(500,15,0)&#34;&#10;&#10;# &#23450;&#20041;&#30417;&#21548;&#20107;&#20214;&#31867;&#22411;&#10;inbox.fab.onClick -&#62;&#10;&#9;inbox.fab.states.next()</span><br></pre></td></tr></table></figure></p>
+<p>在这里恐怕没办法给大家讲解太多关于动画曲线添加的知识。不过可以说的是在Framer中，我最常用的就是spring曲线，他看起来更加自然有趣一些。不想装大神，spring后面跟的三个参数分别是，tension、friction和velocity，我至今也没能很好地理解他们的关系，例子里面的参数是我胡写的，以后搞清楚了再来告诉大家。</p>
+<p>三样最基本的东西讲完了，可以说Framer里面的所有千变万化都是基于这三样东西。代码学起来也没那么难不是吗？下面马上就这我们这个项目做个练习。感谢David Lee提供的例子。</p>
+<h3>下面来动真格了，准备好了没</h3>
+<p>Material Design那么火，我们就来按照guidelines的指导用Framer来实现FAB按钮的交互效果吧。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/fabexample.gif" alt="fabexample"></p>
+<p>就是这个效果。我建议你重新开一个Framer编辑器的窗口，我们从0开始，一步一步来实现这个效果，请亲手键入你的代码，做完之后你就能get到Framer的精髓所在了。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/indesketch.png" alt="inthesketch"></p>
+<p>所有项目都一样，当导入项目之后，我们要做的第一件事就是先设定好它的初始状态，想想看，当我们没做任何操作的时候屏幕上是不是只有一颗FAB按钮。所以我们需要先隐藏默认状态下不需要出现的元素。它们分别是，联系人，联系人的名字，FAB按钮上面的'+'号图标以及后面那层灰白的overlay。在Sketch里面看清楚它们的结构，我们就可以开始用上面学到的小知识来进行设定了。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/indesketch.png" alt="afterimport"></p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.options.opacity = 0&#10;inbox.overlay.opacity = 0&#10;inbox.iconWrite.opacity = 0</span><br></pre></td></tr></table></figure></p>
+<p>将他们的透明度调为0，在Framer里面透明度在0到1之间。</p>
+<p>接下来要思考的是，当我们触发了交互事件，这些被我们隐藏的layer们会以怎样的方式出现，这时候我们要使用的工具就是states（状态）了。当我们单击之后，联系人的头像和名字会出现，而后面那层overlay也会出现。</p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.overlay.states.add&#10;   on:&#10;      opacity: 1     &#10;inbox.overlay.states.animationOptions = curve: &#34;spring(300, 30, 0)&#34;&#10;&#10;&#10;inbox.options.states.add&#10;   on:&#10;      opacity: 1&#10;inbox.options.states.animationOptions = curve: &#34;spring(300, 30, 0)&#34;</span><br></pre></td></tr></table></figure></p>
+<p>接下来就是定义出一个单击事件了。</p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.fab.onClick -&#62;&#10;   inbox.overlay.states.switch(&#34;on&#34;)&#10;   inbox.options.states.switch(&#34;on&#34;)</span><br></pre></td></tr></table></figure></p>
+<p>好的，现在你可以去点击一下了，看看会出现什么样的效果吧。</p>
+<p>点击overlay我们会回到默认的状态，这大概已经成为交互设计的一个规则了吧。</p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.overlay.onClick -&#62;&#10;&#9;inbox.overlay.states.switch(&#34;default&#34;)&#10;&#9;inbox.options.states.switch(&#34;default&#34;)</span><br></pre></td></tr></table></figure></p>
+<p>等等，我们好像并没有定义这个&quot;default&quot;状态啊，这又是什么鬼。实际上按照字面意思，这个就是初始状态，尽管我们没有对它进行过这样的定义，这是Framer默认的定义行为，&quot;default&quot;状态就是最原始的状态。现在你的全部代码看起来应该是这样的。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/looklikethis.png" alt="looklikethis"></p>
+<p>Wow，恭喜你啊，现在初步的效果已经出来了，但是看起来还是怪怪的，guidelines里面说的好像并没有那么的简单。是的，我们还有一些小细节没加上去。</p>
+<p>首先，对iconWrite这个layer再作一些设定。那么现在它的初始状态应该就是：透明度为0，而且旋转了负90度。</p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.iconWrite.rotation = -90</span><br></pre></td></tr></table></figure></p>
+<p>然后当然是添加关于它出现的时候的状态啦。出现的时候的状态就是：旋转90度，然后透明度变为1。</p>
+<p>代码如下：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.iconWrite.states.add&#10;   on:&#10;      opacity: 1&#10;      rotation: 0   # it will rotate 90 degrees clockwise. &#10;inbox.iconWrite.states.animationOptions = curve: &#34;spring(500, 30, 0)&#34;</span><br></pre></td></tr></table></figure></p>
+<p>我们在上面就定义好了的事件代码分别补上这两行：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">... ...&#10;&#9;inbox.iconWrite.states.switch(&#34;on&#34;)&#10;&#10;... ...&#10;&#9;inbox.iconWrite.states.switch(&#34;default&#34;)</span><br></pre></td></tr></table></figure></p>
+<p>注意好缩进。</p>
+<p>那么iconPlus这个layer呢？按照现实中的情况，在单击事件之后，它应该隐藏起来。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inbox.iconPlus.states.add&#10;   on:&#10;      opacity: 0&#10;      rotation: 90 &#10;&#10;inbox.iconPlus.states.animationOptions = curve: &#34;spring(500, 30, 0)&#34;</span><br></pre></td></tr></table></figure></p>
+<p>当然我们还需要在事件代码中把状态的切换给写上。现在你的全部代码看起来应该是这样的。</p>
+<p><img src="http://7xrjhy.com1.z0.glb.clouddn.com/looklikethis2.png" alt="looklikethis2"></p>
+<p>现在看起来是不是好多了呢？我们几乎把Google Inbox的FAB按钮动效完全模拟了出来，然而做到这一切只需要30行不到的代码，试想一下如果在AE里面做的话你需要多少步操作才能达成这个效果。</p>
+<h3>最后</h3>
+<p>前面说了看到最后的同学会有奖励，现在奖励来了。
+这里有一套Framer分享给大家（你懂的），不过我建议大家在学习过后加入感觉适合自己的话一定要去购买正版。<strong>请到这里下载：</strong><a href="http://pan.baidu.com/s/1slWrfEd" target="_blank" rel="external">http://pan.baidu.com/s/1slWrfEd</a>提取码：z6nk</p>
+<p>喜欢使用Inbox的同学可能能够看出来，这并没有完完全全把FAB的动效模拟出来，我不想让教程写得太长，如果你想要看完整效果的代码的话<strong>请到这里下载：</strong><a href="http://pan.baidu.com/s/1jIB6Eoe" target="_blank" rel="external">http://pan.baidu.com/s/1jIB6Eoe</a></p>
+<p>在学习Framer的过程中如果遇到了什么问题欢迎留言一起探讨，也欢迎到我的博客逛一逛，<a href="http://zyxscientist.github.io/" target="_blank" rel="external">zyxscientist.github.io</a>。关于Framer的使用的分享如果大家喜欢的话我会继续出下去的，希望大家能够越过代码这个心理障碍，真正的去了解它，它会为你打开通向新世界的大门。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">这一段可能很没趣，但是这都是你你必须要知道的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">你是不是看到了很多 '. '</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">缩进</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">Framer最重要的三个基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">图层（Layer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">事件(Event)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">状态（State）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">下面来动真格了，准备好了没</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/05/03/framer/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/05/03/framer/&text=Framer Studio入门教程——基础概念"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/05/03/framer/&is_video=false&description=Framer Studio入门教程——基础概念"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio入门教程——基础概念&body=Check out this article: http://yoursite.com/2016/05/03/framer/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/05/03/framer/&title=Framer Studio入门教程——基础概念"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/05/03/framer/&name=Framer Studio入门教程——基础概念&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

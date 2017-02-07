@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+			<meta name="viewport" content="width=100%, initial-scale=1" />
+			<meta name="description" content="about page">
+  			<meta name="author" content="zhuyxuan">
+
+			<!--css-->
+			<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+			<link rel="stylesheet" href="css/normalize.css">
+  			<link rel="stylesheet" href="css/skeleton.css">
+  			<link rel="stylesheet" href="css/main.css">
+  			<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+			<title>朱宇轩的简历</title>
+			<!--script-->
+			<script src="https://ajax.lug.ustc.edu.cn/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    		$('#pagepiling').pagepiling({
+	    			menu: '#menu',
+	    			anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+			    	sectionsColor: ['white', 'white', 'white', 'white','white', 'white', 'white'],
+			    	navigation: {
+			    		'position': 'right',
+			   				'tooltips': ['首页', '项目', '技能', '教育', '实习', '求职', '联系']
+			   					},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    				},
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+
+
+			/*
+		    * Internal use of the demo website
+		    */
+		    $('#showExamples').click(function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				$('#examplesList').toggle();
+			});
+
+			$('html').click(function(){
+				$('#examplesList').hide();
+			});
+	    });
+    </script>
+	</head>
+
+
+<body>
+	<div id="pagepiling">
+    <div class="section center pageborder">
+    <svg viewBox="0 0 600 300"> 
+    <!--Type your textlogo here-->
+    <g class="origin-textline-wrapping">
+    <clippath id="mask-path">
+        <text class="origin-textline"  
+                text-anchor="middle"
+                width="100%"
+                height="100%"
+                x="50%"
+                y="50%"
+                dy=".35em">
+                Zyxscientist
+        </text>
+    </clippath>
+    </g>
+
+    <!--Shadow based by your textlogo,you can turn it on if you need :)-->
+    <g class="shadow" clip-path="url(#mask-path)">
+        <rect width="100%" heigth="100%" class="moverect moverect--shadow"></rect>
+    </g>
+
+    <!--Color rush out based by your textlogo-->
+    <g class="colorrect" clip-path="url(#mask-path)">
+        <rect width="100%" height="100%" class="moverect"></rect>
+        <rect width="70%" height="100%" class="moverect"></rect>
+        <rect width="65%" height="100%" class="moverect"></rect>
+        <rect width="55%" height="100%" class="moverect"></rect>
+        <rect width="40%" height="100%" class="moverect"></rect>
+        <rect width="25%" height="100%" class="moverect"></rect>
+    </g>
+</svg>
+
+    		<h1>朱宇轩</h1>
+    		<p id="subtitle">擅长做好的交互 · 还能写一些代码 · 非常之热爱学习</p>  		
+    		<h4 id="dream">想成为优秀的<strong>交互设计师</strong></h4>
+            <p id="subtitle">今年毕业有木有！</p>
+            <p id="subtitle">zyxchelsea11@gmail.com</p>
+            <p id="subtitle">375935251@qq.com</p>
+    </div>
+
+    <div class="section center pageborder">
+    	<h1>项目作品</h1>
+    	<div class="container">
+    		<div class="row">
+    		<div class="three columns">
+    			<div class="background">
+    			<a href="https://play.google.com/store/apps/details?id=com.uxdesignproject.zhuyuxuan.casepaste"><img src="img/casepaste1.0.png"></a>
+
+    			</div>
+    		</div>
+    		<div class="four columns">
+    		<h2 class="projecttitle"><a href="https://play.google.com/store/apps/details?id=com.uxdesignproject.zhuyuxuan.casepaste">Casepaste 1.0</a></h2>
+    		<p class="note">个人效率类app作品，负责设计与开发工作</p>
+    		</div>
+
+    		<div class="three columns">
+    			<div class="background">
+    			<a href="https://github.com/zyxscientist/Caseshow"><img src="img/hexo.png"></a>
+
+    			</div>
+    		</div>
+    		<div class="four columns">
+    		<h2 class="projecttitle"><a href="https://github.com/zyxscientist/Caseshow">Caseshow</a></h2>
+    		<p class="note">更适合设计师们的Hexo主题,目前已开源到github</p>
+    		</div>
+    		</div>
+    		
+    		<div class="row">
+    			<div class="three columns">
+    				<div class="background">
+    				<a href=""><img src="img/diditalk.png"></a>
+    			</div>
+
+    			</div>
+    				<div class="four columns">
+    					<h2 class="projecttitle"><a href="http://zyxscientist.github.io/2016/03/19/internstory/">交互设计</a></h2>
+    					<p class="note">实习期间参与设计嘀嘀虎云导航app</p>
+    				</div>
+    				<div class="three columns">
+    				<div class="background">
+    				<a href=""><img src="img/rain.png"></a>
+    				</div>
+
+    			</div>
+    				<div class="four columns">
+    					<h2 class="projecttitle"><a href="http://zyxscientist.github.io/2016/03/20/internstory2/">动效设计</a></h2>
+    					<p class="note">主要负责设计并实现动效demo</p>
+    				</div>
+    		</div>
+
+
+    		<div class="row">
+    			<div class="three columns">
+    				<div class="background">
+    				<a href="http://www.ui.cn/detail/60583.html"><img src="img/casepaste2.0.png"></a>
+    				</div>
+
+    			</div>
+    			<div class="four columns">
+    				<h2 class="projecttitle"><a href="http://www.ui.cn/detail/60583.html">Casepaste 2.0</a></h2>
+    				<p class="note">Casepaste下一版本概念设计，更多创新方便的交互形式，提高用户操作效率</p>
+    			</div>
+
+    		</div>
+
+    		</div>
+
+    		
+
+    	</div>
+    	<div class="section center pageborder">
+    	<h1>擅长技能</h1>
+    		<div class="tag">
+    			<div class="tag great">交互设计</div>
+    			<div class="tag great">动效设计</div>
+    		</div>
+    		<div class="tag">
+    			<div class="tag normal">平面设计</div>
+    			<div class="tag great">Axure</div>
+    		</div>
+    		<div class="tag">
+    			<div class="tag great">AfterEffect</div>
+    			<div class="tag great">Framer Studio</div>
+    			<div class="tag great">Photoshop</div>
+    			<div class="tag great">Sketch</div>
+    		</div>
+    		<div class="tag">
+    			<div class="tag normal">Html</div>
+    			<div class="tag normal">CSS</div>
+    			<div class="tag normal">CoffeeScript</div>
+    			<div class="tag normal">jQuery</div>
+    			<div class="tag normal">Java（Android）</div>
+    		</div>
+    		<div class="tag">
+    			<div class="tag normal">Hexo</div>
+    			<div class="tag great">摄影</div>
+    			<div class="tag normal">足球</div>
+    			<div class="tag normal">户外活动</div>
+    			<div class="tag normal">写作</div>
+                <div class="tag normal">视音频剪辑</div>
+    		</div>
+    		<div class="tag">
+    			<div class="tag great">专业辅助</div>
+    			<div class="tag great">打爆下路</div>
+    		</div>
+    		<div id="comment">∗深色代表精通，浅色代表熟悉</div>
+ 
+    </div>
+    		<div class="section center pageborder">
+    			<h1>教育背景</h1>
+    				<p id="school">韩山师范学院 本科学士学位</p>
+    				<p id="school">教育技术学专业</p>
+    				<p id="major">主修课程：平面设计、网页设计、Java<br />安卓程序开发、心理学、传播学等</p>
+    				<p id="graduation">2016年6月毕业</p>
+    				<p id="cet">英语六级 英语口语四六级</p>
+    				<p id="ps">外文干货、设计指南统统能拿下</p>
+    				<p id="comment">∗于<a href="http://i.ui.cn/ucenter/235920.html">ui.cn</a>发布数篇设计相关文章已累计获得40313次观看，620个赞。</p>  			
+    		</div>
+    <div class="section center pageborder">
+    		<h1>实习经历</h1>
+    			<p id="company">深圳广联赛讯有限公司</p>
+    			<p id="position">用户体验部交互设计师</p>
+    			<p class="detail">2015年9月-2015年12月</p>
+    			<p class="detail">参与设计嘀嘀虎云导航app</p>
+    			<p class="detail">负责天气预报动效设计、语音功能动效设计</p>
+    			<p class="detail bold"><strong>相关技能：交互设计、动效设计、竞品分析、需求分析</strong></p>
+    			<div id="comment">∗实习期间获得大量参与重要产品设计的机会，工作质量受到上级与同事好评</div>
+    			
+
+    </div>
+    <div class="section center pageborder">
+    		<h1>求职意向</h1>
+    		<p class="aim">交互设计师</p>
+    		<p class="location">理想工作地：深圳or广州</p>
+    		<p class="desire">渴望与牛人<strong>一起工作</strong></p>
+    		<p class="desire">渴望发挥自己的才能</p>
+    		<p class="desire">渴望成为好的设计师</p>
+    		<p class="desire">所以，offer快到碗里来吧！</p>
+    </div>
+    		<div class="section center pageborder">
+    		<h1>了解更多</h1>
+    		<p id="blog"><a href="https://zyxscientist.github.io/">个人博客</a> </p>
+    		<h6 id="mail">zyxchelsea11@gmail || 375935251@qq.com</h6>
+    		<p id="download"> <a href="pdf/Interaction-Design-Zhuyuxuan.pdf" target="_blank">简历下载（PDF）</a></p>
+    		<div>
+    			<ul class="social">
+    				<li class="googleplus"><a href="https://plus.google.com/u/0/117239115677358273393" target="_blank"><i class="fa  fa-google-plus fa-lg"></i></a></li>
+    				<li class="instagram"><a href="https://www.instagram.com/zyxscience/" target="_blank"><i class="fa  fa-instagram fa-lg"></i></a></li>
+    				<li class="weibo"><a href="http://weibo.com/zhuxuanyluv" target="_blank"><i class="fa  fa-weibo fa-lg"></i></a></li>
+    				<li class="github"><a href="https://github.com/zyxscientist" target="_blank"><i class="fa  fa-github fa-lg"></i></a></li>
+    				<li class="uicn"><a href="http://i.ui.cn/ucenter/235920.html" target="_blank"><img src="img/uicn.png"></a></li>
+    				<li class="uicn"><a href="https://www.zhihu.com/people/yuxuan-zhu" target="_blank"><img src="img/zhihu.png"></a></li>
+    			</ul>	
+    		</div>
+    		</div>
+    </div>
+   
+
+
+ <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script>window.jQuery || document.write('<script src="../blog/js/jquery-1.11.1.min.js"><\/script>');</script>
+ <script type="text/javascript" src="css/jquery.pagepiling.min.js"></script>        
+</body>
+</html>

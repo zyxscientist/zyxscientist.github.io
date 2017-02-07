@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="有一个月没更文章了，最近毕业季加欧洲杯，实在是没能匀出时间来。说起毕业季，16届的童鞋可能大部分已经找到了心仪的工资，傻乎乎的就上起了班了（我就是），17届的师弟妹们也要开始找实习了，活好的可能已经开始实习了。遂腾出时间为大家分享一篇关于线框图的进阶文章，希望大家能找到价值。&amp;lt;!--more--&amp;gt;
+十一年前的我21岁，刚毕业，进了一家小agency做视觉设计，大家也都知道，做agenc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让线框图发挥其真正的价值">
+<meta property="og:url" content="http://yoursite.com/2016/07/06/wireframesvalue/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="有一个月没更文章了，最近毕业季加欧洲杯，实在是没能匀出时间来。说起毕业季，16届的童鞋可能大部分已经找到了心仪的工资，傻乎乎的就上起了班了（我就是），17届的师弟妹们也要开始找实习了，活好的可能已经开始实习了。遂腾出时间为大家分享一篇关于线框图的进阶文章，希望大家能找到价值。&amp;lt;!--more--&amp;gt;
+十一年前的我21岁，刚毕业，进了一家小agency做视觉设计，大家也都知道，做agenc">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNbRwjw1f5p3ahom6hj30rs0ijn2a.jpg">
+<meta property="og:updated_time" content="2016-08-25T14:20:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="让线框图发挥其真正的价值">
+<meta name="twitter:description" content="有一个月没更文章了，最近毕业季加欧洲杯，实在是没能匀出时间来。说起毕业季，16届的童鞋可能大部分已经找到了心仪的工资，傻乎乎的就上起了班了（我就是），17届的师弟妹们也要开始找实习了，活好的可能已经开始实习了。遂腾出时间为大家分享一篇关于线框图的进阶文章，希望大家能找到价值。&amp;lt;!--more--&amp;gt;
+十一年前的我21岁，刚毕业，进了一家小agency做视觉设计，大家也都知道，做agenc">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>让线框图发挥其真正的价值</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/07/10/junior/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/05/24/productthinking/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/07/06/wireframesvalue/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/07/06/wireframesvalue/&text=让线框图发挥其真正的价值"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/07/06/wireframesvalue/&is_video=false&description=让线框图发挥其真正的价值"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=让线框图发挥其真正的价值&body=Check out this article: http://yoursite.com/2016/07/06/wireframesvalue/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/07/06/wireframesvalue/&name=让线框图发挥其真正的价值&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">初级设计师的设计进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">高级设计师的设计流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">做有用的线框图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">下一阶段</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        让线框图发挥其真正的价值
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-07-06T12:12:52.000Z" itemprop="datePublished">2016-07-06</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="http://ww4.sinaimg.cn/large/006tNbRwjw1f5p3ahom6hj30rs0ijn2a.jpg" rel="gallery_ciyvb1bsa003vtm7x79pm0ccc">
+        <img src="http://ww4.sinaimg.cn/large/006tNbRwjw1f5p3ahom6hj30rs0ijn2a.jpg" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p><em>有一个月没更文章了，最近毕业季加欧洲杯，实在是没能匀出时间来。说起毕业季，16届的童鞋可能大部分已经找到了心仪的工资，傻乎乎的就上起了班了（我就是），17届的师弟妹们也要开始找实习了，活好的可能已经开始实习了。遂腾出时间为大家分享一篇关于线框图的进阶文章，希望大家能找到价值。</em>&lt;!--more--&gt;</p>
+<p>十一年前的我21岁，刚毕业，进了一家小agency做视觉设计，大家也都知道，做agency肯定会遇到一言不合就改改改的残暴客户，他们才不会管你鲜肉不鲜肉。做了段时间我学精了，开始学会用电子档的线框图去见客户，然后尝试和他们讲清楚一切。线框图嘛，好画好改，跟客户坐而论道根本不虚。一般走这样的流程的话，客户就很少会提出一些匪夷所思的新“需求”，项目往后推荐大方向也不大会改变很多了。</p>
+<p>回顾职业生涯的这段傻白甜时光，才发现原来这样的做法其实是误用了线框图这种设计工具，并没有发挥到其真正的价值，因为我用错了地方，或者说用得太过片面了。以我这个从业11年的老司机现在的眼里看来，线框图其实就是将项目细分成好多小任务，然后一步步的完成，将项目从**“探索期”<strong>推进到</strong>“准备认真搞起期”<strong>，而上面提到的，防止用户或者领导改变主意杀你一个措手不及只是其中一个小小的方面。当时我没有留意到，其实线框图的更深层次的意义是帮助你摆脱一些设计上非常明显的而陷入当中又难以逃出的</strong>定势思维**，它帮助你更好的让你看清自己的想要的东西，让你在走上错路之前先慢慢地选好一个正确的方向。</p>
+<h3>初级设计师的设计进程</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006tNbRwjw1f5p2qgxaoij30u70jg40n.jpg" alt="">
+以上这则小插图是从大神<a href="https://medium.com/@joulee" target="_blank" rel="external">Julie Zhou</a>的文章，<a href="https://medium.com/the-year-of-the-looking-glass/junior-designers-vs-senior-designers-fbe483d3b51e#.kiwbsini4" target="_blank" rel="external">Junior Designers vs. Senior Designer（初级设计师与高级设计的对比）</a>中拿来的。很好了阐述了新人们在画线框的时候普遍都存在的一个现象：**当一个想法出来之后我们都知道先用线框画下来，但是画着画着，总觉得不对劲，总觉得加上视觉元素之后才能真正看出效果来。<strong>在线框图阶段，这个</strong>“看出效果来”**不知道浪费了多少设计小新的时间。</p>
+<p>初级设计师总是无意之中就把注意力过多的集中到视觉层面之上，而忽视了功能上面的设计，而功能上的设计却正正是线框图阶段最紧要的事情。视觉层次，最先也最易被感受和判断，所以大家容易被吸引过去，想是不是符合最先的潮流啦，能不能在追波上得到很多赞啦，够不够扁平啦，够不够渐变啦，能不能发票圈炫耀一下啦，能不能放到简历里面啦blabla。<strong>初级设计师容易陷入这种让视觉满足过分占据我们大脑的错误状态之中。</strong></p>
+<h3>高级设计师的设计流程</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwjw1f5p2qmu5laj30u70jg0v0.jpg" alt="senior"></p>
+<p>在设计界摸爬滚打多年之后，哥领略到了，搞清楚一个东西的运作方式，远远比它看起来怎么样更加重要。高级设计师会更少地花时间在外观上面，他们反而会在选择一个正确的发展方向上面更舍得花心思。看看上面那幅图，高级设计师解决问题的方法和初级小鲜肉截然不同。</p>
+<p><strong>一辆小破车，无论你喷多贵的车漆，也不会让它内在变更好。</strong></p>
+<p>所以，我们怎么才能够避免在不成熟的idea上面花去了过多的时间精力？怎么才能在避免浪费过多时间的前提下拿出尽量多的问题解决方案？怎么对方案之间的优劣作出正确的判断？</p>
+<h3>做有用的线框图</h3>
+<p>下面我会跟大家分享我在线框图阶段的工作流程，流程本身不重要，重要的是里面的思路。</p>
+<p>一般我会在线框图阶段探索解决问题的办法。本文中的线框图指的是纸质线框图，纸质线框图的好处大家都知道，真正的快，真正的好，真正的简单，每个人都能画，修改起来也不会心疼。（详见译者的另外一篇文章<a href="http://www.ui.cn/detail/84804.html" target="_blank" rel="external">先别急着画高保真原型</a>）</p>
+<p><strong>使用纸质线框图能够避免你把“漂亮的线框图”跟“好的idea”混淆。</strong></p>
+<h3>第一步</h3>
+<p>开始吧。我会拿起一本好点的笔记本，先画上大概20个矩形框作为我们的屏幕，请按照你们所要设计的对象设备屏幕的比例来画。</p>
+<h3>第二步</h3>
+<p>拿起笔，先把最先出现在你脑海中的东西画出来，然后继续思考，尽量在每个矩形里面都画上你的idea。</p>
+<p>在这个过程中，你基本不可能画出20个你都很满意的方案来，然而这就是重点，让你从舒适区中跳出来，强迫自己想一些自己不知道的东西。当然，并不是让你像完任务一样毫无道理地画满20个矩形，当你感到画无可画、想无可想的时候，试着让自己做一些以前都没做过的东西，比如：只留下图片怎么样？没图片会怎样？苹果有案例看看吗？谷歌会怎么做呢？如果不用列表会怎样呢？能不能把重要的东西放在靠近用户拇指那一侧呢？对于我来说，当画到第十个idea左右，有趣的东西就差不多来了。也请记得暂时忽略视觉设计思维，暂时看起来是很丑，但是线框图阶段我们设计的是功能结构。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwjw1f5p2qzdf4sj30sg0qngud.jpg" alt="rectangle"></p>
+<p>如果没有把20个都填满，那么勉强一下自己，想多一些，直到自己真的想不出任何方案来了。要舍得在产品的功能性上面运营更多的时间，即便画出的来的东西可能看起来非常怪异。</p>
+<hr>
+<h3>第三步</h3>
+<p>理想状态下，当上述的步骤得出了结果，那么接下来就应该转入视觉层面上的工作了对吗？但是这种情况实际上很少见，我建议先别急着打开电脑。让你的想法在纸上多呆一阵子，让这种一切还能改变的状态多留久一些。</p>
+<p>将脱颖而出的方案拿出来，在新的纸上画出更大的矩形框，将方案画成保真度更高的线框图。这个阶段我们主要的任务就是验证这些方案能否承载得起更多的细节。</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwjw1f5p2r3ktmpj30u60k4wiz.jpg" alt="detail">
+<img src="http://ww1.sinaimg.cn/large/006tNbRwjw1f5p2qvo8afj30u60k4q68.jpg" alt="detail2"></p>
+<p>当这些工作做完之后你就能够拿去跟同事领导进行探讨了，看看有没什么改进的地方。由于我们之前的工作一直是在纸上进行的，已经节省了好多时间，而且目前我们的方案还停留在纸上，<strong>这时候一定要摆好心态，不要怕改，继续发挥线框图的作用。</strong></p>
+<h3>下一阶段</h3>
+<p>仅花去了相对较少的时间，你可能就得到了一个或数个拿得出手的方案。因为前面你已经做出了你想得到的和不那么容易想得到的假设，又得到了数次反馈，对方案的细节也有了一定的探索了。<strong>（拿着线框图就做线框图的事情，在收集反馈意见的时候也请尽量引导大家往基本框架和功能的层面去讨论。）</strong></p>
+<p>线框图阶段的工作大致完成之后要去做什么在这里我们就不讨论了，但是我可以简单的分析一下自己接下来的工作流程。我推荐大家去读读<a href="https://library.gv.com/the-product-design-sprint-decide-day-3-7d4804bd2fd1#.zd8eb2prd" target="_blank" rel="external"><em>Searching for Conflicts</em> (查找冲突)</a>这篇文章，它里面的概念对我判断idea之间的异同和设计工作的推进有一些启发性的帮助。通常我不会那么快就结束掉线框阶段的工作，我会将关键屏的线框图放到流程里面的再考虑一番，看看前后衔接上面会不会出现问题，当这一步走查工作完成之后我才会制作电子格式的原型，然后在真实设备上体验。</p>
+<hr>
+<p>理想条件之下，通过这个方法，你能够得到数个不同的想法，最后对比之下选出一个你认为最佳的方案。这样你就能够最大程度之上避免了过早的拿出了并不那么成熟的方案了。我想这就是作线框图的真正价值。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">初级设计师的设计进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">高级设计师的设计流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">做有用的线框图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">下一阶段</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/07/06/wireframesvalue/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/07/06/wireframesvalue/&text=让线框图发挥其真正的价值"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/07/06/wireframesvalue/&is_video=false&description=让线框图发挥其真正的价值"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=让线框图发挥其真正的价值&body=Check out this article: http://yoursite.com/2016/07/06/wireframesvalue/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/07/06/wireframesvalue/&title=让线框图发挥其真正的价值"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/07/06/wireframesvalue/&name=让线框图发挥其真正的价值&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

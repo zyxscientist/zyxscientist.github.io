@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="很久以前，大家还不怎么专门谈用户体验的时候，关于如何设计出一款好用的产品，大家基本只能靠猜。没有参照，也没有数据，那时候的设计师们凭借着自己的直觉、品味以及知识来设计一切。
+时过境迁，现在大家都非常重视用户的体验，也有越来越多的人参与了进来，建立了更加具体的知识体系，**而更更重要的是，我们学会了用数据来“量度”体验。**即便用户不去app store进行评论，我们也能够获得非常详细而且具体的数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用户体验是玄学吗？">
+<meta property="og:url" content="http://yoursite.com/2017/01/18/metricsversusexperience/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="很久以前，大家还不怎么专门谈用户体验的时候，关于如何设计出一款好用的产品，大家基本只能靠猜。没有参照，也没有数据，那时候的设计师们凭借着自己的直觉、品味以及知识来设计一切。
+时过境迁，现在大家都非常重视用户的体验，也有越来越多的人参与了进来，建立了更加具体的知识体系，**而更更重要的是，我们学会了用数据来“量度”体验。**即便用户不去app store进行评论，我们也能够获得非常详细而且具体的数据">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1fc0vtxz9kyj30m80grdhv.jpg">
+<meta property="og:updated_time" content="2017-02-07T08:59:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用户体验是玄学吗？">
+<meta name="twitter:description" content="很久以前，大家还不怎么专门谈用户体验的时候，关于如何设计出一款好用的产品，大家基本只能靠猜。没有参照，也没有数据，那时候的设计师们凭借着自己的直觉、品味以及知识来设计一切。
+时过境迁，现在大家都非常重视用户的体验，也有越来越多的人参与了进来，建立了更加具体的知识体系，**而更更重要的是，我们学会了用数据来“量度”体验。**即便用户不去app store进行评论，我们也能够获得非常详细而且具体的数据">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>用户体验是玄学吗？</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/02/06/sketchcandothis/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/12/07/knowtechnology/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/01/18/metricsversusexperience/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/01/18/metricsversusexperience/&text=用户体验是玄学吗？"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/01/18/metricsversusexperience/&is_video=false&description=用户体验是玄学吗？"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用户体验是玄学吗？&body=Check out this article: http://yoursite.com/2017/01/18/metricsversusexperience/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/01/18/metricsversusexperience/&name=用户体验是玄学吗？&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.首先要理清“度量”和“体验”之间的关系。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.当然了，太过追求量化也会带来害处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.还有，有些东西确实是无法量度的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">分享一些关于量化用户体验的建议</span></a>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        用户体验是玄学吗？
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-01-18T14:05:32.000Z" itemprop="datePublished">2017-01-18</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="https://ww3.sinaimg.cn/large/006tNc79gy1fc0vtxz9kyj30m80grdhv.jpg" rel="gallery_ciyvb1bss004ktm7xivpn6hmm">
+        <img src="https://ww3.sinaimg.cn/large/006tNc79gy1fc0vtxz9kyj30m80grdhv.jpg" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p>很久以前，大家还不怎么专门谈<strong>用户体验</strong>的时候，关于如何设计出一款好用的产品，大家基本只能靠猜。没有参照，也没有数据，那时候的设计师们凭借着自己的直觉、品味以及知识来设计一切。</p>
+<p>时过境迁，现在大家都非常重视<strong>用户的体验</strong>，也有越来越多的人参与了进来，建立了更加具体的知识体系，**而更更重要的是，我们学会了用数据来“量度”体验。**即便用户不去app store进行评论，我们也能够获得非常详细而且具体的数据。海量的数据在加以分析之后让我们知道用户是否喜欢我们最新的功能、读没读我们的广告、按钮位置改了之后用户找不找得到。自此，设计师们在开始在一些情况下不再需要纯靠猜。</p>
+<p>不过，尽管有了这牛逼哄哄的数据驱动设计法，用户体验还有太多太多的范畴无法用数字去量度，设计师们还面对太多不确定的东西，很多问题大家也都没有个定数，方案孰优孰劣也无法很好地判断，它不像物理或者化学这类量化科学，是和不是分得很清。</p>
+<p>更要命的是，看起来非常科学的数据分析法得出的结论却与大家原本预期的东西大相径庭，让人不敢相信，觉得一定是数据收集的时候搞错了点东西。又有些时候，我遵循数据的指导作出改变，但最后获得的回报却不尽如人意，<strong>用户体验这东西在一些时候表现得像玄学。</strong></p>
+<p>那么，用户体验到底是不是一门玄学？如何使用数据切实有效地帮助设计师们透过问题看本质，更客观更科学地设计我们的产品？</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fcearre7vfj30m80godu9.jpg" alt=""></p>
+<h3>1.首先要理清“度量”和“体验”之间的关系。</h3>
+<p>聪明的人们学会了使用收集用户的各种数据并尝试用这些数据来理性地量化&quot;体验&quot;。可是，有些人认为用户体验这东西就像照相机的镜头一样，有些人说：“这款镜头好，毒！德味！”可是有些人又说：“怎么有点偏绿蓝啊，是我眼睛不好还是你镜头不好啊？”认为用户体验是无法度量的，是无法量化的。可有些人，甚至有些公司又坚定地践行数据驱动设计，他们坚信用户体验也是可以量化的，从用户的行为表现、各种反馈可以看出用户体验的好与坏，对设计本身的整个过程也有指导意义。</p>
+<p><strong>其实，我们本身就不应该将度量和体验放在两个对立面来看。</strong></p>
+<p>诚然，用户体验这个命题实在是太大，设计的范畴非常广阔，很多确实没办法（或者说目前没有办法）依靠数据来度量。尽管如此，数据还是非常之重要的，今时今日，还是想着完全抛弃数据，仍旧依靠个人品味和喜好来进行设计，未免显得太过老套而且落伍。做设计，数据不是万能的，没有数据却是万万不能的，但是利用数据来驱动设计的必要条件是，你能判断出那些数据对于你的目标来说是重要的，哪些数据对于你的目标来说是不重要甚至是有害的。</p>
+<p>假如你的设计为用户解决了问题，带来了价值，体验很棒，那么那些能够从侧面或是正面反映出你的体验是良好的数据肯定会有所增长。反过来看，假如你在这版的更新修改了以前的陈旧的设计，用上了时下最新潮的样式，可是数据却告诉你我们的用户越来越不爱打开我们的应用了，那相信你也很难说这是一个好的设计，尽管这个设计你po到追波上面被点了一万次赞。<strong>数据不会像设计师一样，不会给你指出哪儿哪儿有一个像素的偏差，但是却能从宏观的角度来对你的设计进行更加具有现实意义的评判。</strong></p>
+<p>更重要的是，数据能够避免让整个设计团队陷入不自知的迷惘与混乱之中，让整个团队知道现在首要的目标是什么，并朝着那个目标进发。譬如说，你们团队有20人，20个人人人都是那么的优秀，人人都有自己的想法，设计师们，你懂的，都觉得自己的想法是最棒的，有时候真的会陷入一种无端的固执之中，如果20个人每个人都是这样，听不进去别人的话，一味依靠自己的主观意识否定别人的设计，那么整个团队就会陷入到上述的不自知的迷惘与混乱之中。有些团队的解决办法是折中处理，每个人的设计都抽取出一些亮点，最后糅合成一个新的东西，不得不说这是一种还算ok的办法，在技术水平良好的团队里面这叫集思广益，在技术水平偏低的团队里面这叫和稀泥，没人能够保证那些亮点本身是一个足够好的设计，更没人能够保证这些设计集中在一起能出来一个什么样的东西。所以面对这些问题，最好的办法还是靠数据分析来度量，设计好了，体验好了，数据上涨，那我们就<strong>判定</strong>这是一个好的设计。这里的判定或许不能非常准确地说明这就是一个好的设计，但是总好于团队像无头苍蝇一样不知道要飞去哪里。有一个数字摆在那里，大家的目标会变得明确很多，劲头也更能往一处使。</p>
+<p>所以说，试图度量用户体验是有益的，但是不要期望这样的度量能够精细地指导设计应该怎么走，我们只能从比较宏观的角度要得到问题的反映，怎么去辨识对于度量用户体验是有益的数据，怎么将它们抽取出来然后得出有用的结论，是更重要的事情。体验与度量并不是敌对的，用户体验固然也不是玄学。</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fceasnc0apj30m80gowl7.jpg" alt=""></p>
+<h3>2.当然了，太过追求量化也会带来害处</h3>
+<p>数据固然必不可少，但是正如水喝多了也会中毒一样，数据多了也不一定能够正确地反映问题，将我们带向不一定正确的方向。因为我们能够获取到的数据是海量的，用户的行为表现、评论反馈、社区反映甚至公司业绩，我们并不能保证每个数据都是有益于我们做出一些决定的。并且，单纯的数据是非常单薄的，设计师们看不到也想不到背后的来由。</p>
+<p>如果我们选错了要观察的的数据，那么设计可能从一开始就已经错了。举个例子：</p>
+<p>a)&quot;原本用户每次打开都要要花上5分钟在我们的app上面，这次改版之后变成了3分钟，我是不是做错了什么？&quot;</p>
+<p>是不是你的错？首先你要问自己，用户的停留时间对于你的产品来说是重要的吗？假如你是社交类，或者是内容类应用，那么当然重要了，用户在这类产品内花的时间越多，越说明你能够为用户提供有价值的东西。但是假如你的产品本身就是一个工具类app，譬如支付宝，你最好还是不要去量度用户的停留时间，支付宝本身是一个支付工具，用户如果能够在更短的时间内完成自己的任务那当然用户的提留时间数据上面的下滑对于你来说就是一件好的事情，用户用更短的时间完成了要完成的任务，这个体验很棒。
+现在支付宝要做社交，在这个时候，支付宝的设计师们也肯定要开始留意用户停留时间这个数据了，我们也是能频频看到他们在这方面的努力，虽然这个过程是非常痛苦的。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcgy1fceat7335jj30m80goq8n.jpg" alt=""></p>
+<h3>3.还有，有些东西确实是无法量度的</h3>
+<p>相信每一个干设计的人都会想过跑到用户脑子里面去看看用户到底想要什么，可惜这个并不能实现，因此我们希望用一些数字来量度我们的设计。然而上文已经说过，用户体验这东西命题比较大，可能有些范畴确实无法度量或者说目前没办法度量。譬如说：</p>
+<ul>
+<li>对于你的产品或者说是里面某个功能特性，用户喜欢/讨厌到了什么程度。</li>
+<li>从长远看，你做出的一些变化是不是真的提高了用户解决问题的效率，为用户带来了价值</li>
+<li>你的产品要简单到了什么程度对于用户来说才算是简单</li>
+<li>对于同类竞品，用户是怎么评价你和他们之间的区别的</li>
+<li>什么东西是用户迫切需要你改变/添加/修复的</li>
+<li>一段时间过后，用户为继续使用你的产品的动机是啥？</li>
+<li>这一次的改版有没有让我们的品牌展现更进一步？</li>
+</ul>
+<p>也许你会说上面的东西发个问卷不就可以收集到数据了，并不是完全不能衡量，但即便是所有用户都认真地填写了你的问卷，得回来的数据也并不能很直接地反映问题。</p>
+<p>某些东西无法量化，数据驱动这个新潮概念有时候会辜负了我们的期望，数据不是万能的。</p>
+<p>1.**复杂性：**这里给一点典型的例子，每次你在app里面添加一个全新的功能，那么使用这个功能的人在数据上的体现一定是增加的，没人能够在你这个功能出来之前就使用上了这个功能。数据上呈现的增加总是让设计师们感觉非常良好，使用率直线上升、社区反馈一篇大好、似乎每个人期待着这个功能。但是这些数据是具有一定的欺骗性的，想想Photoshop之于Sketch，PS历史悠久，体量庞大，功能非常强大，但是做UI的同学就是喜欢用Sketch，喜欢Sketch的简单直接于高效。每次PS更新的新功能，大家都非常的期待，反馈也都非常好，那为什么到最后越来越多的设计师还是投向了Sketch了呢？这个例子想要表达的是，我们目前为止并没能够很好的去测量复杂度的上升对于用户认知负担之间的关系。</p>
+<p>2.**品牌的力量：**就算现在Android在各方面的性能以及追上甚至赶超了iOS，就算每次苹果发布新产品的时候都会被吐槽一番，但是人们最终的选择可能还是一台搭载iOS系统且售价比同级别Android手机高上一倍的苹果手机，这或许就是品牌的力量。大厂里面的童鞋感受可能比较深，产品的用户数总是非常多，“到底是劳资设计牛逼，还在是我司流量的荫护之下，才显得我辣么牛逼咧？”关于你的一些决定会如何影响品牌，而品牌又将如何影响你，数据都无法给你一个准确的答案。</p>
+<p>3.**未来发展：**没有哪项数据能告诉你未来的设计应该要怎么去做。2008年的时候，智能手机方兴未艾，移动互联网势头尚未如此之强大，以前人们逛淘宝都是用的电脑，但是现在很多店铺都能录得百分之八九十甚至是接近百分之一百的移动端浏览记录。08年的时候，移动端的浏览占比是稀少的，所以很多网站并没有专门针对移动端进行优化设计，连自适应的不会有（目前很多网站依然没人），设计师们看到来自移动端的访问量如此之少，就不会去针对移动端进行设计。但是如果摆到现在，移动端迅猛的发展带来的利益大到人们无法想象的当下，几乎每款产品都要针对移动端作大量而且细致的优化。单纯依靠数据我们无法预判未来发展的方向，无法预判明天用户需要些什么，那么关于未来发展的方向，我们是不是就不太好用数据来表达了？这个时候用户体验工作又需要依靠设计师个人的品味、眼界以及知识来行进了。</p>
+<h2>分享一些关于量化用户体验的建议</h2>
+<ul>
+<li>
+<p>**多留意用户的存留率。**不要太过在意你的产品或者是某几个功能的用户数（这通常会跟你们推广的力度有比较大的关系。）你的产品真的能够为用户带来价值，体验也足够好，用户才会愿意一遍遍地回来使。</p>
+</li>
+<li>
+<p>**也要多留意用户的流失率。**用户在正常使用你的产品之前，通常都要经过这几关的考验。首先他们要知道有你这款产品，然后他们要对你的产品产生了足够的兴趣，之后就要开始转化（下载你的app，填写注册信息，收到验证邮件，等等），最后他们还要有足够耐心去了解你的产品能够为他们做些什么，要怎么去使用。最最后，他们还要能够记得自己下过这个app。这些并不怎么讨人喜欢的数据其实非常宝贵，很应该埋点，这里的数据能够告诉你哪个环节出了问题，用户会在哪个环节离开。</p>
+</li>
+<li>
+<p>**找到那些对于你的产品来说真正重要的数据并重点关注。**的确，以现在的技术我们就能够收集到非常多种类的数据了，这个感觉非常好，让你感觉一切尽在你的掌控与监视之中。但是非常抱歉，最能对于设计产生切实价值的数据通常只有那么特定几支，所以不要浪费时间与精力在那些对于你们来说不重要的数据身上。</p>
+</li>
+<li>
+<p>**设定某个目标之前一定要仔细想清楚。**这个真的比你们想象中要重要得多，搞清楚为什么要设定这个目标，将会非常直接地影响到你的设计工作的进行。多问两个为什么，会不会出现其实已经做出了改进，然而数据却不升反降的情况？相反地，会不会出现数据上升，但是却不是因为设计有所改进的情况？假如有，那么说明这只数据受别的因素影响可能更大，那么会不会有别的更好的替代品呢？</p>
+</li>
+<li>
+<p>**寻找重点数据的“反面数据”**为了更好地让数据说真话，我们在关注某个重点数据的同时一定要寻找到它的“反面数据”，譬如说不能在看pv的同时不看流失率，不能在看订单量的同时不看订单取消量。数据及其反面数据的比较更能让你发现不在表层的错误，学会找到数据的反面数据并观察它们同时期不同的表现，千万不要养成只看一支数据的习惯，这样得出的结论太过片面。</p>
+</li>
+</ul>
+<hr>
+<p>我的追波：<a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">dribbble.com/Zhuyuxuan</a>
+知乎专栏：<a href="https://zhuanlan.zhihu.com/designcoder" target="_blank" rel="external">DesignCoder</a></p>
+<p>以上文字以及图片均来自 Julie Zhou的博文 <em>Metrics Versus Experience</em>
+原文地址https://medium.com/the-year-of-the-looking-glass/metrics-versus-experience-a9347d6b80b#.lq10bfhex</p>
+<p><strong>转载前请询得译者同意</strong></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.首先要理清“度量”和“体验”之间的关系。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.当然了，太过追求量化也会带来害处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.还有，有些东西确实是无法量度的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">分享一些关于量化用户体验的建议</span></a>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/01/18/metricsversusexperience/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/01/18/metricsversusexperience/&text=用户体验是玄学吗？"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/01/18/metricsversusexperience/&is_video=false&description=用户体验是玄学吗？"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用户体验是玄学吗？&body=Check out this article: http://yoursite.com/2017/01/18/metricsversusexperience/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/01/18/metricsversusexperience/&title=用户体验是玄学吗？"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/01/18/metricsversusexperience/&name=用户体验是玄学吗？&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
