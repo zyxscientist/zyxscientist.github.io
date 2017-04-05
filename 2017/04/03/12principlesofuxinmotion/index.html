@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="简评：本文将市面上最常被使用的动效进行了一次总结并逐条阐明这些设计背后的原理，plus 每条原理后面我都会为朋友们选出一些大家最常用的 App 作为例子，顺手打开就能体验啦。
+
+
+缓动（Easing）、偏移量和延迟（Offset &amp;amp; Delay）主要与时间相关。父子关系（Parenting）用于阐述元素之间的关系。变形（Transformation）、数值变化（Value Change）、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不整虚的，12 条提高产品可用性的动效设计的原理">
+<meta property="og:url" content="http://yoursite.com/2017/04/03/12principlesofuxinmotion/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="简评：本文将市面上最常被使用的动效进行了一次总结并逐条阐明这些设计背后的原理，plus 每条原理后面我都会为朋友们选出一些大家最常用的 App 作为例子，顺手打开就能体验啦。
+
+
+缓动（Easing）、偏移量和延迟（Offset &amp;amp; Delay）主要与时间相关。父子关系（Parenting）用于阐述元素之间的关系。变形（Transformation）、数值变化（Value Change）、">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcgy1feaslqmvqgj31970j5jto.jpg">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9kiqvloig30m80go77v.gif">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9ktcns9mg30m80gogp1.gif">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9ljqbtv2g30m80gon1j.gif">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9lsmax7fg30m80goaf3.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcgy1fe9m1xfbzag30m80gotd6.gif">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9ma5rwyjg30m80go432.gif">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9t5qkpyeg30m80godkb.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcgy1feamzzhio0g30m80go7c5.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcgy1fean7zg6heg30m80gowkw.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcgy1feanv65n6sg30m80go41t.gif">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcgy1feaopx5cscg30m80go7ih.gif">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcgy1feapihny4jg30m80godnq.gif">
+<meta property="og:updated_time" content="2017-04-05T05:20:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="不整虚的，12 条提高产品可用性的动效设计的原理">
+<meta name="twitter:description" content="简评：本文将市面上最常被使用的动效进行了一次总结并逐条阐明这些设计背后的原理，plus 每条原理后面我都会为朋友们选出一些大家最常用的 App 作为例子，顺手打开就能体验啦。
+
+
+缓动（Easing）、偏移量和延迟（Offset &amp;amp; Delay）主要与时间相关。父子关系（Parenting）用于阐述元素之间的关系。变形（Transformation）、数值变化（Value Change）、">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>不整虚的，12 条提高产品可用性的动效设计的原理</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/03/21/bestdesignadvice/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/03/12principlesofuxinmotion/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&text=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&is_video=false&description=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=不整虚的，12 条提高产品可用性的动效设计的原理&body=Check out this article: http://yoursite.com/2017/04/03/12principlesofuxinmotion/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&name=不整虚的，12 条提高产品可用性的动效设计的原理&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.缓动（Easing）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.偏移量和延迟（Offset & Delay）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.父子关系（Parenting）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">4.变形（Transformation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">5.数值变化（Value Change）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">6.遮罩（Masking）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">7.覆盖（Overlay）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">8.蒙层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">9.</span> <span class="toc-text">10.视差（Parallax）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">10.</span> <span class="toc-text">11.多维化（Dimensionality）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">11.</span> <span class="toc-text">12.镜头平移与缩放（Dolly & Zoom）</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        不整虚的，12 条提高产品可用性的动效设计的原理
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-03T07:15:46.000Z" itemprop="datePublished">2017-04-03</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>简评：本文将市面上最常被使用的动效进行了一次总结并逐条阐明这些设计背后的原理，plus 每条原理后面我都会为朋友们选出一些大家最常用的 App 作为例子，顺手打开就能体验啦。</p>
+</blockquote>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgy1feaslqmvqgj31970j5jto.jpg" alt=""></p>
+<p>缓动（Easing）、偏移量和延迟（Offset &amp; Delay）主要与时间相关。父子关系（Parenting）用于阐述元素之间的关系。变形（Transformation）、数值变化（Value Change）、遮罩（Masking）、覆盖（Overlay）、生成（Cloning）多作用于加强元素自身的延续性。视差（Parallax）多作用于表明元素的层级关系。蒙层（Obscuration）、多维化（Dimensionality）、镜头平移与缩放（Dolly &amp; Zoom）作用于表明元素与空间的关系。</p>
+<h3>1.缓动（Easing）</h3>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9kiqvloig30m80go77v.gif" alt="">
+当运动发生的时候，元素运动速率的变化符合用户的预期。自然界之中是很少存在完全线性的运动的，没有任何东西能够完美的保持匀速运动，缓动效果能够让运动看起来更加接近自然，符合用户的认知，达到用户的预期。</p>
+<p><em>例子：你手机里面几乎所有动态效果都是缓动的，看起来是不是非常舒服和谐呢？</em></p>
+<h3>2.偏移量和延迟（Offset &amp; Delay）</h3>
+<p><img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9ktcns9mg30m80gogp1.gif" alt="">
+利用偏移和延迟来错开元素的运动时间，表明元素之间的层级与关系。设计师利用错开运动时间的方法，让信息或界面元素按照有所区别的秩序进退场，利用明显的错序运动暗示用户信息与界面元素之间或许存在某些区别，或利用错序的方法吸引用户的注意。但一般情况设计师不应该使用太多的延时效果，因为譬如说网络的加载本身就已经需要时间，所以延迟效果的使用最好只用于服务于技术。</p>
+<p><em>例子：苹果官网各商品详情页均有大量运用。</em></p>
+<h3>3.父子关系（Parenting）</h3>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9ljqbtv2g30m80gon1j.gif" alt="">
+在用户进行操作时，有父子关系的元素帮助用户更好地理解它们之间的层级关系以及带来更加有理可循的操作反馈。正如上面给出的这张动图，位于下方的方块的左右运动，而位于上方的方块跟随下方方块进行左右运动并同时进行自己的缩放运动，他们之间构成了父子关系。说得简单一点，父子关系就是子元素的某个属性的值随父元素的某个属性参数的值按照一定的比例进行变化。</p>
+<p><em>例子：Google Allo 按住发送按钮向上滑动，发送内容字体变大。</em></p>
+<h3>4.变形（Transformation）</h3>
+<p><img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9lsmax7fg30m80goaf3.gif" alt="">
+利用变形来告知用户元素的状态或作用发生了改变。人们对于实物的变形是敏感的，合理的变形能够清晰高效地将正确的信息以最高效、最令人愉悦的方式传递给用户。注意，这里所说的变形并不一定要像上面那种动图一样动作那么大才算变形。或许是颜色的变化，也有可能是角度的改变，这些都能达成我们想要的效果。</p>
+<p><em>例子：知乎 Live 选择赞助金额的动画效果。</em></p>
+<h3>5.数值变化（Value Change）</h3>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcgy1fe9m1xfbzag30m80gotd6.gif" alt="">
+连续性的数值变化动态效果能让用户清晰地看见数值到底是在变多还是变少。关于这一点，我想多用两张动图呈现，大家可以看到，数值变化有连续性动态效果的一张是不是更能让你知道数字是在变多还是变少？想象一下，假如在某款理财 App 里面，这个数值是你的钱的话，那么数量的增加与减少这个信息对于用户来说就非常重要了。</p>
+<p><em>例子：京东金融手机APP，”总资产“，及”白条“页面的数值变化效果。</em></p>
+<h3>6.遮罩（Masking）</h3>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1fe9ma5rwyjg30m80go432.gif" alt="">
+遮罩型的动画是在界面元素进场或者退场的时候创造连续性效果的一种选择。这种类型的动效似乎在 Material Design 里面比较常见，所以没有使用过原生安卓系统的伙伴们可能比较陌生。</p>
+<p><em>例子：原生安卓系统（5.0 以上 7.0以下版本可见，7.0取消了菜单按钮，以上划操作代替。）点击菜单按钮呼出菜单的动画效果。美图秀秀手机 App 处于首页的各个功能按钮点击后的转场效果。</em></p>
+<h3>7.覆盖（Overlay）</h3>
+<p><img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fe9t5qkpyeg30m80godkb.gif" alt="">
+覆盖用于在扁平化（没有厚度）设计的界面上阐明两个相互独立的元素的位置关系。在实际上没有厚度、没有纵深概念扁平化设计中，覆盖动画的使用能让本来就非常有限的屏幕空间被更好的利用起来。</p>
+<p><em>例子：微信横划删除聊天记录。</em></p>
+<h3>8.蒙层</h3>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcgy1feamzzhio0g30m80go7c5.gif" alt="">
+蒙层与覆盖非常相似，在没有纵深概念的扁平化设计中表现纵深，它并不完全将处于下方的元素遮盖住，而通常是通过高斯模糊或变暗的手段让下方的元素保留一定的可视性。</p>
+<p><em>例子：在 iOS 里面随处可见的毛玻璃效果。</em></p>
+<p>###9.生成（Cloning）
+<img src="https://ww2.sinaimg.cn/large/006tKfTcgy1fean7zg6heg30m80gowkw.gif" alt="">
+当元素被生产出来时，表达元素与元素之间的连续性的关系。这种动画能够非常清晰地表达因某个操作而产生的一个或数个事件发生以及它们之间的关系。</p>
+<p><em>例子：苹果的 Messages 发送信息的效果。</em></p>
+<h3>10.视差（Parallax）</h3>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcgy1feanv65n6sg30m80go41t.gif" alt="">
+界面元素同时开始运动，但运动的效率不同，构成一种视差的效果。用户在进行滚动操作的时候通过视差效果可以在扁平化的界面里面表现空间中个元素的位置及层级关系。这种效果还非常的美观高端，能让整个页面看起来更加活泼一些。<strong>通过视差的特性，我能引导用户去关注应该应该关注的地方</strong>，运动效率高的元素通常表达的是距离用户更近，适合承载更加有使用性意义的重要信息，而运动效率较低的元素通常表达的是距离用户较远，而且或许没有承载什么重要的信息。</p>
+<p><em>例子：苹果官网各商品详情页。</em></p>
+<h3>11.多维化（Dimensionality）</h3>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgy1feaopx5cscg30m80go7ih.gif" alt="">
+将界扁平化的界面元素多维化从而表达空间中个元素的位置及层级关系。其实扁平并不符人类认知逻辑的（而符合人类认知逻辑是几乎可以说是可用性的第一原则），所以人们在扁平化的界面里面下足了功夫来在没有纵深和厚度的界面里表达纵深和厚度，这句话读起来非常拗口，但实际上就是这样的。多维化的使用比较少，因为添加纵深感有很多种手法（覆盖、蒙层、阴影，etc.），而多维化的开发成本是比较高的。</p>
+<p><em>例子：iBooks 的翻页效果和 Flipboard 的翻页效果，滴滴打车退出呼叫状态的 Appbar 动画。</em></p>
+<h3>12.镜头平移与缩放（Dolly &amp; Zoom）</h3>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgy1feapihny4jg30m80godnq.gif" alt="">
+镜头平移与缩放听起来好像是一样的东西，事实上确完全是两码事。镜头平移是拍摄的术语，被拍摄物保持静止而镜头移动或镜头保持静止而被摄物体进行远离或接近镜头的前后移动，缩放是镜头与被摄物体在位置上保持静止而被摄物自身进行缩放。镜头平移与缩放效果表明元素与空间之间的关系，也能表现出一种纵深感。</p>
+<p><em>例子：iOS的解锁动画是典型的镜头平移效果，而双击放大图片操作的那个动画是典型的缩放效果。</em></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.缓动（Easing）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.偏移量和延迟（Offset & Delay）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.父子关系（Parenting）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">4.变形（Transformation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">5.数值变化（Value Change）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">6.遮罩（Masking）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">7.覆盖（Overlay）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">8.蒙层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">9.</span> <span class="toc-text">10.视差（Parallax）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">10.</span> <span class="toc-text">11.多维化（Dimensionality）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">11.</span> <span class="toc-text">12.镜头平移与缩放（Dolly & Zoom）</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/03/12principlesofuxinmotion/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&text=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&is_video=false&description=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=不整虚的，12 条提高产品可用性的动效设计的原理&body=Check out this article: http://yoursite.com/2017/04/03/12principlesofuxinmotion/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&title=不整虚的，12 条提高产品可用性的动效设计的原理"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/03/12principlesofuxinmotion/&name=不整虚的，12 条提高产品可用性的动效设计的原理&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
