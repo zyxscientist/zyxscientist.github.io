@@ -19,7 +19,8 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNbRwgy1felzzapq8hj30w018r42w.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tKfTcgy1fem4h5cs72j31gm0xc78i.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tKfTcgy1fem4zom8jvj30pm0ai0t5.jpg">
-<meta property="og:updated_time" content="2017-04-14T09:05:21.000Z">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1feme0xca0jj30ru0pgmz4.jpg">
+<meta property="og:updated_time" content="2017-04-14T14:55:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="到底什么是DPI①基础概念">
 <meta name="twitter:description" content="我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德
@@ -109,7 +110,7 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">DPI 和 PPI 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">分辨率、像素和屏幕尺寸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">DPI 和 PPI 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">分辨率、像素和屏幕尺寸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">对设计会造成什么样的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -156,25 +157,36 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 <p><em>由于本文篇幅有点儿长，所以将会分成四部分分享给大家，大家可以点个关注，即时收到推送</em></p>
 <h3>DPI 和 PPI 是什么？</h3>
 <p>DPI 是英文 Dots（点） Per Inch 的缩写，<strong>在最早的时候，这个单位是用来描述打印机的性能的</strong>，意思就是这台打印机最多能用多少个墨点来打印一寸的内容。目前市面上常见的家用黑白打印机普遍都去到了 600 <code>*</code> 600 dpi 而家用彩色照片打印机则能去到 5760 <code>*</code> 1440 dpi。DPI 越高，每英寸内的墨点就越多，你打印出来的东西就会越清晰锐利。</p>
-<p>PPI 是英文 Pixels Per Inch 的缩写，用于描述屏幕的分辨率。我们上面提到的印刷物以无数多的墨点来构成图像，而屏幕同样也是以一定数量的发光点来构成图像。见过街上那些走红字的 LED 显示屏么？上面的那一颗颗的 LED 灯就是这块屏幕的发光点，我们使用的 MacBook 的 Retina 显示屏的原理也跟这些看起来十分粗糙的走红字显示屏是一样的，只不过 Retina 显示屏的发光点密度非常高，我们看不出来而已。<strong>对于屏幕来说 PPI 是用于描述每英寸发光点数量的，这些发光点我们更常称之为像素，一块屏幕宽高有几寸是在生产的时候就被定好的，而宽高各能容纳下多少颗像素，也是在生产的时候就被定好的，所以我们所说的 PPI 可以说是一个物理单位。</strong></p>
+<p>PPI 是英文 Pixels Per Inch 的缩写，意味每寸能容纳多少颗像素，用于描述屏幕的像素密度。我们上面提到的印刷物以无数多的墨点来构成图像，而屏幕同样也是以一定数量的发光点来构成图像。见过街上那些走红字的 LED 显示屏么？上面的那一颗颗的 LED 灯就是这块屏幕的发光点，我们使用的 MacBook 的 Retina 显示屏的原理也跟这些看起来十分粗糙的走红字显示屏是一样的，只不过 Retina 显示屏的发光点<strong>密度非常高</strong>，人眼已经看不出来颗粒感而已。<strong>对于屏幕来说 PPI 是用于描述每英寸发光点数量的，它表明了一块屏幕发光点密度的高低，这些发光点我们更常称之为像素，一块屏幕宽高有几寸是在生产的时候就被定好的，而宽高各能容纳下多少颗像素，也是在生产的时候就被定好的，所以我们所说的 PPI 可以说是一个物理单位。</strong></p>
 <p>简单举个例子吧，我们手头上的 iPhone(6~7) 宽为 2.3 英寸，高为 4.1 英寸，**根据勾股定理得出这块屏幕的尺寸（屏幕对角线距离）是 4.7 英寸。**同时，iPhone(6~7)屏幕宽（每行）有 750 个像素（发光点），高（每竖）有 1334 个像素（发光点）。</p>
 <p><img src="http://ww3.sinaimg.cn/large/006tNbRwgy1felzzapq8hj30w018r42w.jpg" alt=""></p>
 <h3>分辨率、像素和屏幕尺寸</h3>
-<p>询问别人一粒像素有多大是一个非常鸡贼的问题（小心面试遇到这样的题），虽然我们说像素是构成屏幕的发光的点，是物理的，但是像素在脱离了屏幕尺寸之后是没有大小可言的，你可以将 1920px <code>*</code> 1080px 颗像素放到一台 40 寸的小米电视机里面，也可以将同样多的像素全部塞到一台 5.5 寸的 iPhone7 Plus 手机里面去，那么对于 40 寸的电视而言，像素颗粒当然会大于 5.5 寸的手机的像素。**所以光看屏幕像素尺寸对于设计师来说是不具备多少实际意义的，**分辨率才是我们设计师要关心的问题，我们通过像素和屏幕尺寸就能计算出屏幕的分辨率。</p>
+<p>PPI 说的是像素密度，而分辨率说的是块屏幕的像素尺寸，譬如说 1334<code>*</code>750 就是 iPhone（6~7）的分辨率，说 iPhone（6~7）的分辨率是 326 是错误的表述，326 是它的像素密度，单位是 PPI。</p>
+<p>询问别人一粒像素有多大是一个非常鸡贼的问题（小心面试遇到这样的题），虽然我们说像素是构成屏幕的发光的点，是物理的，但是像素在脱离了屏幕尺寸之后是没有大小可言的，你可以将 1920px <code>*</code> 1080px 颗像素放到一台 40 寸的小米电视机里面，也可以将同样多的像素全部塞到一台 5.5 寸的 iPhone7 Plus 手机里面去，那么对于 40 寸的电视而言，每个像素颗粒当然会大于 5.5 寸的手机的像素。。**所以光看屏幕像素尺寸对于设计师来说是不具备多少实际意义的，**通过分辨率计算得出的像素密度（PPI）才是我们设计师要关心的问题，我们通过屏幕分辨率和屏幕尺寸就能计算出屏幕的像素密度的。</p>
 <p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1fem4h5cs72j31gm0xc78i.jpg" alt=""></p>
 <p>再次使用 iPhone（6~7）作为例子。我们通过勾股定理计算出了该屏幕的尺寸为 4.7 英寸，且我们又知道它是一块 750<code>*</code>1334 的屏幕，根据勾股定理我们得出在改屏幕的对角线上有约 1530 颗像素，所以我们能够算出 iPhone（6~7）的屏幕是 326 PPI，意为每寸存在 326 颗像素。</p>
 <p><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1fem4zom8jvj30pm0ai0t5.jpg" alt=""></p>
-<p>其实不论我们怎么除，计算得出来的分辨率都会是这个数，宽存在像素除以宽物理长度，高存在像素除以高物理长度，得数都接近于 326。</p>
+<p>其实不论我们怎么除，计算得出来的像素密度（PPI）都会是这个数，宽存在像素除以宽物理长度，高存在像素除以高物理长度，得数都接近于 326。</p>
+<h3>对设计会造成什么样的影响</h3>
+<p>一块 326<code>*</code>326px 的正方形色块在一台 iPhone 7 上面展现出来的物理尺寸将会会是 1<code>*</code>1 英寸。这是因为该屏幕每英寸能容纳 326 颗像素，所以 326px 凑在一起刚好就是 1 英寸。假设我们能将 iPhone 7 手机屏幕 PPI 调低 50% 变为 163，那么这个色块的物理尺寸就会变成 2<code>*</code>2 英寸，同样多的像素，看起来却大了一倍。咦！这是为啥？</p>
+<p>因为我们的色块是 326<code>*</code>326px 大小的，而这台 163PPI 的假 iPhone 7 每英寸上面只有 163 颗像素，为了要展示 326<code>*</code>326px 的色块，它就要多用 1 英寸的屏幕，所以这个色块在屏幕上面看起来就“长大了”一倍。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1feme0xca0jj30ru0pgmz4.jpg" alt=""></p>
 <h3>太长了不想看</h3>
 <ol>
 <li>
-<p>像素本身没有尺寸，你可以将 1920px <code>*</code> 1080px 颗像素放到一台 40 寸的小米电视机里面，也可以将同样多的像素全部塞到一台 5 寸的 Nexus 5 手机里面去。</p>
+<p>像素本身没有尺寸，你可以将</p>
+</li>
+<li>
+<p>1920px <code>*</code> 1080px 颗像素放到一台 40 寸的小米电视机里面，也可以将同样多的像素全部塞到一台 5.5 寸的 iPhone7 Plus 手机里面去。</p>
 </li>
 <li>
 <p>只有跟屏幕尺寸一起的时候，谈论像素才有意义，因为我们能够算出该屏幕的 PPI。</p>
 </li>
 <li>
-<p>DPI 跟 PPI 虽然概念相近，但是我奉劝你还是不要拿着他们俩混用，虽然可能好多人告诉你这样没啥关系。<strong>下次分享跟大家讲讲 dp、pt 跟 sp。</strong></p>
+<p>DPI 跟 PPI 虽然概念相近，但是我奉劝你还是不要拿着他们俩混用，虽然可能好多人告诉你这样没啥关系。</p>
+</li>
+<li>
+<p>在设计过程中，我们并不见得真的要去计算各种东西的实际尺寸，但是对于原理的把握能让你心里有个低，或许就是我们常说的“意识”。别以为每个人的屏幕上显示的都会跟你屏幕上显示的是一样的。</p>
 </li>
 </ol>
 
@@ -203,7 +215,7 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">DPI 和 PPI 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">分辨率、像素和屏幕尺寸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">DPI 和 PPI 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">分辨率、像素和屏幕尺寸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">对设计会造成什么样的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
