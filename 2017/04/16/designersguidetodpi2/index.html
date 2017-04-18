@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德
+
+dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正理解这些单位的设计师恐怕并不太多，毕竟真的有点儿复杂，别说学美术出身的设计师了，很多程序员都搞不太懂。但是作为一名 UI/UX/PD/etc. 设计师，因为不了解这些知识而闹笑话的事情几乎每天都在发生，不知道这些甚至连自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是 dp、pt、sp？为什么会有倍率？">
+<meta property="og:url" content="http://yoursite.com/2017/04/16/designersguidetodpi2/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德
+
+dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正理解这些单位的设计师恐怕并不太多，毕竟真的有点儿复杂，别说学美术出身的设计师了，很多程序员都搞不太懂。但是作为一名 UI/UX/PD/etc. 设计师，因为不了解这些知识而闹笑话的事情几乎每天都在发生，不知道这些甚至连自">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tKfTcgy1feqmzbsrbzj31gm4820wz.jpg">
+<meta property="og:updated_time" content="2017-04-18T02:45:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是 dp、pt、sp？为什么会有倍率？">
+<meta name="twitter:description" content="我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德
+
+dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正理解这些单位的设计师恐怕并不太多，毕竟真的有点儿复杂，别说学美术出身的设计师了，很多程序员都搞不太懂。但是作为一名 UI/UX/PD/etc. 设计师，因为不了解这些知识而闹笑话的事情几乎每天都在发生，不知道这些甚至连自">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>什么是 dp、pt、sp？为什么会有倍率？</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/04/12/designersguidetodpi/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/16/designersguidetodpi2/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&text=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&is_video=false&description=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=什么是 dp、pt、sp？为什么会有倍率？&body=Check out this article: http://yoursite.com/2017/04/16/designersguidetodpi2/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&name=什么是 dp、pt、sp？为什么会有倍率？&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        什么是 dp、pt、sp？为什么会有倍率？
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-16T08:34:04.000Z" itemprop="datePublished">2017-04-16</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德</p>
+</blockquote>
+<p>dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正理解这些单位的设计师恐怕并不太多，毕竟真的有点儿复杂，别说学美术出身的设计师了，很多程序员都搞不太懂。但是作为一名 UI/UX/PD/etc. 设计师，因为不了解这些知识而闹笑话的事情几乎每天都在发生，<strong>不知道这些甚至连自己的做设计的电脑屏幕都不了解你觉得真的好吗？</strong></p>
+<p>本次分享将在尽量不涉及数学，尽量用最简单的语言，尽量使用最贴近生活的例子来为在座各位患者朋友将心头这些个疑虑全部消除。</p>
+<p><em>由于本文篇幅有点儿长，所以将会分成四部分分享给大家，大家可以点个关注，即时收到推送</em></p>
+<h3>什么是 dp、pt、sp？</h3>
+<p>DP 或者说 DiP 是 Device independent Pixel 的缩写，而 PT 是 Point 的缩写，<strong>DP 用于安卓系统开发，而 PT 用于 iOS 系统开发</strong>。但从根本来讲它们都是一个意思。</p>
+<p>上一篇文章我们仔细地对屏幕最基础的几个属性——分辨率、PPI、和物理尺寸，似乎我们只要知道了这几个东西那我们的设计就怎么样也不会错。但是聪明的童鞋可能发现了一些不对，我们不可能对每一块屏幕都进行了解，然后专门针对这块屏幕再进行一次设计吧？世界上那么多屏幕，那一个界面我要画多少个稿啊！！</p>
+<p>没错，假如真是这样的话，那么面对不同的屏幕，不仅要从新设计，连程序都可能要重新写一回，这显然是不可能的事情。不过这个问题不仅我们想到了，那些计算机、智能手机的生产商也想到了，<strong>为了让广大程序员和设计师朋友能够更加容易地解决适配问题，让更多的开发者来来为他们开发软件</strong>，他们使用了一种很聪明的方法，同时这也是为什么我们又多了 DP、PT、SP 等那么多“杂七杂八”的单位的原因。</p>
+<p>解析这几个单位的必要，可能要从开发的角度来讲会比较清晰一点。</p>
+<p>程序员在搭建界面的时候也会像我们设计师画图一样，首先会有一个画布，一个画布代表针对设备的一屏，程序员将会在这个画布内对界面进行搭建。针对 iPhone（6~7）而言，这个画布的最佳大小是375<code>*</code>667pt。</p>
+<p>等等，不是说 iPhone（6~7）的分辨率是 750<code>*</code>1334px 吗？这个奇怪东西又是什么？这是 iPhone（6~7）的逻辑点分辨率（或称虚拟点分辨率），这个就是人们为了解决屏幕尺寸繁多而设计出来的一套机制。iOS 系统就是根据这个 375<code>*</code>667pt 的画布进行一个二倍放大渲染来填满 750<code>*</code>1334px 的屏幕的。这也是为什么那么多设计师推荐使用一倍图进行设计的原因，这样是最接近开发环境的，开发不需要换算就能直接照着你的设计稿设置各个元素的尺寸和位置。</p>
+<p>比如说，你在 Sketch 里面使用一倍稿（375<code>*</code>667px 的画布）画了一颗 44<code>*</code>44 px 的按钮，对于开发来说，这颗按钮在画布上并不是 44px 大小，而是 44 pt。**的确，我们在输出按钮这张图的时候会输出成 88px（@2），或132px（@3）但是我们输出的只是一张 .png 的图片，是这颗按钮的“表皮”而已。**而对于开发来说，这颗按钮是一个控件，是界面的一个零部件，这个控件的大小就不能定义成几多几多 px 了，**px 是死的， pt 是活的，面对iPhone 7，44pt 将会被渲染成 88px 大小的一枚按钮，上面覆盖上了你输出的 @2.png 表皮，而面对 iPhone 7 Plus，它将会被渲染成 132px 的一枚按钮，上面覆盖上了你输出的 @3.png 表皮。**系统是以这样的机制，来尽量保证能够使用一个布局文件来对不同分辨率、不同 PPI 的屏幕进行正确的布局。</p>
+<p>DP 或 DiP 也差不多是这个道理，这个单位用于安卓开发。</p>
+<p>SP 是 Scale-independent pixels 的缩写，大意是可放大像素的意思，这个单位多用在安卓设备的字体大小上面。它跟 DP、 PT 的概念差不多，能够面对不同的屏幕尺寸渲染出大小适合文字。</p>
+<h3>罗里吧嗦那么多，敢不敢来张图？</h3>
+<p><strong>此处只以 iPhone（6~7）来举例，其实其他设备也是这个原理，包括电脑、手机、平板电脑、甚至是智能手表。</strong></p>
+<p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqmzbsrbzj31gm4820wz.jpg" alt=""></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/16/designersguidetodpi2/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&text=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&is_video=false&description=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=什么是 dp、pt、sp？为什么会有倍率？&body=Check out this article: http://yoursite.com/2017/04/16/designersguidetodpi2/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&title=什么是 dp、pt、sp？为什么会有倍率？"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/16/designersguidetodpi2/&name=什么是 dp、pt、sp？为什么会有倍率？&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
