@@ -18,7 +18,7 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正理解这些单位的设计师恐怕并不太多，毕竟真的有点儿复杂，别说学美术出身的设计师了，很多程序员都搞不太懂。但是作为一名 UI/UX/PD/etc. 设计师，因为不了解这些知识而闹笑话的事情几乎每天都在发生，不知道这些甚至连自">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1feqnzuhvqbj30zk0m8gsu.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tKfTcgy1feqpt3fnr1j31gm4820wz.jpg">
-<meta property="og:updated_time" content="2017-04-18T04:23:05.000Z">
+<meta property="og:updated_time" content="2017-04-18T12:56:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是 dp、pt、sp？为什么会有倍率？">
 <meta name="twitter:description" content="我们自称 UI/UX/PD/etc. 设计师，但是我们对自己手头上设备的屏幕去一无所知 -- 沃兹基·硕德
@@ -108,7 +108,7 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -156,17 +156,34 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
 <h3>什么是 dp、pt、sp？</h3>
 <p>DP 或者说 DiP 是 Device independent Pixel 的缩写，而 PT 是 Point 的缩写，<strong>DP 用于安卓系统开发，而 PT 用于 iOS 系统开发</strong>。但从根本来讲它们都是一个意思。</p>
 <p>上一篇文章我们仔细地对屏幕最基础的几个属性——分辨率、PPI、和物理尺寸，似乎我们只要知道了这几个东西那我们的设计就怎么样也不会错。但是聪明的童鞋可能发现了一些不对，我们不可能对每一块屏幕都进行了解，然后专门针对这块屏幕再进行一次设计吧？世界上那么多屏幕，那一个界面我要画多少个稿啊！！</p>
-<p>没错，假如真是这样的话，那么面对不同的屏幕，不仅要从新设计，连程序都可能要重新写一回，这显然是不可能的事情。不过这个问题不仅我们想到了，那些计算机、智能手机的生产商也想到了，<strong>为了让广大程序员和设计师朋友能够更加容易地解决适配问题，让更多的开发者来来为他们开发软件</strong>，他们使用了一种很聪明的方法，同时这也是为什么我们又多了 DP、PT、SP 等那么多“杂七杂八”的单位的原因。</p>
+<p>没错，假如真是这样的话，那么面对不同的屏幕，不仅要从新设计，连程序都可能要重新写一回，这显然是不可能的事情。不过这个问题不仅我们想到了，那些计算机、智能手机的生产商也想到了，<strong>为了让广大程序员和设计师朋友能够更加容易地解决适配问题，让更多的开发者来来为他们开发软件，他们使用了一种很聪明的方法</strong>，同时这也是为什么我们又多了 DP、PT、SP 等那么多“杂七杂八”的单位的原因。</p>
 <p>解析这几个单位的必要，可能要从开发的角度来讲会比较清晰一点。</p>
-<p>程序员在搭建界面的时候也会像我们设计师画图一样，首先会有一个画布，一个画布代表针对设备的一屏，程序员将会在这个画布内对界面进行搭建。针对 iPhone（6~7）而言，这个画布的最佳大小是375<code>*</code>667pt。
-<img src="http://ww4.sinaimg.cn/large/006tKfTcgy1feqnzuhvqbj30zk0m8gsu.jpg" alt="">
-等等，不是说 iPhone（6~7）的分辨率是 750<code>*</code>1334px 吗？这个奇怪东西又是什么？这是 iPhone（6~7）的逻辑点分辨率（或称虚拟点分辨率），这个就是人们为了解决屏幕尺寸繁多而设计出来的一套机制。iOS 系统就是根据这个 375<code>*</code>667pt 的画布进行一个二倍放大渲染来填满 750<code>*</code>1334px 的屏幕的。这也是为什么那么多设计师推荐使用一倍图进行设计的原因，这样是最接近开发环境的，开发不需要换算就能直接照着你的设计稿设置各个元素的尺寸和位置。</p>
-<p>比如说，你在 Sketch 里面使用一倍稿（375<code>*</code>667px 的画布）画了一颗 44<code>*</code>44 px 的按钮，对于开发来说，这颗按钮在画布上并不是 44px 大小，而是 44 pt。**的确，我们在输出按钮这张图的时候会输出成 88px（@2），或132px（@3）但是我们输出的只是一张 .png 的图片，是这颗按钮的“表皮”而已。**而对于开发来说，这颗按钮是一个控件，是界面的一个零部件，这个控件的大小就不能定义成几多几多 px 了，**px 是死的， pt 是活的，面对iPhone 7，44pt 将会被渲染成 88px 大小的一枚按钮，上面覆盖上了你输出的 @2.png 表皮，而面对 iPhone 7 Plus，它将会被渲染成 132px 的一枚按钮，上面覆盖上了你输出的 @3.png 表皮。**系统是以这样的机制，来尽量保证能够使用一个布局文件来对不同分辨率、不同 PPI 的屏幕进行正确的布局。</p>
-<p>DP 或 DiP 也差不多是这个道理，这个单位用于安卓开发。</p>
+<p>程序员在搭建界面的时候也会像我们设计师画图一样，首先会有一个画布，一个画布代表针对设备的一屏，程序员将会在这个画布内对界面进行搭建。针对 iPhone（6~7）而言，这个画布的最佳大小是375<code>*</code>667pt。下面这张图就是程序员的画布，长这样的，有点像 Sketch，注意红框里面的数字。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1feqnzuhvqbj30zk0m8gsu.jpg" alt=""></p>
+<p>等等，不是说 iPhone（6~7）的分辨率是 750<code>*</code>1334px 吗？这个奇怪东西又是什么？这是 iPhone（6~7）的逻辑点分辨率（或称虚拟点分辨率），这个就是人们为了解决屏幕尺寸繁多而设计出来的一套机制。iOS 系统就是根据这个 375<code>*</code>667pt 的画布进行<strong>一个二倍放大渲染</strong>来填满 750<code>*</code>1334px 的屏幕的。这也是为什么那么多设计师推荐使用一倍图进行设计的原因，这样是最接近开发环境的，开发不需要换算就能直接照着你的设计稿设置各个元素的尺寸和位置。</p>
+<p>比如说，你在 Sketch 里面使用一倍稿（375<code>*</code>667px 的画布）画了一颗 44<code>*</code>44 px 的按钮，对于开发来说，这颗按钮在画布上并不是 44px 大小，而是 44 pt。**的确，我们在输出按钮这张图的时候会输出成 88px（@2），或132px（@3）但是我们输出的只是一张 .png 的图片，是这颗按钮的“表皮”而已。**而对于开发来说，这颗按钮是一个控件，是界面的一个零部件，这个控件的大小就不能定义成几多几多 px 了，**px 是死的， pt 是活的，面对iPhone 7，44pt 将会被渲染成 88px 大小的一枚按钮，上面覆盖上了你输出的 @2.png 表皮，而面对 iPhone 7 Plus，它将会被渲染成 132px 大小的一枚按钮，上面覆盖上了你输出的 @3.png 表皮。**系统是以这样的机制，来保证能够使用一个布局文件来对不同分辨率、不同 PPI 的屏幕进行尽量正确的布局。</p>
+<p>DP 或 DiP 也差不多是这个道理，只不过这个单位用于安卓开发。</p>
 <p>SP 是 Scale-independent pixels 的缩写，大意是可放大像素的意思，这个单位多用在安卓设备的字体大小上面。它跟 DP、 PT 的概念差不多，能够面对不同的屏幕尺寸渲染出大小适合文字。</p>
 <h3>罗里吧嗦那么多，敢不敢来张图？</h3>
 <p><strong>此处只以 iPhone（6~7）来举例，其实其他设备也是这个原理，包括电脑、手机、平板电脑、甚至是智能手表。</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/006tKfTcgy1feqpt3fnr1j31gm4820wz.jpg" alt=""></p>
+<h3>太长了不想看</h3>
+<ol>
+<li>不想看看上面的图吧 233333。</li>
+</ol>
+<p>参考链接：<a href="http://sebastien-gabriel.com/designers-guide-to-dpi/" target="_blank" rel="external">Designer's guide to DPI</a></p>
+<p>欢迎关注</p>
+<ul>
+<li>
+<p>知乎专栏 「极光日报」，每天为 Makers 导读三篇优质英文文章；</p>
+</li>
+<li>
+<p>个人专栏： <a href="https://zhuanlan.zhihu.com/designcoder" target="_blank" rel="external">「DesignCoder」</a> 设计师不能只懂设计；</p>
+</li>
+<li>
+<p>我的追波：<a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">Zhuyuxuan</a></p>
+</li>
+</ul>
 
   </div>
 </article>
@@ -193,7 +210,7 @@ dpi、ppi、dp、pt、sp 等等这些个单位我们天天接触，但是真正�
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">什么是 dp、pt、sp？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">罗里吧嗦那么多，敢不敢来张图？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">太长了不想看</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
