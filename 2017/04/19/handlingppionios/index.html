@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="前面两篇说了好些基础的概念，这篇与下篇**（Android 的切图与标注）**将会结合之前我们讲到的数个概念来谈谈图为什么要这样切，标注为什么要这样做。
+跑 iOS 的设备主要两种，iPhone 和 iPad。
+iPhone 方面我们从非 retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plus。
+
+
+苹果在推出 iPhone 4/S 的时候首次为自己的智能手机产品配备 re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 的切图与标注">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/handlingppionios/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="前面两篇说了好些基础的概念，这篇与下篇**（Android 的切图与标注）**将会结合之前我们讲到的数个概念来谈谈图为什么要这样切，标注为什么要这样做。
+跑 iOS 的设备主要两种，iPhone 和 iPad。
+iPhone 方面我们从非 retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plus。
+
+
+苹果在推出 iPhone 4/S 的时候首次为自己的智能手机产品配备 re">
+<meta property="og:updated_time" content="2017-04-20T05:34:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 的切图与标注">
+<meta name="twitter:description" content="前面两篇说了好些基础的概念，这篇与下篇**（Android 的切图与标注）**将会结合之前我们讲到的数个概念来谈谈图为什么要这样切，标注为什么要这样做。
+跑 iOS 的设备主要两种，iPhone 和 iPad。
+iPhone 方面我们从非 retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plus。
+
+
+苹果在推出 iPhone 4/S 的时候首次为自己的智能手机产品配备 re">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>iOS 的切图与标注</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'b5cc4111f2a09939']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+  </script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/04/16/designersguidetodpi2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/19/handlingppionios/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/19/handlingppionios/&text=iOS 的切图与标注"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/19/handlingppionios/&is_video=false&description=iOS 的切图与标注"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=iOS 的切图与标注&body=Check out this article: http://yoursite.com/2017/04/19/handlingppionios/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/19/handlingppionios/&name=iOS 的切图与标注&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        iOS 的切图与标注
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-19T05:13:05.000Z" itemprop="datePublished">2017-04-19</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>前面两篇说了好些基础的概念，这篇与下篇**（Android 的切图与标注）**将会结合之前我们讲到的数个概念来谈谈图为什么要这样切，标注为什么要这样做。</p>
+<p>跑 iOS 的设备主要两种，iPhone 和 iPad。</p>
+<p>iPhone 方面我们从<strong>非</strong> retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plus。</p>
+<ul>
+<li>
+<p>苹果在推出 iPhone 4/S 的时候首次为自己的智能手机产品配备 retina 显示屏。需要注意的是它的屏幕尺寸与 iPhone 3G/S 一样，都是 3.5 寸，但分辨率却整整提升了四倍，也就是说同样大的屏幕塞进去了四倍的像素，PPI 是前者的两倍，达到了 326。</p>
+</li>
+<li>
+<p>iPhone 5/S/C 的屏幕达到了 4 英寸。值得注意的是，iPhone 5/S/C 屏幕横向还是与 iPhone 4/S 一样保持有 640 颗像素，横向物理尺寸也没变，同样都是 2.0 英寸，变的是纵向的尺寸。屏幕边长了一点点，PPI 维持不变。</p>
+</li>
+<li>
+<p>iPhone 6/7（Plus）屏幕分别为 4.7 英寸和 5.5 英寸。前所未有的尺寸，前所未有的分大小屏，同时也是前所未有的分辨率。非 Plus 机型维持了 326 PPI，而 Plus 则去到了 401 PPI。更大的屏幕，更高的分辨率，iOS的设计师也是从这个时候开始需要输出 @3的切图了。</p>
+</li>
+</ul>
+<p>图</p>
+<p>关于 Plus 机型，不得不仔细说说它的一个小特点。</p>
+<p>上篇文章（没有看的小伙伴建议还是先看了会比较好）说到在 iPhone 6/7 上，系统会根据 350<code>*</code>667pt 的逻辑画布进行一个二倍渲染，变成 750<code>*</code>1334 之后再将界面投射到屏幕上面去。Plus 机型也差不多，它的逻辑画布的最佳大小是 414<code>*</code>736pt 然后系统进行了一次三倍的渲染变为 1242<code>*</code>2208px。但 Plus 机型的分辨率是 1080<code>*</code>1920px 的，逻辑画布渲染出来的大小怎么跟这个不一样，那还怎么准确投射，充满整个屏幕啊！</p>
+<p>在 Plus 机型上，渲染出来的 1242<code>*</code>2208px 会先降低采样变成 1080<code>*</code>1920px 然后再投射到屏幕上面去。我们还是来看图吧。</p>
+<p>图</p>
+<p>1080<code>*</code>1920px 相较于 1242<code>*</code>2208px 小了 15%，那么很多元素的尺寸都会出现小数，比如说 131.3244px 这样的东西。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/19/handlingppionios/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/19/handlingppionios/&text=iOS 的切图与标注"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/19/handlingppionios/&is_video=false&description=iOS 的切图与标注"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=iOS 的切图与标注&body=Check out this article: http://yoursite.com/2017/04/19/handlingppionios/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/19/handlingppionios/&title=iOS 的切图与标注"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/19/handlingppionios/&name=iOS 的切图与标注&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
