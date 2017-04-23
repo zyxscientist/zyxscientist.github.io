@@ -24,7 +24,7 @@ iPhone 方面我们从非 retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plu">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tKfTcgy1fevxc73nf0j31e0196aeo.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1fevxch8d36j31e017vn1q.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1fex21drkx1j31e013fane.jpg">
-<meta property="og:updated_time" content="2017-04-23T16:00:04.000Z">
+<meta property="og:updated_time" content="2017-04-23T16:10:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 的切图与标注">
 <meta name="twitter:description" content="前面两篇说了好些基础的概念，这篇与下篇**（Android 的切图与标注）**将会结合之前我们讲到的数个概念来谈谈图为什么要这样切，标注为什么要这样做。
@@ -187,10 +187,10 @@ iPhone 方面我们从非 retina 显示屏的 iPhone3G/S 讲到 iPhone 7/Plu">
 <p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1fevx8w6ptlj31fu0x8wvh.jpg" alt="">
 <img src="http://ww4.sinaimg.cn/large/006tKfTcgy1fevx9j110gj31e017vtex.jpg" alt=""></p>
 <p><strong>关于 Plus 机型，不得不仔细说说它的一个小特点。</strong></p>
-<p><a href="https://zhuanlan.zhihu.com/p/26481853?group_id=838816902980710400" target="_blank" rel="external">上篇文章</a>（没有看的小伙伴建议还是先看了会比较好）说到在 iPhone 6/7 上，系统会根据 350<code>*</code>667pt 的逻辑画布进行一个二倍渲染，变成 750<code>*</code>1334 之后再将界面投射到屏幕上面去。Plus 机型也差不多，它的逻辑画布的最佳大小是 414<code>*</code>736pt 然后系统进行了一次三倍的渲染变为 1242<code>*</code>2208px。但 Plus 机型的分辨率是 1080<code>*</code>1920px 的，逻辑画布渲染出来的大小怎么跟这个不一样，那还怎么准确投射，充满整个屏幕啊！</p>
+<p><a href="https://zhuanlan.zhihu.com/p/26481853?group_id=838816902980710400" target="_blank" rel="external">上篇文章</a>（没有看的小伙伴建议还是先看了会比较好）说到在 iPhone 6/7 上，系统会根据 350<code>*</code>667pt 的逻辑画布进行一个二倍渲染，变成 750<code>*</code>1334 之后再将界面投射到屏幕上面去。Plus 机型也差不多，它的逻辑画布的最佳大小是 414<code>*</code>736pt（由于与非 Plus 机型的逻辑分辨率并不太悬殊，所以平时我们只是用一倍画稿进行设计也没有产生太大的问题，误差将由程序员使用一些技术上的布局手段减小） 然后系统进行了一次三倍的渲染变为 1242<code>*</code>2208px。但 Plus 机型的分辨率是 1080<code>*</code>1920px 的，逻辑画布渲染出来的大小怎么跟这个不一样，那还怎么准确投射，充满整个屏幕啊！</p>
 <p>在 Plus 机型上，渲染出来的 1242<code>*</code>2208px 会先<strong>降低采样</strong>变成 1080<code>*</code>1920px 然后再投射到屏幕上面去。我们还是来看图吧。</p>
 <p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1fevxagwczgj31e017vdk3.jpg" alt=""></p>
-<p>1080<code>*</code>1920px 相较于 1242<code>*</code>2208px 小了 15%，那么很多尺寸都会出现小数，比如说 131.3244px 这样恶心数字，出现小数的话图片的边缘就会出现模糊的状况，而 Plus 机型上几乎所有图片都不是整数的，但得益于高分辨率的 retina 显示屏，我们的肉眼可能看不出来端倪（凑近一点看的话有可能能够看得出来大家不妨试试）。绝大部分情况下 Plus 的降低采样机制不会对我们的设计出现什么太过巨大的影响，主要输出 @3x 图即可，<strong>不过要说的是，越是细小的元素影响就会越大。</strong></p>
+<p>1080<code>*</code>1920px 相较于 1242<code>*</code>2208px 大约缩小了 15%，那么很多尺寸都会出现小数，比如说 131.3244px 这样恶心数字，出现小数的话图片的边缘就会出现模糊的状况，而 Plus 机型上几乎所有图片都不是整数的，但得益于高分辨率的 retina 显示屏，我们的肉眼可能看不出来端倪（凑近一点看的话有可能能够看得出来大家不妨试试）。绝大部分情况下 Plus 的降低采样机制不会对我们的设计造成什么太过巨大的影响，记得输出 @3X 图即可，<strong>不过要说的是，越是细小的元素影响就会越大。</strong></p>
 <h3>iPads</h3>
 <p>iPad 方面我们从<strong>非</strong> retina 显示屏的第一代 iPad 到想要代替电脑的 12.9寸的 iPad Pro 再到 iPad mini 1/2/3/4。</p>
 <ul>
