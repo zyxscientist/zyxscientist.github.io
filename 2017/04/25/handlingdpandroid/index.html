@@ -29,7 +29,7 @@ MDPI, HDPI, XHDPI, XXHDPI 以及 XXXHDPI
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1ff00kjtkv6j31e00nzdz4.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tKfTcgy1ff0d9wo19aj305603udft.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1ff0devc18bj31e01e0jxy.jpg">
-<meta property="og:updated_time" content="2017-04-26T13:07:56.000Z">
+<meta property="og:updated_time" content="2017-04-26T13:22:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四篇——Android 的切图与标注">
 <meta name="twitter:description" content="简评：长篇设计师修真玄幻小说最终章👏👏👏
@@ -198,7 +198,7 @@ MDPI, HDPI, XHDPI, XXHDPI 以及 XXXHDPI
 <p>以下这张长图是 Android 工程文件管理图片资源的方式，我们可以看到里面有从 drawable-hdpi 到 drawable-xxxhdpi 数个文件夹，你没猜错，这些文件夹里面就放着设计师们精心设计出来的各种 .png 切图。</p>
 <p><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1ff0d9wo19aj305603udft.jpg" alt=""></p>
 <p>Android 系统会自动根据屏幕的属性来选则使用哪个文件夹里面的那套切图。譬如说在新出的盖乐世 S8 上面运行的话，那么系统就会自动选择使用 drawable-xxxhdpi 文件夹里面的图，新出的小米 6 的话，就会自动选用 drawable-xxhdpi 文件夹里面的图。</p>
-<p>并且，我们输出的图片的<strong>名字全部都要是一样的</strong>，安装不同的倍率进行导出，并且不能带有后缀或其他标记，同<strong>个图切出来不同倍率五张资源，分别被放入了相应的文件夹里面</strong>。使用神奇 Sketch Measure 进行批量导出，程序员会跪着感谢你的。</p>
+<p>并且，我们输出的图片的<strong>名字全部都要是一样的</strong>，安装不同的倍率进行导出，并且不能带有后缀或其他标记，同<strong>个图切出来不同倍率五张资源，分别被放入了相应的文件夹里面</strong>。使用神奇 <a href="https://github.com/utom/sketch-measure" target="_blank" rel="external">Sketch Measure</a> 进行批量导出，程序员会跪着感谢你的。</p>
 <p>看起来可能会是这样的：</p>
 <p><em>···
 drawable-mdpi/[文件名].png
@@ -208,13 +208,13 @@ drawable-xxxhdpi/[文件名].png
 ···</em></p>
 <p>以下拿运行于 Android 平板 Nexus9 上的 Chrome 浏览器作为例子。Chrome 的安装包里面带有了这五种倍率的切图，然而运行在 Nexus9 这台平板电脑之上的时候，它选用了 xhdpi 这一档分辨率的切图来对自己进行适配。</p>
 <p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1ff0devc18bj31e01e0jxy.jpg" alt=""></p>
-<p>这里有个非常重要的点大家一定要注意一下。1.5 倍倍率切出来的图片必然带有小数，如 33pt <code>*</code> 1.5 = 49.5px ，如此之大的小数会让图片的边缘非常模糊，简直不能忍。所以遇到这两个倍率，我们要手动将小数去掉，譬如就将尺寸改变为 50px，为了你的身体健康，请千万别把 49.5<code>*</code>49.5px 的图片输出出来交给程序员。</p>
+<p>这里有个非常重要的点大家一定要注意一下。1.5 倍倍率切出来的图片必然带有小数，如 33pt <code>*</code> 1.5 = 49.5px ，如此之大的小数会让图片的边缘非常模糊，简直不能忍。所以遇到这两个倍率，我们要手动将小数去掉，譬如就将尺寸改变为 50px，不过刚刚提到的神奇能够自动地进行这一项工作，为了你的身体健康，请千万别把 49.5<code>*</code>49.5px 的图片输出出来交给程序员。</p>
 <h3>太长了不想看</h3>
 <ul>
 <li>说是说有七种分辨率的图要切，但是就目前市面上的设备来讲你只要关注 mdpi、hdpi、xhdpi、xxhdpi、 xxxhdpi 这五种已经够了。如针对可穿戴设备的话，那可能会用到 tvdpi。</li>
 <li>360<code>*</code>640px 作为一倍稿进行设计。</li>
 <li>做标注时使用 dp 作为单位（iOS 使用的是 pt，但实际上差不多一个意思）</li>
-<li>如果尺寸出现小数，那么请手动将小数去掉。使用 Sketch Measure 进行导出的话就不用手动去撸，插件会代劳。</li>
+<li>如果尺寸出现小数，那么请手动将小数去掉。使用 <a href="https://github.com/utom/sketch-measure" target="_blank" rel="external">Sketch Measure</a> 进行导出的话就不用手动去撸，插件会代劳。</li>
 <li>输出 .png 格式的图片资源。</li>
 <li>记住命名规则，同个图片资源的各个倍率的文件名都是一样。</li>
 </ul>
