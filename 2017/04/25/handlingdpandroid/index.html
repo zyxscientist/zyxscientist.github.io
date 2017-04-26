@@ -29,7 +29,7 @@ MDPI, HDPI, XHDPI, XXHDPI 以及 XXXHDPI
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1ff00kjtkv6j31e00nzdz4.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tKfTcgy1ff0d9wo19aj305603udft.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tKfTcgy1ff0devc18bj31e01e0jxy.jpg">
-<meta property="og:updated_time" content="2017-04-26T13:22:02.000Z">
+<meta property="og:updated_time" content="2017-04-26T13:25:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四篇——Android 的切图与标注">
 <meta name="twitter:description" content="简评：长篇设计师修真玄幻小说最终章👏👏👏
@@ -208,7 +208,7 @@ drawable-xxxhdpi/[文件名].png
 ···</em></p>
 <p>以下拿运行于 Android 平板 Nexus9 上的 Chrome 浏览器作为例子。Chrome 的安装包里面带有了这五种倍率的切图，然而运行在 Nexus9 这台平板电脑之上的时候，它选用了 xhdpi 这一档分辨率的切图来对自己进行适配。</p>
 <p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1ff0devc18bj31e01e0jxy.jpg" alt=""></p>
-<p>这里有个非常重要的点大家一定要注意一下。1.5 倍倍率切出来的图片必然带有小数，如 33pt <code>*</code> 1.5 = 49.5px ，如此之大的小数会让图片的边缘非常模糊，简直不能忍。所以遇到这两个倍率，我们要手动将小数去掉，譬如就将尺寸改变为 50px，不过刚刚提到的神奇能够自动地进行这一项工作，为了你的身体健康，请千万别把 49.5<code>*</code>49.5px 的图片输出出来交给程序员。</p>
+<p>这里有个非常重要的点大家一定要注意一下。1.5 倍倍率切出来的图片必然带有小数，如 33pt <code>*</code> 1.5 = 49.5px ，如此之大的小数会让图片的边缘非常模糊，简直不能忍。所以遇到这两个倍率，我们要手动将小数去掉，譬如就将尺寸改变为 50px，不过刚刚提到的神奇能够自动地进行这一项工作。为了你的身体健康，请千万别把 49.5<code>*</code>49.5px 的图片输出出来交给程序员。</p>
 <h3>太长了不想看</h3>
 <ul>
 <li>说是说有七种分辨率的图要切，但是就目前市面上的设备来讲你只要关注 mdpi、hdpi、xhdpi、xxhdpi、 xxxhdpi 这五种已经够了。如针对可穿戴设备的话，那可能会用到 tvdpi。</li>
