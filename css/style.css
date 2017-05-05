@@ -442,7 +442,7 @@ body {
   color: #c9cacc;
   background-color: #1d1f21;
   font-size: 14px;
-  font-family: "Pingfang SC", "Menlo", "Meslo LG", monospace;
+  font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
   line-height: 1.725;
   text-rendering: geometricPrecision;
@@ -1274,7 +1274,7 @@ article .content .caption {
   font-style: italic;
 }
 pre {
-  font-family: "Pingfang SC", "Menlo", "Meslo LG", monospace;
+  font-family: "Menlo", "Meslo LG", monospace;
   font-size: 13px;
   padding: 10px 15px;
   padding-bottom: 0;
@@ -1296,7 +1296,7 @@ pre code {
   padding: 0;
 }
 .highlight {
-  font-family: "Pingfang SC", "Menlo", "Meslo LG", monospace;
+  font-family: "Menlo", "Meslo LG", monospace;
   background: #212326;
   -webkit-border-radius: 4px;
   border-radius: 4px;
