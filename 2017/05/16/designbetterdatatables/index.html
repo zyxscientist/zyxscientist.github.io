@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="简评：前阵子设计了一款后端产品，接触到了非常多前端产品接触不到的需求，天天与后端产品的 PM 与用户打交道，学到了非常多的东西。数据的价值堪比黄金石油，数据可视化设计这项技能对于设计师来说变得日益重要。这篇文章不讲那些花里胡哨阴影与渐变齐飞的图形数据表，我们从最基本最高效，但也是最不起眼的形式——表单（Table），来谈论怎么设计更好的数据表。
+
+在没经过设计与组织之前，人们是无法观察或者利用庞大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计更好数据表">
+<meta property="og:url" content="http://yoursite.com/2017/05/16/designbetterdatatables/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="简评：前阵子设计了一款后端产品，接触到了非常多前端产品接触不到的需求，天天与后端产品的 PM 与用户打交道，学到了非常多的东西。数据的价值堪比黄金石油，数据可视化设计这项技能对于设计师来说变得日益重要。这篇文章不讲那些花里胡哨阴影与渐变齐飞的图形数据表，我们从最基本最高效，但也是最不起眼的形式——表单（Table），来谈论怎么设计更好的数据表。
+
+在没经过设计与组织之前，人们是无法观察或者利用庞大">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gy1ffn46alq0jg30m80gob29.gif">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gy1ffn45rva57g30m80goqha.gif">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gy1ffn4nbfu1ng30m80go16w.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffn4wyiywtg30m80goqt8.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gy1ffnglql7fbg30m80go4qp.gif">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79gy1ffngs9ja3jj30m80goq42.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79gy1ffngy6tu2zj30m80gognh.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffnh8157ayg30m80godo1.gif">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79gy1ffnhby7euqg30m80gok2h.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffnhdzdv7cg30m80go7ln.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffnhgsh1kyg30m80gohdt.gif">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gy1ffnhm16dfzg30m80gou0x.gif">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79gy1ffnhq6zir3g30m80go4qq.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gy1ffnht57eoag30m80goaoi.gif">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffni1oet3rj30m80gognx.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79gy1ffni5lmckaj30m80gotan.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gy1ffni8x6mofj30m80gowgz.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1ffnib5obcdj30m80goab4.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gy1ffniedsy05j30m80gogmo.jpg">
+<meta property="og:updated_time" content="2017-05-16T13:23:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计更好数据表">
+<meta name="twitter:description" content="简评：前阵子设计了一款后端产品，接触到了非常多前端产品接触不到的需求，天天与后端产品的 PM 与用户打交道，学到了非常多的东西。数据的价值堪比黄金石油，数据可视化设计这项技能对于设计师来说变得日益重要。这篇文章不讲那些花里胡哨阴影与渐变齐飞的图形数据表，我们从最基本最高效，但也是最不起眼的形式——表单（Table），来谈论怎么设计更好的数据表。
+
+在没经过设计与组织之前，人们是无法观察或者利用庞大">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>设计更好数据表</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/05/10/guidepic/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/16/designbetterdatatables/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/16/designbetterdatatables/&text=设计更好数据表"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/16/designbetterdatatables/&is_video=false&description=设计更好数据表"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=设计更好数据表&body=Check out this article: http://yoursite.com/2017/05/16/designbetterdatatables/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/16/designbetterdatatables/&name=设计更好数据表&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">固定头部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">水平滚动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸可变的列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">行的样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">显示密度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">图形数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">分页设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">悬浮显示操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">9.</span> <span class="toc-text">行编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">10.</span> <span class="toc-text">可展开行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">11.</span> <span class="toc-text">快捷浏览视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">12.</span> <span class="toc-text">模态化视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">13.</span> <span class="toc-text">多模态化视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">14.</span> <span class="toc-text">表项细节页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">15.</span> <span class="toc-text">可排序的列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">16.</span> <span class="toc-text">基本过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">17.</span> <span class="toc-text">可搜索列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">18.</span> <span class="toc-text">个性化增减列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">19.</span> <span class="toc-text">个性化排序</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        设计更好数据表
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-05-16T04:29:18.000Z" itemprop="datePublished">2017-05-16</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>简评：前阵子设计了一款后端产品，接触到了非常多前端产品接触不到的需求，天天与后端产品的 PM 与用户打交道，学到了非常多的东西。数据的价值堪比黄金石油，数据可视化设计这项技能对于设计师来说变得日益重要。这篇文章不讲那些花里胡哨阴影与渐变齐飞的图形数据表，我们从最基本最高效，但也是最不起眼的形式——表单（Table），来谈论怎么设计更好的数据表。</p>
+</blockquote>
+<p>在没经过设计与组织之前，人们是无法观察或者利用庞大复杂而又无需的数据的。设计精良的数据表能让用户非常高效地对数据进行**浏览、分析、比对、过滤、分类等各种操作，**并让数据产生应有的价值。</p>
+<h3>固定头部</h3>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ffn46alq0jg30m80gob29.gif" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#22312;&#29992;&#25143;&#28378;&#21160;&#27983;&#35272;&#25968;&#25454;&#30340;&#26102;&#20505;&#23558;&#34920;&#22836;&#22266;&#23450;&#65292;&#38450;&#27490;&#29992;&#25143;&#22240;&#20026;&#30475;&#19981;&#21040;&#34920;&#22836;&#12290;&#32780;&#36855;&#22833;&#20110;&#36825;&#20123;&#34892;&#34892;&#21015;&#21015;&#30340;&#25968;&#25454;&#20043;&#20013;&#24773;&#20917;&#30340;&#21457;&#29983;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>水平滚动</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffn45rva57g30m80goqha.gif" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#24403;&#25968;&#25454;&#38598;&#22826;&#22823;&#65292;&#35774;&#22791;&#30340;&#23631;&#24149;&#23610;&#23544;&#19981;&#33021;&#19968;&#23631;&#23601;&#23558;&#25152;&#26377;&#30340;&#21015;&#21576;&#29616;&#23436;&#27605;&#30340;&#26102;&#20505;&#65292;&#27700;&#24179;&#28378;&#21160;&#26102;&#22266;&#23450;&#31532;&#19968;&#21015;&#25968;&#25454;&#30340;&#36825;&#31181;&#35774;&#35745;&#38750;&#24120;&#26377;&#24517;&#35201;&#12290;&#25105;&#20204;&#35774;&#35745;&#25968;&#25454;&#34920;&#30340;&#26102;&#20505;&#65292;&#31532;&#19968;&#21015;&#36890;&#24120;&#37117;&#26159;&#35692;&#22914;&#35828;&#29992;&#25143;&#21807;&#19968; id&#12289;&#21830;&#21697;&#21807;&#19968; id &#20043;&#31867;&#30340;&#35782;&#21035;&#31526;&#25968;&#25454;&#65292;&#22266;&#23450;&#27492;&#34892;&#26377;&#21161;&#29992;&#25805;&#20316;&#21015;&#34920;&#30340;&#29992;&#25143;&#26102;&#21051;&#37117;&#30693;&#36947;&#36825;&#19968;&#34892;&#34770;&#34503;&#37027;&#20040;&#38271;&#30340;&#25968;&#25454;&#21040;&#24213;&#23646;&#20110;&#35841;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>尺寸可变的列</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffn4nbfu1ng30m80go16w.gif" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#38024;&#23545;&#22240;&#20026;&#26412;&#36523;&#36807;&#38271;&#32780;&#19981;&#24471;&#19981;&#32553;&#30053;&#26174;&#31034;&#30340;&#25968;&#25454;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>行的样式</h3>
+<p><strong>有分解线设计、无分界线线设计、macOS上用很多的斑马线设计，这三样比较常见。</strong>
+<img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffn4wyiywtg30m80goqt8.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20960;&#31181;&#26679;&#24335;&#30340;&#30446;&#30340;&#37117;&#26159;&#20026;&#20102;&#33021;&#35753;&#29992;&#25143;&#26356;&#21152;&#28165;&#26224;&#22320;&#27983;&#35272;&#25968;&#25454;&#12290;&#38754;&#23545;&#25968;&#25454;&#38598;&#36739;&#23567;&#65292;&#25968;&#25454;&#20063;&#36739;&#23569;&#30340;&#25968;&#25454;&#34920;&#30340;&#26102;&#20505;&#65292;&#25105;&#20204;&#21487;&#20197;&#37319;&#29992;&#26080;&#20998;&#30028;&#32447;&#35774;&#35745;&#26469;&#35753;&#25972;&#20010;&#39029;&#38754;&#26356;&#28165;&#29245;&#65292;&#24178;&#25200;&#26356;&#23567;&#12290;&#32780;&#38754;&#23545;&#24222;&#22823;&#25968;&#25454;&#38598;&#65292;&#25968;&#25454;&#20063;&#38750;&#24120;&#22810;&#30340;&#34920;&#65292;&#24456;&#24819;&#32437;&#21521;&#37117;&#20250;&#26377;&#38750;&#24120;&#22810;&#30340;&#25968;&#25454;&#65292;&#36825;&#31181;&#26102;&#20505;&#37319;&#29992;&#26377;&#20998;&#30028;&#32447;&#35774;&#35745;&#21644;&#26001;&#39532;&#32447;&#35774;&#35745;&#26679;&#24335;&#21487;&#20197;&#35753;&#29992;&#25143;&#22312;&#27178;&#21521;&#32437;&#21521;&#27983;&#35272;&#36825;&#20040;&#22810;&#25968;&#25454;&#30340;&#26102;&#20505;&#20063;&#19981;&#33267;&#20110;&#36855;&#22833;&#65292;&#20943;&#23569;&#30475;&#38169;&#34892;&#30340;&#27010;&#29575;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>显示密度</h3>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ffnglql7fbg30m80go4qp.gif" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#23494;&#24230;&#39640;&#30340;&#21015;&#34920;&#33021;&#22312;&#26377;&#38480;&#30340;&#23631;&#24149;&#31354;&#38388;&#20869;&#26174;&#31034;&#26356;&#22810;&#30340;&#25968;&#25454;&#65292;&#23481;&#26131;&#35753;&#29992;&#25143;&#22312;&#27983;&#35272;&#30340;&#26102;&#20505;&#20986;&#29616;&#38169;&#35823;&#12290;&#23494;&#24230;&#30340;&#39640;&#20302;&#38754;&#23545;&#30340;&#26159;&#19981;&#19968;&#26679;&#30340;&#22330;&#26223;&#65292;&#25226;&#36825;&#20010;&#25511;&#21046;&#26435;&#30041;&#32473;&#29992;&#25143;&#21543;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>图形数据表</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffngs9ja3jj30m80goq42.jpg" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#31616;&#27905;&#39640;&#25928;&#30340;&#22270;&#24418;&#25968;&#25454;&#34920;&#32463;&#24120;&#20276;&#38543;&#25968;&#25454;&#34920;&#19968;&#36215;&#20986;&#29616;&#12290;&#21508;&#31181;&#31867;&#22411;&#30340;&#22270;&#24418;&#21270;&#25968;&#25454;&#34920;&#33021;&#22815;&#21457;&#25381;&#21508;&#33258;&#30340;&#29305;&#28857;&#65292;&#20026;&#29992;&#25143;&#24102;&#26469;&#26356;&#21152;&#30452;&#35266;&#30340;&#24863;&#30693;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>分页设置</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffngy6tu2zj30m80gognh.jpg" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#25968;&#25454;&#34920;&#20135;&#21697;&#21487;&#36319;&#21681;&#20204;&#32463;&#24120;&#38386;&#36891;&#30340; Pinterest &#31561;&#20854;&#20182;&#20135;&#21697;&#19981;&#19968;&#26679;&#65292;Pinterest &#36825;&#31867;&#20135;&#21697;&#37319;&#29992;&#28689;&#24067;&#27969;&#24335;&#24067;&#23616;&#65292;&#40723;&#21169;&#29992;&#25143;&#19981;&#26029;&#25506;&#32034;&#20869;&#23481;&#12290;&#32780;&#25968;&#25454;&#34920;&#20135;&#21697;&#35762;&#31350;&#30340;&#26159;&#20934;&#30830;&#39640;&#25928;&#65292;&#27599;&#39029;&#26174;&#31034;&#22266;&#23450;&#30340;&#26465;&#25968;&#33021;&#20445;&#35777;&#29992;&#25143;&#19981;&#20250;&#22312;&#19981;&#26029;&#30340;&#33258;&#21160;&#21152;&#36733;&#20013;&#22833;&#21435;&#26041;&#21521;&#24863;&#65292;&#25152;&#20197;&#25968;&#25454;&#34920;&#36890;&#24120;&#20250;&#37319;&#29992;&#20998;&#39029;&#35774;&#35745;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>悬浮显示操作</h3>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffnh8157ayg30m80godo1.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#23558;&#19968;&#31995;&#21015;&#30340;&#38468;&#21152;&#25805;&#20316;&#38544;&#34255;&#36215;&#26469;&#65292;&#22312;&#40736;&#26631;&#24748;&#28014;&#20110;&#19978;&#30340;&#26102;&#20505;&#25165;&#23637;&#31034;&#33021;&#22815;&#20943;&#23567;&#29992;&#25143;&#30340;&#35270;&#35273;&#36127;&#25285;&#65292;&#27605;&#31455;&#21015;&#34920;&#30340;&#20449;&#24687;&#37327;&#24050;&#32463;&#22815;&#22823;&#20102;&#12290;&#20294;&#26159;&#36825;&#31181;&#38544;&#34255;&#26041;&#24335;&#23545;&#20110;&#29992;&#25143;&#26469;&#35828;&#21487;&#33021;&#38590;&#20197;&#21457;&#29616;&#65292;&#24910;&#29992;&#20026;&#22909;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>行编辑</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffnhby7euqg30m80gok2h.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20551;&#22914;&#20320;&#30340;&#25968;&#25454;&#34920;&#26159;&#21487;&#20197;&#32534;&#36753;&#30340;&#35805;&#65292;&#37027;&#20040;&#26368;&#22909;&#33021;&#35753;&#29992;&#25143;&#22312;&#24403;&#21069;&#39029;&#38754;&#30340;&#30446;&#26631;&#34892;&#20869;&#23601;&#25226;&#32534;&#36753;&#20219;&#21153;&#23436;&#25104;&#65292;&#36825;&#26679;&#33021;&#35753;&#26368;&#22823;&#31243;&#24230;&#22320;&#20445;&#25345;&#29992;&#20303;&#29992;&#25143;&#30340;&#26041;&#21521;&#24863;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>可展开行</h3>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffnhdzdv7cg30m80go7ln.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20551;&#22914;&#34920;&#39033;&#24102;&#26377;&#36739;&#22810;&#38468;&#21152;&#20449;&#24687;&#30340;&#35805;&#65292;&#37027;&#20040;&#24403;&#21069;&#39029;&#30340;&#21487;&#23637;&#24320;&#35774;&#35745;&#26159;&#19968;&#31181;&#20540;&#24471;&#32771;&#34385;&#30340;&#36873;&#25321;&#65292;&#22909;&#22788;&#21644;&#19978;&#19968;&#26465;&#24046;&#19981;&#22810;&#65292;&#26368;&#22823;&#31243;&#24230;&#22320;&#20445;&#25345;&#20303;&#29992;&#25143;&#30340;&#26041;&#21521;&#24863;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>快捷浏览视图</h3>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffnhgsh1kyg30m80gohdt.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#21487;&#23637;&#24320;&#34892;&#30340;&#23637;&#24320;&#38754;&#31215;&#27605;&#31455;&#26159;&#26377;&#38480;&#30340;&#65288;&#36807;&#22823;&#30340;&#23637;&#24320;&#38754;&#31215;&#19981;&#26041;&#20415;&#29992;&#25143;&#27983;&#35272;&#19982;&#25805;&#20316;&#65289;&#65292;&#20551;&#22914;&#25105;&#20204;&#38754;&#23545;&#26356;&#21152;&#22810;&#30340;&#38468;&#21152;&#20449;&#24687;&#65292;&#29978;&#33267;&#26159;&#19968;&#20123;&#22797;&#26434;&#25805;&#20316;&#30340;&#26102;&#20505;&#65292;&#19968;&#20010;&#20174;&#21491;&#20391;&#36793;&#65288;&#23613;&#37327;&#19981;&#25377;&#20303;&#35782;&#21035;&#31526;&#25968;&#25454;&#25110;&#26159;&#38752;&#21069;&#30340;&#36739;&#37325;&#35201;&#25968;&#25454;&#65289;&#20986;&#26469;&#30340;&#24555;&#25463;&#27983;&#35272;&#35270;&#22270;&#23558;&#20250;&#26159;&#19981;&#38169;&#30340;&#36873;&#25321;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>模态化视图</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffnhm16dfzg30m80gou0x.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#36825;&#26159;&#23637;&#31034;&#34920;&#39033;&#26356;&#22810;&#38468;&#21152;&#20449;&#24687;&#30340;&#21478;&#22806;&#19968;&#31181;&#36873;&#25321;&#12290;&#27169;&#24577;&#21270;&#35270;&#22270;&#33021;&#22815;&#35753;&#29992;&#25143;&#26356;&#21152;&#19987;&#27880;&#65292;&#33021;&#22815;&#25215;&#36733;&#26356;&#21152;&#22810;&#30340;&#20449;&#24687;&#65292;&#20063;&#26377;&#31354;&#38388;&#35753;&#29992;&#25143;&#36827;&#34892;&#26356;&#21152;&#22797;&#26434;&#20999;&#37325;&#35201;&#30340;&#25805;&#20316;&#12290;&#20294;&#27169;&#24577;&#21270;&#31383;&#21475;&#30340;&#26041;&#21521;&#24863;&#20445;&#25345;&#24615;&#33021;&#19981;&#22914;&#21069;&#20004;&#32773;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>多模态化视图</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffnhq6zir3g30m80go4qq.gif" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#22810;&#27169;&#24577;&#21270;&#35270;&#22270;&#33021;&#22815;&#26041;&#20415;&#29992;&#25143;&#23545;&#34920;&#39033;&#30340;&#20449;&#24687;&#36827;&#34892;&#27604;&#36739;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>表项细节页</h3>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ffnht57eoag30m80goaoi.gif" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#22810;&#27169;&#24577;&#21270;&#35270;&#22270;&#30340;&#26041;&#24335;&#36866;&#29992;&#20110;&#25968;&#25454;&#38598;&#27604;&#36739;&#23567;&#65292;&#38468;&#21152;&#20449;&#24687;&#36739;&#23569;&#30340;&#25968;&#25454;&#34920;&#65292;&#32780;&#38754;&#23545;&#25968;&#25454;&#38598;&#26412;&#36523;&#23601;&#24456;&#24222;&#22823;&#65292;&#38468;&#21152;&#20449;&#24687;&#20063;&#24456;&#22810;&#30340;&#25968;&#25454;&#34920;&#26469;&#35828;&#65292;&#34920;&#39033;&#32454;&#33410;&#20063;&#30340;&#35774;&#35745;&#25163;&#27861;&#21017;&#26356;&#20026;&#21512;&#36866;&#12290;&#28857;&#20987;&#34920;&#20869;&#30340;&#26576;&#19968;&#39033;&#65292;&#25968;&#25454;&#34920;&#21464;&#24418;&#20026;&#24038;&#20391;&#20445;&#30041;&#26174;&#31034;&#34920;&#39033;&#65292;&#21491;&#20391;&#26174;&#31034;&#34920;&#32454;&#33410;&#30340;&#19968;&#20010;&#35270;&#22270;&#12290;&#24222;&#22823;&#30340;&#20449;&#24687;&#37327;&#23481;&#26131;&#35753;&#29992;&#25143;&#36855;&#22833;&#26041;&#21521;&#65292;&#24038;&#20391;&#34920;&#39033;&#65292;&#21491;&#20391;&#32454;&#33410;&#30340;&#25968;&#25454;&#33021;&#22815;&#35753;&#29992;&#25143;&#22312;&#27604;&#36739;&#21508;&#25903;&#24222;&#22823;&#25968;&#25454;&#30340;&#26102;&#20505;&#19981;&#23481;&#26131;&#20986;&#38169;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>可排序的列</h3>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffni1oet3rj30m80gognx.jpg" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#26377;&#24207;&#25968;&#25454;&#30340;&#21015;&#26368;&#22909;&#20801;&#35768;&#29992;&#25143;&#33021;&#22815;&#33258;&#34892;&#36873;&#25321;&#25490;&#24207;&#26041;&#24335;&#65292;&#26041;&#20415;&#29992;&#25143;&#35266;&#23519;&#12289;&#27983;&#35272;&#25968;&#25454;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>基本过滤</h3>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffni5lmckaj30m80gotan.jpg" alt=""></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20801;&#35768;&#29992;&#25143;&#23545;&#25968;&#25454;&#36827;&#34892;&#22522;&#26412;&#30340;&#21333;&#37325;&#26465;&#20214;&#25110;&#22810;&#37325;&#26465;&#20214;&#30340;&#36807;&#28388;&#19982;&#25628;&#32034;&#12290;&#34987;&#20154;&#31216;&#36947;&#30340;&#21518;&#31471;&#20135;&#21697;&#24517;&#23450;&#26377;&#19968;&#20010;&#34987;&#20154;&#31216;&#36947;&#25628;&#32034;&#36807;&#28388;&#21151;&#33021;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>可搜索列</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffni8x6mofj30m80gowgz.jpg" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20551;&#22914;&#20801;&#35768;&#30340;&#35805;&#65292;&#22312;&#34920;&#22836;&#23601;&#33021;&#35753;&#29992;&#25143;&#36827;&#34892;&#25628;&#32034;&#26159;&#19968;&#31181;&#26356;&#21152;&#39640;&#32423;&#65292;&#26356;&#21152;&#20154;&#24615;&#21270;&#30340;&#35774;&#35745;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>个性化增减列</h3>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1ffnib5obcdj30m80goab4.jpg" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#19981;&#21516;&#30340;&#20154;&#20851;&#27880;&#30340;&#25968;&#25454;&#19981;&#19968;&#26679;&#65292;&#19981;&#21516;&#24773;&#26223;&#20043;&#19979;&#29992;&#25143;&#38656;&#35201;&#30340;&#25968;&#25454;&#20063;&#19981;&#19968;&#26679;&#65292;&#33021;&#35753;&#29992;&#25143;&#33258;&#34892;&#23545;&#25968;&#25454;&#34920;&#30340;&#21015;&#36827;&#34892;&#20010;&#24615;&#21270;&#30340;&#22686;&#20943;&#26159;&#19968;&#39033;&#38750;&#24120;&#19981;&#38169;&#30340;&#35774;&#35745;&#12290;&#24403;&#28982;&#20102;&#65292;&#36825;&#39033;&#21151;&#33021;&#38024;&#23545;&#30340;&#24212;&#35813;&#26159;&#20013;&#39640;&#32423;&#29992;&#25143;&#12290;</span><br></pre></td></tr></table></figure></p>
+<h3>个性化排序</h3>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ffniedsy05j30m80gogmo.jpg" alt="">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#19982;&#20010;&#24615;&#21270;&#22686;&#20943;&#21015;&#19968;&#26679;&#65292;&#20801;&#35768;&#29992;&#25143;&#26681;&#25454;&#33258;&#24049;&#30340;&#38656;&#27714;&#21644;&#19981;&#21516;&#30340;&#20351;&#29992;&#22330;&#26223;&#23545;&#25968;&#25454;&#34920;&#30340;&#21015;&#36827;&#34892;&#20010;&#24615;&#21270;&#30340;&#25490;&#24207;&#65292;&#24182;&#19988;&#20801;&#35768;&#29992;&#25143;&#20445;&#23384;&#22810;&#31181;&#25490;&#24207;&#26041;&#24335;&#26159;&#38750;&#24120;&#19981;&#38169;&#30340;&#35774;&#35745;&#12290;&#20801;&#35768;&#29992;&#25143;&#26356;&#26377;&#38024;&#23545;&#24615;&#22320;&#27983;&#35272;&#25968;&#25454;&#65292;&#20063;&#26041;&#20415;&#29992;&#25143;&#32508;&#21512;&#20960;&#25903;&#25968;&#25454;&#26469;&#36827;&#34892;&#20998;&#26512;&#21644;&#27604;&#23545;&#65292;&#33719;&#21462;&#20998;&#24067;&#38544;&#34255;&#22312;&#33509;&#24178;&#25968;&#25454;&#20013;&#26356;&#21152;&#20840;&#38754;&#26377;&#25928;&#30340;&#20449;&#24687;&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>参考链接：<a href="https://uxdesign.cc/design-better-data-tables-4ecc99d23356" target="_blank" rel="external">Design Better Data Tables</a></p>
+<p>欢迎关注
+	•	知乎专栏 <a href="https://zhuanlan.zhihu.com/jiguang-daily" target="_blank" rel="external">「极光日报」</a>，每天为 Makers 导读三篇优质英文文章；</p>
+<pre><code>•	个人专栏：[「DesignCoder」](https://zhuanlan.zhihu.com/designcoder)设计是一项工程；
+
+•	我的追波：[Zhuyuxuan](https://dribbble.com/Zhuyuxuan)
+</code></pre>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">固定头部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">水平滚动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸可变的列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">行的样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">显示密度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">图形数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">分页设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">悬浮显示操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">9.</span> <span class="toc-text">行编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">10.</span> <span class="toc-text">可展开行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">11.</span> <span class="toc-text">快捷浏览视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">12.</span> <span class="toc-text">模态化视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">13.</span> <span class="toc-text">多模态化视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">14.</span> <span class="toc-text">表项细节页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">15.</span> <span class="toc-text">可排序的列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">16.</span> <span class="toc-text">基本过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">17.</span> <span class="toc-text">可搜索列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">18.</span> <span class="toc-text">个性化增减列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">19.</span> <span class="toc-text">个性化排序</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/16/designbetterdatatables/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/16/designbetterdatatables/&text=设计更好数据表"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/16/designbetterdatatables/&is_video=false&description=设计更好数据表"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=设计更好数据表&body=Check out this article: http://yoursite.com/2017/05/16/designbetterdatatables/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/16/designbetterdatatables/&title=设计更好数据表"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/16/designbetterdatatables/&name=设计更好数据表&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
