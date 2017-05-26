@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>「AE直接导出代码」介绍Airbnb发布的动画库——Lottie - Zyxscientist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一经推出就刷爆Medium、Github的star到突破4K，Airbnb推出的这款开源的动画工具——Lottie是一个可以将你在AE里面制作的动画导出成JSON文件（一种轻量级的数据交换格式，你也可以理解为源码）并直接使用在iOS、Android与Web上的一个新的动画解决方案。
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="一经推出就刷爆Medium、Github的star到突破4K，Airbnb推出的这款开源的动画工具——Lottie是一个可以将你在AE里面制作的动画导出成JSON文件（一种轻量级的数据交换格式，你也可以理解为源码）并直接使用在iOS、Android与Web上的一个新的动画解决方案。
 动画虽好，但实际上动画非常消耗资源，首先设计师需要花费很多时间进行设计，开发也要耗费大量的精力来进行实现，以往使用p">
 <meta property="og:type" content="website">
 <meta property="og:title" content="「AE直接导出代码」介绍Airbnb发布的动画库——Lottie">
@@ -23,101 +24,77 @@
 <meta name="twitter:title" content="「AE直接导出代码」介绍Airbnb发布的动画库——Lottie">
 <meta name="twitter:description" content="一经推出就刷爆Medium、Github的star到突破4K，Airbnb推出的这款开源的动画工具——Lottie是一个可以将你在AE里面制作的动画导出成JSON文件（一种轻量级的数据交换格式，你也可以理解为源码）并直接使用在iOS、Android与Web上的一个新的动画解决方案。
 动画虽好，但实际上动画非常消耗资源，首先设计师需要花费很多时间进行设计，开发也要耗费大量的精力来进行实现，以往使用p">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <!--Text logo font #Righteous-->
-  <link href='https://fonts.lug.ustc.edu.cn/css?family=Righteous' rel='stylesheet' type='text/css'>
-
-  <!--You can add Pure to your page via Yahoo's free CDN-->
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/pure-min.css">
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/grids-responsive-min.css">
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">-->
-<!--<![endif]-->
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-75859600-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>「AE直接导出代码」介绍Airbnb发布的动画库——Lottie</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo logo-text" href="/">Zyxsicentist</a>
-      <a id="subtitle-text" class=subtitle href="/">Interesting things</a>
-      <nav id="main-nav">
-       <ul> 
+    
+    <div class="content index width mx-auto px2 my4">
         
-            <li class="menu-li"><a class="main-nav-link" href="/">Home</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/archives">Archives</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/categories">Categories</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/tags">Tags</a></li>
-            
-          
-         
-              <li class="menu-li"><a class="main-nav-link" href="about/about.html ">About</a></li>
-            
-          
-        </ul>
-      </nav>
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(/images/logo.png);"></div>
+    
+  
+    <div id="title">
+      <h1>Zyxscientist</h1>
     </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/about/about.html">About</a></li>
+       
+        <li><a href="/archives/">Writing</a></li>
+       
+        <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+      
+    </ul>
   </div>
 </header>
-    <section id="main" class="outer"><div class="pure-g"><article id="page-undefined" class="article article-type-page + post-box pure-u-1 pure-u-md-2-3 pure-u-lg-undefined" itemscope itemprop="blogPost">
-  <div class="article-inner">
-      
+
         
-          <header class="article-header">
-            
-  
-    <h1 class="article-title" itemprop="name">
-      「AE直接导出代码」介绍Airbnb发布的动画库——Lottie
-    </h1>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   
 
-          </header>
-        
-        <div class="article-meta">
-          <a href="/introoflottie.html" class="article-date">
-  <time datetime="2017-02-09T10:16:54.000Z" itemprop="datePublished">2017-02-09</time>
-</a>
-            
-              <div class="article-tag-list-link-undefined">
-              </div>
-            
-          
-        </div>
-        <div class="article-entry" itemprop="articleBody">
-          
-            <p>一经推出就刷爆Medium、Github的star到突破4K，Airbnb推出的这款开源的动画工具——<strong>Lottie</strong>是一个可以将你在AE里面制作的动画导出成JSON文件（一种轻量级的数据交换格式，你也可以理解为源码）并直接使用在iOS、Android与Web上的一个新的动画解决方案。</p>
+  <div class="content" itemprop="articleBody">
+    <p>一经推出就刷爆Medium、Github的star到突破4K，Airbnb推出的这款开源的动画工具——<strong>Lottie</strong>是一个可以将你在AE里面制作的动画导出成JSON文件（一种轻量级的数据交换格式，你也可以理解为源码）并直接使用在iOS、Android与Web上的一个新的动画解决方案。</p>
 <p>动画虽好，但实际上动画非常消耗资源，首先设计师需要花费很多时间进行设计，开发也要耗费大量的精力来进行实现，以往使用png序列或者gif来实现的动画会消耗设备的大量内存，而且本身的体积非常大，png和gif也无法根据设备进行适配。费时费力效果不好，还需要承担一系列的风险，实在是吃力不讨好。</p>
 <p>Airbnb的这款工具正是为了解决这个问题而来的，JSON本身是一种兼容性非常友好的格式，这就意味着设计师只需要输出一次就能在各个平台上运行，发开也不用去捣鼓那些复杂繁琐的代码了。根据我自己（iOS、web）和坐我前面的程序员大哥（Android）简单地测试了一下，确实非常的流畅，重要的是它居然还并不消耗太多的资源！但是根据Github上的反馈，Lottie目前还存在一些不完善的地方，譬如说使用过多的蒙版会和导致一些bug，另外它对追踪遮罩的支持也不是太好。
 <img src="https://ww1.sinaimg.cn/large/006tNc79gy1fckik5g14fg30rs07fdmo.gif" alt=""></p>
@@ -143,27 +120,47 @@ ga('send', 'pageview');
 <p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fcklhfoddzj30my0zetat.jpg" alt=""></p>
 <p>稍待片刻，输出完成之后你就获得了一个“.json”文件，这就是bodymovin最终输出的结果。</p>
 
-          
-        </div>
-    
-    </div>
-    
-      
-    
-  </article>
+  </div>
+</article>
 
-  
-</div></section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Zhu Yuxuan&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </nav>
   </div>
 </footer>
 
-  </div>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
 </body>
 </html>

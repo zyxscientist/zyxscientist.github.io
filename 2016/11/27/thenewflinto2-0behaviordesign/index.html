@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>重量级更新 Flinto 2.0 - Zyxscientist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flinto for Mac 2 已经出了好一段时间了，不过国内好像没有啥关注度（我猜是因为他们的官网没翻墙登不上的缘故），其实这回更新非常给力，新增的Behavior Designer功能让它成为我制作可交互原型的第二选择（第一选择肯定是我的大FramerJS啦），那么到底这个Behavior Designer是什么，下面就来给大家介绍下。
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Flinto for Mac 2 已经出了好一段时间了，不过国内好像没有啥关注度（我猜是因为他们的官网没翻墙登不上的缘故），其实这回更新非常给力，新增的Behavior Designer功能让它成为我制作可交互原型的第二选择（第一选择肯定是我的大FramerJS啦），那么到底这个Behavior Designer是什么，下面就来给大家介绍下。
 &amp;lt;!--more--&amp;gt;
 文章最后有特大福利">
 <meta property="og:type" content="article">
@@ -22,112 +23,140 @@
 <meta name="twitter:description" content="Flinto for Mac 2 已经出了好一段时间了，不过国内好像没有啥关注度（我猜是因为他们的官网没翻墙登不上的缘故），其实这回更新非常给力，新增的Behavior Designer功能让它成为我制作可交互原型的第二选择（第一选择肯定是我的大FramerJS啦），那么到底这个Behavior Designer是什么，下面就来给大家介绍下。
 &amp;lt;!--more--&amp;gt;
 文章最后有特大福利">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <!--Text logo font #Righteous-->
-  <link href='https://fonts.lug.ustc.edu.cn/css?family=Righteous' rel='stylesheet' type='text/css'>
-
-  <!--You can add Pure to your page via Yahoo's free CDN-->
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/pure-min.css">
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/grids-responsive-min.css">
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">-->
-<!--<![endif]-->
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-75859600-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>重量级更新 Flinto 2.0</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo logo-text" href="/">Zyxsicentist</a>
-      <a id="subtitle-text" class=subtitle href="/">Interesting things</a>
-      <nav id="main-nav">
-       <ul> 
-        
-            <li class="menu-li"><a class="main-nav-link" href="/">Home</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/archives">Archives</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/categories">Categories</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/tags">Tags</a></li>
-            
-          
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
          
-              <li class="menu-li"><a class="main-nav-link" href="about/about.html ">About</a></li>
-            
-          
-        </ul>
-      </nav>
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/12/07/knowtechnology/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/11/26/50shadesof-fafafa/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&text=重量级更新 Flinto 2.0"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&is_video=false&description=重量级更新 Flinto 2.0"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=重量级更新 Flinto 2.0&body=Check out this article: http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&name=重量级更新 Flinto 2.0&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
     </div>
-  </div>
-</header>
-    <section id="main" class="outer"><div class="pure-g"><article id="post-thenewflinto2-0behaviordesign" class="article article-type-post" itemscope itemprop="blogPost">
-  
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img-pages fancybox" href="http://ww3.sinaimg.cn/large/006y8mN6gw1fa6usfwup3j31jk0ubjtf.jpg" rel="gallery_cj35l1j200040mq7xyugq4741">
-        <img src="http://ww3.sinaimg.cn/large/006y8mN6gw1fa6usfwup3j31jk0ubjtf.jpg" itemprop="image">
-      </a>
-    
-  </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何为Behavior Designer？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">复用性能被增强了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">Transition Designer也有所提升</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
-    <div class="article-inner-pages">
-         
-       <header class="article-header-pages">
-         
-  
-    <h1 class="article-title-pages" itemprop="name">
-      重量级更新 Flinto 2.0
-    </h1>
-  
-
-       </header>
-      
-    <div class="article-meta">
-      <a href="/2016/11/27/thenewflinto2-0behaviordesign/" class="article-date-page">
-  <time datetime="2016-11-27T09:21:17.000Z" itemprop="datePublished">2016-11-27</time>
-</a>
+    
+    <div class="content index width mx-auto px2 my4">
         
-          <div class="article-tag-list-link-yiwen">
-            
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/译文/">译文</a></li></ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        重量级更新 Flinto 2.0
+    </h1>
 
-          </div>
-    </div>
-    <div class="article-entry-pages" itemprop="articleBody">
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
       
-        <p>Flinto for Mac 2 已经出了好一段时间了，不过国内好像没有啥关注度（我猜是因为他们的官网没翻墙登不上的缘故），其实这回更新非常给力，新增的<strong>Behavior Designer</strong>功能让它成为我制作可交互原型的第二选择（第一选择肯定是我的大FramerJS啦），那么到底这个Behavior Designer是什么，下面就来给大家介绍下。
+    <div class="postdate">
+        <time datetime="2016-11-27T09:21:17.000Z" itemprop="datePublished">2016-11-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="http://ww3.sinaimg.cn/large/006y8mN6gw1fa6usfwup3j31jk0ubjtf.jpg" rel="gallery_cj35l1j200040mq7xyugq4741">
+        <img src="http://ww3.sinaimg.cn/large/006y8mN6gw1fa6usfwup3j31jk0ubjtf.jpg" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p>Flinto for Mac 2 已经出了好一段时间了，不过国内好像没有啥关注度（我猜是因为他们的官网没翻墙登不上的缘故），其实这回更新非常给力，新增的<strong>Behavior Designer</strong>功能让它成为我制作可交互原型的第二选择（第一选择肯定是我的大FramerJS啦），那么到底这个Behavior Designer是什么，下面就来给大家介绍下。
 &lt;!--more--&gt;
 文章最后有<strong>特大福利</strong>，还有关于Behavior Designer这个新功能的详细官方教程，虽然详细，但却短小精悍，一看就懂。翻墙搬运，且下且珍惜。</p>
 <hr>
@@ -159,70 +188,99 @@ ga('send', 'pageview');
 <p><a href="http://7xrjhy.com1.z0.glb.clouddn.com/%E8%B5%84%E6%BA%90%E5%8C%85.zip" target="_blank" rel="external">福利资源包</a></p>
 <p>BTW，如果有空的话，还可以来我<a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">Dribbble</a>逛逛！</p>
 
-      
-    </div>
-    
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/12/07/knowtechnology/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          技术，要懂多少才算懂？
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/11/26/50shadesof-fafafa/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于设计师的40条冷知识&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-
-
-  <div class="ds-thread" data-thread-key="post-thenewflinto2-0behaviordesign" data-title="重量级更新 Flinto 2.0" data-url="http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"zyxscientist"};
-    (function() {
-     var ds = document.createElement('script');
-     ds.type = 'text/javascript';ds.async = true;
-     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-     ds.charset = 'UTF-8';
-     (document.getElementsByTagName('head')[0] 
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
 </article>
 
-</div></section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Zhu Yuxuan&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+
     </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何为Behavior Designer？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">复用性能被增强了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">Transition Designer也有所提升</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&text=重量级更新 Flinto 2.0"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&is_video=false&description=重量级更新 Flinto 2.0"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=重量级更新 Flinto 2.0&body=Check out this article: http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&title=重量级更新 Flinto 2.0"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/11/27/thenewflinto2-0behaviordesign/&name=重量级更新 Flinto 2.0&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </nav>
   </div>
 </footer>
 
-  </div>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
 </body>
 </html>

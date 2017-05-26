@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>关于iOS10锁屏界面交互的一次严肃地分析 - Zyxscientist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS说：“清晰度，咱俩分手吧”
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="iOS说：“清晰度，咱俩分手吧”
 以往的iOS锁屏界面非常简单直接，但是来到今年的iOS10，情况发生非常大的变化，在开始认真严肃地为大家分析（tucao）之前我想先说明一些东西：&amp;lt;!--more--&amp;gt;
 
 分析并写下这篇文章绝对不是为了黑苹果的设计大神们，因为我也不知道苹果的设计团队在做出这些决定的时候面对的是什么样的制约或有什么更加长远的目标。此文针对设计做分析，不是针对某人或某团队">
@@ -25,112 +26,140 @@
 以往的iOS锁屏界面非常简单直接，但是来到今年的iOS10，情况发生非常大的变化，在开始认真严肃地为大家分析（tucao）之前我想先说明一些东西：&amp;lt;!--more--&amp;gt;
 
 分析并写下这篇文章绝对不是为了黑苹果的设计大神们，因为我也不知道苹果的设计团队在做出这些决定的时候面对的是什么样的制约或有什么更加长远的目标。此文针对设计做分析，不是针对某人或某团队">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <!--Text logo font #Righteous-->
-  <link href='https://fonts.lug.ustc.edu.cn/css?family=Righteous' rel='stylesheet' type='text/css'>
-
-  <!--You can add Pure to your page via Yahoo's free CDN-->
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/pure-min.css">
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/grids-responsive-min.css">
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">-->
-<!--<![endif]-->
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-75859600-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>关于iOS10锁屏界面交互的一次严肃地分析</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo logo-text" href="/">Zyxsicentist</a>
-      <a id="subtitle-text" class=subtitle href="/">Interesting things</a>
-      <nav id="main-nav">
-       <ul> 
-        
-            <li class="menu-li"><a class="main-nav-link" href="/">Home</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/archives">Archives</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/categories">Categories</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/tags">Tags</a></li>
-            
-          
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
          
-              <li class="menu-li"><a class="main-nav-link" href="about/about.html ">About</a></li>
-            
-          
-        </ul>
-      </nav>
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/11/10/stopgratuitousuianimation/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/09/24/howtouseicon/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/10/13/ios10lockscreen/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/10/13/ios10lockscreen/&text=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/10/13/ios10lockscreen/&is_video=false&description=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于iOS10锁屏界面交互的一次严肃地分析&body=Check out this article: http://yoursite.com/2016/10/13/ios10lockscreen/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/10/13/ios10lockscreen/&name=关于iOS10锁屏界面交互的一次严肃地分析&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
     </div>
-  </div>
-</header>
-    <section id="main" class="outer"><div class="pure-g"><article id="post-ios10lockscreen" class="article article-type-post" itemscope itemprop="blogPost">
-  
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img-pages fancybox" href="http://ww2.sinaimg.cn/large/65e4f1e6jw1f8z629gyd7j20fk0egmya.jpg" rel="gallery_cj35l1j2r004wmq7xr9eqc02p">
-        <img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f8z629gyd7j20fk0egmya.jpg" itemprop="image">
-      </a>
-    
-  </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">这个新的锁屏界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">死于过多滑动操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">横划打开相机好像蛮酷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">控件中心到底是在哪个页面里？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">大总结</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
-    <div class="article-inner-pages">
-         
-       <header class="article-header-pages">
-         
-  
-    <h1 class="article-title-pages" itemprop="name">
-      关于iOS10锁屏界面交互的一次严肃地分析
-    </h1>
-  
-
-       </header>
-      
-    <div class="article-meta">
-      <a href="/2016/10/13/ios10lockscreen/" class="article-date-page">
-  <time datetime="2016-10-13T14:24:59.000Z" itemprop="datePublished">2016-10-13</time>
-</a>
+    
+    <div class="content index width mx-auto px2 my4">
         
-          <div class="article-tag-list-link-yiwen">
-            
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/译文/">译文</a></li></ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        关于iOS10锁屏界面交互的一次严肃地分析
+    </h1>
 
-          </div>
-    </div>
-    <div class="article-entry-pages" itemprop="articleBody">
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
       
-        <p>iOS说：“清晰度，咱俩分手吧”</p>
+    <div class="postdate">
+        <time datetime="2016-10-13T14:24:59.000Z" itemprop="datePublished">2016-10-13</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/译文/">译文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="http://ww2.sinaimg.cn/large/65e4f1e6jw1f8z629gyd7j20fk0egmya.jpg" rel="gallery_cj35l1j2r004wmq7xr9eqc02p">
+        <img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f8z629gyd7j20fk0egmya.jpg" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p>iOS说：“清晰度，咱俩分手吧”</p>
 <p>以往的iOS锁屏界面非常简单直接，但是来到今年的iOS10，情况发生非常大的变化，在开始认真严肃地为大家分析（tucao）之前我想先说明一些东西：&lt;!--more--&gt;</p>
 <ul>
 <li>分析并写下这篇文章绝对不是为了黑苹果的设计大神们，因为我也不知道苹果的设计团队在做出这些决定的时候面对的是什么样的制约或有什么更加长远的目标。<strong>此文针对设计做分析，不是针对某人或某团队。</strong></li>
@@ -181,70 +210,99 @@ ga('send', 'pageview');
 <h2>大总结</h2>
 <p>iOS系统一直以其优秀的设计著称，这一点无需过多地解释，或许是这次更新加入了太多前所未有的新功能，让一些问题被忽略或者说是忽视了。在某些点上，iOS的这次大胆的更新或许需要重新产生出一套更加成熟的设计规范，让一切重回正轨。</p>
 
-      
-    </div>
-    
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/11/10/stopgratuitousuianimation/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          请勿滥用动效
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/09/24/howtouseicon/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">如何使用Icons&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-
-
-  <div class="ds-thread" data-thread-key="post-ios10lockscreen" data-title="关于iOS10锁屏界面交互的一次严肃地分析" data-url="http://yoursite.com/2016/10/13/ios10lockscreen/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"zyxscientist"};
-    (function() {
-     var ds = document.createElement('script');
-     ds.type = 'text/javascript';ds.async = true;
-     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-     ds.charset = 'UTF-8';
-     (document.getElementsByTagName('head')[0] 
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
 </article>
 
-</div></section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Zhu Yuxuan&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+
     </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">这个新的锁屏界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">死于过多滑动操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">横划打开相机好像蛮酷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">控件中心到底是在哪个页面里？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">大总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/10/13/ios10lockscreen/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/10/13/ios10lockscreen/&text=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/10/13/ios10lockscreen/&is_video=false&description=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于iOS10锁屏界面交互的一次严肃地分析&body=Check out this article: http://yoursite.com/2016/10/13/ios10lockscreen/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/10/13/ios10lockscreen/&title=关于iOS10锁屏界面交互的一次严肃地分析"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/10/13/ios10lockscreen/&name=关于iOS10锁屏界面交互的一次严肃地分析&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </nav>
   </div>
 </footer>
 
-  </div>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
 </body>
 </html>

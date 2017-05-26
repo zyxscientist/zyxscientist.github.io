@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>分享一则SVG动画 - Zyxscientist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为什么使用SVG
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="为什么使用SVG
 SVG这种图片格式今年来真是呈现一个越来越火的节奏，最近“动效”这个词非常的流行，产品们都恨不得能够在自己的所有产品上都加上炫目的动效，设计师们都恨不得在一夜之间都掌握所有制作动效的软件，而SVG的大热，或多或少都是拜这股洪流所赐。SVG与代码能打出非常好的配合，设计师们能够用简单的几行CSS代码就&amp;lt;!--more--&amp;gt;实现出许许多多动效，是的，再也不是做成GIF的“">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分享一则SVG动画">
@@ -19,112 +20,140 @@ SVG这种图片格式今年来真是呈现一个越来越火的节奏，最近�
 <meta name="twitter:title" content="分享一则SVG动画">
 <meta name="twitter:description" content="为什么使用SVG
 SVG这种图片格式今年来真是呈现一个越来越火的节奏，最近“动效”这个词非常的流行，产品们都恨不得能够在自己的所有产品上都加上炫目的动效，设计师们都恨不得在一夜之间都掌握所有制作动效的软件，而SVG的大热，或多或少都是拜这股洪流所赐。SVG与代码能打出非常好的配合，设计师们能够用简单的几行CSS代码就&amp;lt;!--more--&amp;gt;实现出许许多多动效，是的，再也不是做成GIF的“">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <!--Text logo font #Righteous-->
-  <link href='https://fonts.lug.ustc.edu.cn/css?family=Righteous' rel='stylesheet' type='text/css'>
-
-  <!--You can add Pure to your page via Yahoo's free CDN-->
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/pure-min.css">
-  <link rel="stylesheet" type="text/css" href="/css/3rd/pure-release-0.6.0/grids-responsive-min.css">
-  <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">-->
-<!--<![endif]-->
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-75859600-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>分享一则SVG动画</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo logo-text" href="/">Zyxsicentist</a>
-      <a id="subtitle-text" class=subtitle href="/">Interesting things</a>
-      <nav id="main-nav">
-       <ul> 
-        
-            <li class="menu-li"><a class="main-nav-link" href="/">Home</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/archives">Archives</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/categories">Categories</a></li>
-            
-          
-        
-            <li class="menu-li"><a class="main-nav-link" href="/tags">Tags</a></li>
-            
-          
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
          
-              <li class="menu-li"><a class="main-nav-link" href="about/about.html ">About</a></li>
-            
-          
-        </ul>
-      </nav>
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/04/12/微交互：好产品的秘密/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/03/20/internstory2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/03/30/SVGanimaiton/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/03/30/SVGanimaiton/&text=分享一则SVG动画"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/03/30/SVGanimaiton/&is_video=false&description=分享一则SVG动画"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=分享一则SVG动画&body=Check out this article: http://yoursite.com/2016/03/30/SVGanimaiton/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/03/30/SVGanimaiton/&name=分享一则SVG动画&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
     </div>
-  </div>
-</header>
-    <section id="main" class="outer"><div class="pure-g"><article id="post-SVGanimaiton" class="article article-type-post" itemscope itemprop="blogPost">
-  
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img-pages fancybox" href="http://7xrjhy.com1.z0.glb.clouddn.com/logoanimation2.gif" rel="gallery_cj35l1j3n0061mq7x5x70vtt4">
-        <img src="http://7xrjhy.com1.z0.glb.clouddn.com/logoanimation2.gif" itemprop="image">
-      </a>
-    
-  </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">为什么使用SVG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">代码来了</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
-    <div class="article-inner-pages">
-         
-       <header class="article-header-pages">
-         
-  
-    <h1 class="article-title-pages" itemprop="name">
-      分享一则SVG动画
-    </h1>
-  
-
-       </header>
-      
-    <div class="article-meta">
-      <a href="/2016/03/30/SVGanimaiton/" class="article-date-page">
-  <time datetime="2016-03-30T06:29:18.000Z" itemprop="datePublished">2016-03-30</time>
-</a>
+    
+    <div class="content index width mx-auto px2 my4">
         
-          <div class="article-tag-list-link-fenxiang">
-            
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li></ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        分享一则SVG动画
+    </h1>
 
-          </div>
-    </div>
-    <div class="article-entry-pages" itemprop="articleBody">
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
       
-        <h3>为什么使用SVG</h3>
+    <div class="postdate">
+        <time datetime="2016-03-30T06:29:18.000Z" itemprop="datePublished">2016-03-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/分享/">分享</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="http://7xrjhy.com1.z0.glb.clouddn.com/logoanimation2.gif" rel="gallery_cj35l1j3n0061mq7x5x70vtt4">
+        <img src="http://7xrjhy.com1.z0.glb.clouddn.com/logoanimation2.gif" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <h3>为什么使用SVG</h3>
 <p>SVG这种图片格式今年来真是呈现一个越来越火的节奏，最近“动效”这个词非常的流行，产品们都恨不得能够在自己的所有产品上都加上炫目的动效，设计师们都恨不得在一夜之间都掌握所有制作动效的软件，而SVG的大热，或多或少都是拜这股洪流所赐。SVG与代码能打出非常好的配合，设计师们能够用简单的几行CSS代码就&lt;!--more--&gt;实现出许许多多动效，是的，再也不是做成GIF的“类动效”，而是实打实的代码实现的动效，并且真的非常简单。SVG除了能够很好配合你的CSS代码之外，还有许多别的优秀特性。</p>
 <ol>
 <li>
@@ -157,70 +186,99 @@ HTML部分总体来讲就是这么几种元素，然而配合CSS却可以做出�
 以后有新文章新作品跟大家分享，除了会首发到ui中国之外还会发布到最近自己搭建的<a href="zyxscientist.github.io">博客</a>之上，希望大家多来逛逛，多交流</p>
 <p>最后的最后，希望有大神能够指出上面代码写得naiev的地方。</p>
 
-      
-    </div>
-    
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/04/12/微交互：好产品的秘密/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          微交互：好产品的秘密
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/03/20/internstory2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">实习期间做的事(2)&nbsp;<span>&gt;</span></div>
-    </a>
-  
-</nav>
-
-  
-
-
-  <div class="ds-thread" data-thread-key="post-SVGanimaiton" data-title="分享一则SVG动画" data-url="http://yoursite.com/2016/03/30/SVGanimaiton/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"zyxscientist"};
-    (function() {
-     var ds = document.createElement('script');
-     ds.type = 'text/javascript';ds.async = true;
-     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-     ds.charset = 'UTF-8';
-     (document.getElementsByTagName('head')[0] 
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
 </article>
 
-</div></section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Zhu Yuxuan&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+
     </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">为什么使用SVG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">代码来了</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2016/03/30/SVGanimaiton/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2016/03/30/SVGanimaiton/&text=分享一则SVG动画"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2016/03/30/SVGanimaiton/&is_video=false&description=分享一则SVG动画"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=分享一则SVG动画&body=Check out this article: http://yoursite.com/2016/03/30/SVGanimaiton/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2016/03/30/SVGanimaiton/&title=分享一则SVG动画"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2016/03/30/SVGanimaiton/&name=分享一则SVG动画&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </nav>
   </div>
 </footer>
 
-  </div>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
 </body>
 </html>
