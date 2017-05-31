@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Framer Studio 在今天（5 月 31 日）发布了 V90 版本。
+以往使用纯代码构建界面、纯代码编辑一个可编辑原型的 Framer 强是强矣，但是对于我国大部分没有 Coding 基础的设计师来说实在只能说是望码兴叹，学习成本确实很高。在要合理构建界面的同时又能兼顾到交互动画逻辑能够顺畅的跑起来，这种代码的组织能力恐怕不是大家把官网上面所有的教程看完就能学会的，这是一种选血泪的操作意识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具">
+<meta property="og:url" content="http://yoursite.com/2017/05/31/framerupdate/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="Framer Studio 在今天（5 月 31 日）发布了 V90 版本。
+以往使用纯代码构建界面、纯代码编辑一个可编辑原型的 Framer 强是强矣，但是对于我国大部分没有 Coding 基础的设计师来说实在只能说是望码兴叹，学习成本确实很高。在要合理构建界面的同时又能兼顾到交互动画逻辑能够顺畅的跑起来，这种代码的组织能力恐怕不是大家把官网上面所有的教程看完就能学会的，这是一种选血泪的操作意识">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fg50s2cyjqj31kw0ucqna.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fg4zl82lppj31kw0vd7ai.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fg500g4s9zj31kw0uvdsk.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fg50d08ug0j31kw0vidri.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fg50fxoxfcj31kw0ve4cg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fg510yqpm9j31kw6beu0z.jpg">
+<meta property="og:updated_time" content="2017-05-31T16:58:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具">
+<meta name="twitter:description" content="Framer Studio 在今天（5 月 31 日）发布了 V90 版本。
+以往使用纯代码构建界面、纯代码编辑一个可编辑原型的 Framer 强是强矣，但是对于我国大部分没有 Coding 基础的设计师来说实在只能说是望码兴叹，学习成本确实很高。在要合理构建界面的同时又能兼顾到交互动画逻辑能够顺畅的跑起来，这种代码的组织能力恐怕不是大家把官网上面所有的教程看完就能学会的，这是一种选血泪的操作意识">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/05/17/animaitonproperties/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/31/framerupdate/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/31/framerupdate/&text=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/31/framerupdate/&is_video=false&description=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具&body=Check out this article: http://yoursite.com/2017/05/31/framerupdate/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/31/framerupdate/&name=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">图形设计的强化（Design Tab）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">代码编辑器（Code Tab）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">最后想说</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-05-31T15:33:46.000Z" itemprop="datePublished">2017-05-31</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/分享/">分享</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a href="https://framer.com/" target="_blank" rel="external">Framer Studio</a> 在今天（5 月 31 日）发布了 V90 版本。</p>
+<p>以往使用纯代码构建界面、纯代码编辑一个可编辑原型的 Framer 强是强矣，但是对于我国大部分没有 Coding 基础的设计师来说实在只能说是望码兴叹，学习成本确实很高。在要合理构建界面的同时又能兼顾到交互动画逻辑能够顺畅的跑起来，这种<strong>代码的组织能力</strong>恐怕不是大家把官网上面所有的教程看完就能学会的，这是一种选血泪的操作意识。不过我认为一款强大的软件伴随之而来的必然是有一定复杂性，既要面面俱到满足你所有的愿望，又要简单快捷不花费你太多脑力的东西基本上是不存在的，譬如美图秀秀之于 Photoshop（没有贬低任何一方的意思）。我知道很多设计师朋友都向往动效、开发方面继续自己对于设计这个命题更深入的探究，如果你是也是这样想的话，那么学一些代码怕是绕不开的，而来到了 V90 版本的 Framer Studio 恐怕是现在市面上最适合设计师<strong>学习代码制作原型、学习代码来表达自己的动效、学习代码来试验自己交互逻辑的一款工具。</strong></p>
+<p><strong>说了那么多，下面跟大家简单分享下 V90 到底更新了啥，变成了什么样吧。</strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fg50s2cyjqj31kw0ucqna.jpg" alt=""></p>
+<p>先祭出现在界面，可以看到最明显的地方时，上面分成了 Design 和 Code 两个 Tab。</p>
+<h3>图形设计的强化（Design Tab）</h3>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fg4zl82lppj31kw0vd7ai.jpg" alt=""></p>
+<p><em>Interface design, the way its meant to be.</em> 让界面设计变回它本该有的样子。Framer “摒弃”了以往一进来就招呼你写代码的左边编辑器、右边预览图的界面，第一次将界面构建跟代码完全分离，它变得更像 Sketch ，你能直接在里面用鼠标来构建你的原型，而且还有了更接近于 Sketch 的那种 artboards 的概念。以往Framer 多被诟病的一点是，不适合做多界面跳转的完整的产品交互，只适合做单页面的可操作原型，现在加入了 artboards 和 只能分组算法，对于多页面跳转的完整一些的产品原型也能轻松应对。而且还内嵌了万众期待的 auto-layout（自适应）功能，这肯定会对有自适应需求的设计师们带来非常大的帮助。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fg500g4s9zj31kw0uvdsk.jpg" alt=""></p>
+<p><em>Spend less time grouping and more time drawing.</em> 少为以往杂乱无序的分组很图层结构而担心。用鼠标来画界面，以往的Framer 也可以，可是以前的问题是，画出来的东西会让你所有的代码都乱了套，最后你还是要手动去帮它擦屁股，这种操作很晕人。智能分组的出现就是为了解决这个问题，其实说智能也太高级了，大家可以这样理解，以前 Framer 的图形编辑是一坨 X，现在不一样了，它变得更加接近于我们最喜爱的 Sketch，只不过 Framer 会在你一边画画的同时，<strong>严格按照你要的图层顺序</strong>一边把代码帮你写好。**画出来就是自适应的，画出来就是不用擦屁股的，尽管像用 Sketch 一样来用它就好。**对了它还增加了一个插入 icon 的小功能，你可以把在 Sketch 里面画好的小 icon 添加到这里，随时供你调用。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fg50d08ug0j31kw0vidri.jpg" alt=""></p>
+<p>瞧瞧，是不是有点眼熟呢！完全支持你像在 Sketch 里面精确构建界面一样全方位掌控你想要掌控的所有元素了。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fg50fxoxfcj31kw0ve4cg.jpg" alt=""></p>
+<p>将界面的构建与代码编辑器完全分开，多画板，自适应，智能图层的引入的让 Framer 变得像超级无敌简单版本的 Xcode，我们终于可以很方便地一边构建我们的界面，又一边用代码来编辑我们的交互逻辑、动效逻辑了。</p>
+<h3>代码编辑器（Code Tab）</h3>
+<p>猜想这回 Framer Studio 主要更新在于图形设计的强化，代码编辑这一块并没有带来什么任何新功能，所以贴个官网的截图，大家感受一下（Framer 官网的设计一向都维持比较高的水准，没事我都爱逛逛。）</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fg510yqpm9j31kw6beu0z.jpg" alt=""></p>
+<h3>最后想说</h3>
+<p>图形编辑能力的全方位增强可能能够解决我们以往最发愁的界面代码与交互动效代码混合而导致的种种牵一发而动全身的 bug 了。设计师能够更加专注于使用代码来构建原型而不是大部分时间都沉浸于无数的 bug 之中耗费精力。简单点说，Framer 替我们完成了连专业程序员也会觉得繁杂而无趣的工作。一边亲手写入秀丽的代码，一边看着自己的原型从静态的一张张静态图片串联起来成为一个完整的可交互原型，是非常享受的一种体验。在这个过程你用最简单，最漂亮又最有意义的方式把学习了一些程序思考的方式，又能够深层次的检查一遍整个产品的交互流程，最后还能得到一个有说服力的可交互原型，这种一石二鸟的学习买卖我认为很值。</p>
+<p>假如大家感兴趣的话，或许以后我能写一些 Framer Studio 的小教程分享给打架吧。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">图形设计的强化（Design Tab）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">代码编辑器（Code Tab）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">最后想说</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/31/framerupdate/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/31/framerupdate/&text=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/31/framerupdate/&is_video=false&description=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具&body=Check out this article: http://yoursite.com/2017/05/31/framerupdate/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/31/framerupdate/&title=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/31/framerupdate/&name=Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
