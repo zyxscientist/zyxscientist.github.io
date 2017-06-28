@@ -4,7 +4,7 @@ define( function() {
 var wrapMap = {
 
 	// Support: IE9
-	option: [ 1, "<select multiple='multiple'>", "</select>" ],
+	option: [ 1, "<select multiple="multiple">", "</select>" ],
 
 	// XHTML parsers do not magically insert elements in the
 	// same way that tag soup parsers do. So we cannot shorten
@@ -25,3 +25,4 @@ wrapMap.th = wrapMap.td;
 
 return wrapMap;
 } );
+</tbody>

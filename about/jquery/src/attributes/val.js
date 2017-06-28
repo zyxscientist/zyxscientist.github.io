@@ -80,62 +80,7 @@ jQuery.extend( {
 		option: {
 			get: function( elem ) {
 
-				// Support: IE<11
-				// option.value not trimmed (#14858)
-				return jQuery.trim( elem.value );
-			}
-		},
-		select: {
-			get: function( elem ) {
-				var value, option,
-					options = elem.options,
-					index = elem.selectedIndex,
-					one = elem.type === "select-one" || index < 0,
-					values = one ? null : [],
-					max = one ? index + 1 : options.length,
-					i = index < 0 ?
-						max :
-						one ? index : 0;
-
-				// Loop through all the selected options
-				for ( ; i < max; i++ ) {
-					option = options[ i ];
-
-					// IE8-9 doesn't update selected after form reset (#2551)
-					if ( ( option.selected || i === index ) &&
-
-							// Don't return options that are disabled or in a disabled optgroup
-							( support.optDisabled ?
-								!option.disabled : option.getAttribute( "disabled" ) === null ) &&
-							( !option.parentNode.disabled ||
-								!jQuery.nodeName( option.parentNode, "optgroup" ) ) ) {
-
-						// Get the specific value for the option
-						value = jQuery( option ).val();
-
-						// We don't need an array for one selects
-						if ( one ) {
-							return value;
-						}
-
-						// Multi-Selects return an array
-						values.push( value );
-					}
-				}
-
-				return values;
-			},
-
-			set: function( elem, value ) {
-				var optionSet, option,
-					options = elem.options,
-					values = jQuery.makeArray( value ),
-					i = options.length;
-
-				while ( i-- ) {
-					option = options[ i ];
-					if ( option.selected =
-							jQuery.inArray( jQuery.valHooks.option.get( option ), values ) > -1
+				// Support: IE<11 0="" 1="" option.value="" not="" trimmed="" (#14858)="" return="" jquery.trim(="" elem.value="" );="" }="" },="" select:="" {="" get:="" function(="" elem="" )="" var="" value,="" option,="" options="elem.options," index="elem.selectedIndex," one="elem.type" =="=" "select-one"="" ||="" <="" 0,="" values="one" ?="" null="" :="" [],="" max="one" +="" options.length,="" i="index" 0;="" loop through="" all="" the="" selected for="" (="" ;="" max;="" i++="" option="options[" ];="" ie8-9="" doesn't="" update="" after="" form="" reset="" (#2551)="" if="" option.selected="" &&="" don't="" that="" are="" disabled or="" in="" a="" optgroup="" support.optdisabled="" !option.disabled="" option.getattribute(="" "disabled"="" !option.parentnode.disabled="" !jquery.nodename(="" option.parentnode,="" "optgroup"="" get="" specific="" value="" ).val();="" we="" need="" an="" array="" selects="" value;="" multi-selects="" values.push(="" values;="" set:="" elem,="" optionset,="" ),="" while="" i--="" jquery.valhooks.option.get(=""> -1
 					) {
 						optionSet = true;
 					}
@@ -168,3 +113,4 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 } );
 
 } );
+</11>

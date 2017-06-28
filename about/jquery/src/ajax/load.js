@@ -81,3 +81,4 @@ jQuery.fn.load = function( url, params, callback ) {
 };
 
 } );
+</div>
