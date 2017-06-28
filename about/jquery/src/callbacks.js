@@ -150,7 +150,19 @@ jQuery.Callbacks = function( options ) {
 						list.splice( index, 1 );
 
 						// Handle firing indexes
-						if ( index <= firingindex="" )="" {="" firingindex--;="" }="" );="" return="" this;="" },="" check="" if="" a="" given="" callback="" is="" in="" the="" list.="" no="" argument="" given,="" whether="" or="" not="" list="" has="" callbacks="" attached.="" has:="" function(="" fn="" ?="" jquery.inarray(="" fn,=""> -1 :
+						if ( index <= firingIndex ) {
+							firingIndex--;
+						}
+					}
+				} );
+				return this;
+			},
+
+			// Check if a given callback is in the list.
+			// If no argument is given, return whether or not list has callbacks attached.
+			has: function( fn ) {
+				return fn ?
+					jQuery.inArray( fn, list ) > -1 :
 					list.length > 0;
 			},
 
@@ -218,4 +230,3 @@ jQuery.Callbacks = function( options ) {
 
 return jQuery;
 } );
-</=>

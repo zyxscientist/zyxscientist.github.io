@@ -66,4 +66,3 @@ jQuery.ajaxTransport( "script", function( s ) {
 } );
 
 } );
-</script>

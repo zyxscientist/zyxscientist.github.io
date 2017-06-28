@@ -1,2 +1,3 @@
 define( function() {
-	return ( /
+	return ( /<([\w:-]+)/ );
+} );
