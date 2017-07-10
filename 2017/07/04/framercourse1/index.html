@@ -7,22 +7,26 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
-在没有更新之前，假如不使用导入 Sketch 源文件功能的话, Demo里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用Framer，讲真，那段时间的 Fram">
+在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谁都能看懂的 Framer Studio 教程（1）">
 <meta property="og:url" content="http://yoursite.com/2017/07/04/framercourse1/index.html">
 <meta property="og:site_name" content="Zyxscientist">
 <meta property="og:description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
-在没有更新之前，假如不使用导入 Sketch 源文件功能的话, Demo里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用Framer，讲真，那段时间的 Fram">
+在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fha6ejztb2j31kw0zk16v.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fha6f6vmo4g30go0b4q5e.gif">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fherxv3qaag30go0b4abj.gif">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fha6fi54vag30go0b40ur.gif">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fha6l5j973j30qw18gdz2.jpg">
-<meta property="og:updated_time" content="2017-07-06T07:17:45.000Z">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fhaidvk42gj30qg0bwwfc.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fhaicyqcwlj30xa0k6q74.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fhaif9emboj30m807cmy8.jpg">
+<meta property="og:updated_time" content="2017-07-10T06:33:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谁都能看懂的 Framer Studio 教程（1）">
 <meta name="twitter:description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
-在没有更新之前，假如不使用导入 Sketch 源文件功能的话, Demo里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用Framer，讲真，那段时间的 Fram">
+在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的">
     
     
         
@@ -149,25 +153,41 @@
 
   <div class="content" itemprop="articleBody">
     <p>Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： <a href="https://zhuanlan.zhihu.com/p/27188492" target="_blank" rel="external">Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具</a>）。</p>
-<p>在没有更新之前，假如不使用导入 Sketch 源文件功能的话, Demo里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用Framer，讲真，那段时间的 Framer 比现在(V95)难用好多好多倍，即便是计科专业的我都经常会因为 Layer 之间的关系弄不清楚而绕得晕头转向，亲手 code 界面这样的活儿除了能让你了解一小点编程里面{对象（object）}的基本概念之外对你的工作流程除了增加工作量以外毫无益处，而这回 Framer 花大力气给出来的 Design Tab 就是为了解决这样的问题，不用亲手 code 出界面节省了大半工作量的同时还降低学习成本，跟 Sketch 相差无几 artboard 功能也让 Framer 对制作多页面原型的能力有了超大幅度的提升。在 Design Tab 里面用设计师最惯常的方法来完成搭建界面的工作，在 Code Tab 里面完成交互与动效的逻辑，也就是写代码的工作。V90 往后的 Framer 说是市面上最强的 Demo 工具也不为过，做出及其精巧准确的 Demo 的同时又能习得一二代码思维，好像再也找不到借口不选用这一件兵器了。</p>
-<p>这是一篇入门教程，为毫无编程基础但又对编程充满好奇心的设计师而准备，尽量以最简单的文字来把事情讲清楚。先简单说说 Design Tab，再详细地讲讲 Code Tab。为避免像一般程序员的技术书籍那样写得长篇累牍看着想死，文章可能不会非常系统地给你逐条代码进行讲解，不过你很有可能会发现其实大部分代码无需讲解都能看懂。最后我还会给出例子项目的素材和源码并且诚挚希望有兴趣的朋友照着亲手做一遍。</p>
+<p>在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用 Framer，讲真，那段时间的 Framer 比现在(V95)难用好多好多倍，即便是计科专业的我都经常会因为 Layer 之间的关系弄不清楚而绕得晕头转向，亲手 code 界面这样的活儿除了能让你了解一小点编程里面{对象（object）}的基本概念之外对你的工作流程除了增加工作量以外毫无益处，而这回 Framer 花大力气给出来的 Design Tab 就是为了解决这样的问题，不用亲手 code 出界面节省了大半工作量的同时还降低学习成本，跟 Sketch 相差无几 artboard 功能也让 Framer 对制作多页面原型的能力有了超大幅度的提升。在 Design Tab 里面用设计师最惯常的方法来完成搭建界面的工作，在 Code Tab 里面完成交互与动效的逻辑，也就是写代码的工作。V90 往后的 Framer 说是市面上最强的 Demo 工具也不为过，做出及其精巧准确的 Demo 的同时又能习得一二代码思维，好像再也找不到借口不选用这一件兵器了。</p>
+<p>这是一篇入门教程，为毫无编程基础但又对编程充满好奇心的设计师而准备，尽量以最简单的文字来把事情讲清楚。先简单说说 Design Tab，再详细地讲讲 Code Tab。为避免像一般程序员的技术书籍那样写得长篇累牍看着想死，文章不会非常系统地给你逐条代码进行讲解而是更趋向于提供一种思路和鼓励。不过你很有可能会发现其实大部分代码无需讲解都能看懂。最后我还会给出例子项目的素材和源码并且诚挚希望有兴趣的朋友照着亲手做一遍。</p>
 <h3>Design Tab</h3>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fha6ejztb2j31kw0zk16v.jpg" alt=""></p>
-<p>对于熟悉 Sketch 的设计师来讲看完上面这张图或许就能够大概知道 Design Tab 到底是怎么样一回事了。不仅界面布局上与 Sketch 非常类似，而且使用方法也别无二致，因此对于 Design Tab 的详细使用方法这里就不作赘述。它与 Sketch 最大的不同点在于所谓的{智能分组算法}和{targeting}</p>
-<p><strong>1.智能分组算法</strong></p>
-<p>这个名词听起来非常高大上，但经过了一段时间使用之后我发现智能这个属性是不存在的，它只不过是为了方便后续代码调用的一个自动分组功能而已。</p>
+<p>对于熟悉 Sketch 的设计师来讲看完上面这张图或许就能够大概知道 Design Tab 到底是怎么样一回事了。不仅界面布局上与 Sketch 非常类似，而且使用方法也别无二致，因此对于 Design Tab 的详细使用方法这里就不作赘述。它与 Sketch 最大的不同点在于它的「自动层级系统」、「图像剪裁」和「targeting」。</p>
+<p><strong>1.自动层级系统</strong></p>
+<p>这个名词听起来非常高大上，但经过了一段时间使用之后发现，它其实是为了方便后续代码调用的一个类自动设置父子层的功能。自动设置图层之间父子级的关系与 Sketch 里面的分组看起来很类似，<strong>但并不是一回事，在 Framer 里面没有分组（Grouping）的概念。</strong></p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fha6f6vmo4g30go0b4q5e.gif" alt=""></p>
-<p>没错，大致就是那么一个回事，当你把一个面积较小的图层拽到一个面积较大的图层之上的时候，<strong>Framer 会把面积较小的图层设定为面积较大图层的子图层（面积更大的总会自动被设定为父层）</strong>。比方说你在一个背景色为白色的卡片上面添加上了一张美美的图片然后还添加上了一个骚气的渐变色按钮的话，那么这张图片和这颗骚气的按钮就会被自动判定为卡片的子图层，有点儿类似于 你在 Sketch 里面手动执行的分组操作。</p>
+<p>没错，大致就是那么一个回事，当你把一个面积较小的图层拽到一个面积较大的图层之上的时候，<strong>Framer 会把面积较小的图层设定为面积较大图层的子图层（基本原则是面积更大图层的总会自动被设定为父层）</strong>。比方说你在一个背景色为白色的卡片上面添加上了一张美美的图片然后还添加上了一个骚气的渐变色按钮的话，那么这张图片和这颗骚气的按钮就会被自动判定为卡片的子图层，有点儿类似于 你在 Sketch 里面手动执行的分组操作。</p>
 <p>可能你会觉得这个自动处理图层关系的功能有点儿多余，它确实不是什么时候都那么好用，很多我们时候想要的并不是简单的父子关系。但 Framer 与 Sketch 最大的不同之处就是在于我们后面还要使用代码控制先前所搭建的界面，自动处理图层之间的父子关系是非常有必要的。例如我想为刚刚画好的那张卡片添加一个简单的平移动画，那么我们只需要指定让最高级的父层做平移运动，在它之下的子图层就会跟着一起走。假如没有这层父子关系的话，我们就需要为每个元素都添加上一个位移量都各自不同的运动，这就非常反人类了。</p>
-<p>刚开始使用可能会有那么一点不习惯，这一点与 Sketch 确实非常不同，但知道了它的原因与原理之后还是蛮不错的。</p>
-<p><strong>2.Targeting</strong></p>
-<p>好了，在了解完这个<strong>智能分组算法</strong>之后其实我们就对 Framer 的 Design Tab 基本使用方法就已经掌握得差不多了。在进入代码编辑之前，还有一步操作要做，就是 Targeting。</p>
+<p>刚开始使用会有那么一点不习惯，这一点与 Sketch 确实非常不同，但知道了它的<strong>原因与原理</strong>之后还是蛮不错的。</p>
+<p><strong>2.Clip（剪裁）</strong></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fherxv3qaag30go0b4abj.gif" alt="">
+想让子层只在父层之内显示，做出类似于 Sketch 里面 Mask，也就是我们常说的蒙版的效果，我们只需要放置好图层，然后将父层的 Clip 勾选上就可以了。</p>
+<p><strong>3.Targeting</strong></p>
+<p>好了，在了解完「自动层级系统」和「Clip（剪裁）」和之后其实我们就对 Framer 的 Design Tab 基本使用方法就已经掌握得差不多了。在进入代码编辑之前，还有一步操作要做，就是 Targeting。</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fha6fi54vag30go0b40ur.gif" alt=""></p>
-<p>在撸起袖子准备写代码之前，请先将你想要用代码加以控制的图层 Targeting 出来。建议只 Targeting 那些有需要的图层，那些无需添加代码控制的图层就不必 Targeting 了，让它们跟随父层运动即可。Targeting 的设计配合上之前所说的智能分组算法是整个 Design Tab 的精髓与意义所在，它们杜绝了以前 Framer{使用代码设计界面，使用代码处理图层之间的关系并最后成功将所有东西都弄到乱七八糟}的恶心境况。</p>
-<p><strong>3.我好像说了好多老版本的坏话？</strong></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fha6l5j973j30qw18gdz2.jpg" alt=""></p>
-<p>这里给出两张图，同一个原型，老版本 Framer 使用代码行数比新版本多了几乎一倍(177/93)，这还是因为这个原型界面简单才仅仅多出了一倍。</p>
+<p>在撸起袖子准备写代码之前，需要先将需要交互的元素 Targeting 出来。我们可以只 Targeting 那些有需要的图层，那些无需添加代码控制的图层就不必 Targeting 了，让它们跟随父层运动即可。Targeting 的设计配合上之前所说的智能分组算法是整个 Design Tab 的精髓与意义所在，它们杜绝了以前 Framer{使用代码设计界面，使用代码处理图层之间的关系并最后成功将所有东西都弄得乱七八糟}的恶心境况。</p>
+<p>看到这里，请你参照文章的第一张图片来在 Design Tab 里面搭建一个一毛一样的界面，注意图层命名与图层之间的关系。</p>
 <h3>Code Tab</h3>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif" alt=""></p>
+<p>这是模仿 iOS11 新版本 App Store 【今日】页面的一个视差效果制作的一个 DEMO，接下来我们试着用 Framer 把这个效果用代码写出来。</p>
+<p>为什么一上来就招呼大家做那么复杂的练习呢？因为这个原型的动效的样式能非常明确地为大家展示 Framer 与其他原型工具的不同之处，代码的灵活性和准确性为大家带来的便利，难必有它难的道理，这也正正是整个 Framer Studio 的最令人喜爱的点。</p>
+<p><strong>1.你真的看不懂代码吗？</strong></p>
+<p>不要被自己的设计师的 title 限制了自己聪明的大脑，静下心来看一小段 Framer 的代码，并猜想一下它到底是什么意思。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fhaidvk42gj30qg0bwwfc.jpg" alt=""></p>
+<p>假如实在看不懂的话，那也不是因为你看不懂代码，充其量只能说你看不懂英文，我们一起来看看这段代码是什么一个意思。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fhaicyqcwlj30xa0k6q74.jpg" alt=""></p>
+<p>那么，我们将这段咒语翻译为一句人话就是：劳资要为 logo 图层添加一个状态，这个状态的名字叫 expand，在这个状态之下，logo 图层的 x 变成了 22px，y 变成了 29px，切换到这个状态的时候的动画会持续0.5秒钟并有一个低调的小弹性（Spring(damping: .8)）。除了 Spring(damping: .8) 这一句有一点不知所云之外其他的都难不倒你吧？</p>
+<p><strong>2.看懂了继续</strong></p>
+<p>短短数行，我们就为 DJI 的 logo 添加上了一个名为 expand 的 states，同时你也学会了在 Framer 里面<strong>最核心、最基本、最常用同时也是最好用</strong>的编辑动画的方式。</p>
+<p>什么？编辑了动画？我怎么没看到动呢？</p>
+<p>是的，什么都没发生，现在你只是为 logo 图层添加上了一个状态，但是我们还需要一个点击操作来触发它由初始状态（在 Design Tab 里面的状态就是所有图层的初始状态）切换至我们刚刚添加上的 expand 状态。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fhaif9emboj30m807cmy8.jpg" alt=""></p>
+<p>触发就更简单了，不过也照例翻译成人话看一下：我要在点击 img 图层的时候，执行下面这个切换状态的命令，我不管，我就要，你得听我的！你为 img 这个图层添加了一个操作，按照字面意思 onClick 就是点击一下啦，当然， Framer 里面还有好多种操作手势等待你来调用，包括 Force Touch 我会乱说？</p>
 
   </div>
 </article>
