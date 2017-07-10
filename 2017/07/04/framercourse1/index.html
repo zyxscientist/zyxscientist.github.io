@@ -9,7 +9,7 @@
     <meta name="description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
 在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谁都能看懂的 Framer Studio 教程（1）">
+<meta property="og:title" content="谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）">
 <meta property="og:url" content="http://yoursite.com/2017/07/04/framercourse1/index.html">
 <meta property="og:site_name" content="Zyxscientist">
 <meta property="og:description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
@@ -19,12 +19,16 @@
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fherxv3qaag30go0b4abj.gif">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fha6fi54vag30go0b40ur.gif">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fheue8fblfg30go0b4k5w.gif">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fhevlxug45g30go0b4dio.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fhevrdjghjj312413uwqg.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fhaidvk42gj30qg0bwwfc.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fhaicyqcwlj30xa0k6q74.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fhaif9emboj30m807cmy8.jpg">
-<meta property="og:updated_time" content="2017-07-10T06:33:10.000Z">
+<meta property="og:updated_time" content="2017-07-10T09:00:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谁都能看懂的 Framer Studio 教程（1）">
+<meta name="twitter:title" content="谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）">
 <meta name="twitter:description" content="Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具）。
 在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的">
     
@@ -46,7 +50,7 @@
         
     
     <!-- title -->
-    <title>谁都能看懂的 Framer Studio 教程（1）</title>
+    <title>谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）</title>
     <!-- styles -->
     <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
@@ -100,20 +104,20 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/04/framercourse1/&text=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/04/framercourse1/&is_video=false&description=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=谁都能看懂的 Framer Studio 教程（1）&body=Check out this article: http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/04/framercourse1/&name=谁都能看懂的 Framer Studio 教程（1）&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/04/framercourse1/&text=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/04/framercourse1/&is_video=false&description=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）&body=Check out this article: http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/04/framercourse1/&name=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Design Tab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">Code Tab</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Design Tab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">Design Tab 的使用思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">做个练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">Code Tab</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -125,7 +129,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        谁都能看懂的 Framer Studio 教程（1）
+        谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）
     </h1>
 
 
@@ -153,11 +157,11 @@
 
   <div class="content" itemprop="articleBody">
     <p>Framer Studio 在上个月更新到了 V90 版本后增加了 Design Tab（如果并不了解是怎个回事可以看我上一篇文章： <a href="https://zhuanlan.zhihu.com/p/27188492" target="_blank" rel="external">Framer Studio 可能是目前为止最适合设计师学习代码的一款原型工具</a>）。</p>
-<p>在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用 Framer，讲真，那段时间的 Framer 比现在(V95)难用好多好多倍，即便是计科专业的我都经常会因为 Layer 之间的关系弄不清楚而绕得晕头转向，亲手 code 界面这样的活儿除了能让你了解一小点编程里面{对象（object）}的基本概念之外对你的工作流程除了增加工作量以外毫无益处，而这回 Framer 花大力气给出来的 Design Tab 就是为了解决这样的问题，不用亲手 code 出界面节省了大半工作量的同时还降低学习成本，跟 Sketch 相差无几 artboard 功能也让 Framer 对制作多页面原型的能力有了超大幅度的提升。在 Design Tab 里面用设计师最惯常的方法来完成搭建界面的工作，在 Code Tab 里面完成交互与动效的逻辑，也就是写代码的工作。V90 往后的 Framer 说是市面上最强的 Demo 工具也不为过，做出及其精巧准确的 Demo 的同时又能习得一二代码思维，好像再也找不到借口不选用这一件兵器了。</p>
-<p>这是一篇入门教程，为毫无编程基础但又对编程充满好奇心的设计师而准备，尽量以最简单的文字来把事情讲清楚。先简单说说 Design Tab，再详细地讲讲 Code Tab。为避免像一般程序员的技术书籍那样写得长篇累牍看着想死，文章不会非常系统地给你逐条代码进行讲解而是更趋向于提供一种思路和鼓励。不过你很有可能会发现其实大部分代码无需讲解都能看懂。最后我还会给出例子项目的素材和源码并且诚挚希望有兴趣的朋友照着亲手做一遍。</p>
+<p>在没有更新之前，假如不使用导入 Sketch 源文件功能（导入 Sketch 源文件灵活性太差，不推荐使用）的话, Demo 里面的所有东西你都要亲手 code 出来。我大学还未毕业的时候就开始使用 Framer，讲真，那段时间的 Framer 比现在(V95)难用好多好多倍，即便是计科专业的我都经常会因为 Layer 之间的关系弄不清楚而绕得晕头转向，亲手 code 界面这样的活儿除了能让你了解一小点编程里面「对象（object）」的基本概念之外对你的工作流程除了增加工作量以外毫无益处，而这回 Framer 花大力气给出来的 Design Tab 就是为了解决这样的问题，不用亲手 code 出界面节省了大半工作量的同时还降低学习成本，跟 Sketch 相差无几 artboard 功能也让 Framer 对制作多页面原型的能力有了超大幅度的提升。在 Design Tab 里面用设计师最惯常的方法来完成搭建界面的工作，在 Code Tab 里面完成交互与动效的逻辑，也就是写代码的工作。V90 往后的 Framer 说是市面上最强的 Demo 工具也不为过，做出及其精巧准确的 Demo 的同时又能习得一二代码思维，好像再也找不到借口不选用这一件兵器了。</p>
+<p>这是一篇入门教程，为毫无编程基础但又对编程充满好奇心的设计师而准备，尽量以最简单的文字来把事情讲清楚。第一篇先介绍 Design Tab，第二篇再详细地讲讲 Code Tab。为避免像一般程序员的技术书籍那样写得长篇累牍看着想死，文章不会非常系统地给你逐条代码进行讲解而是更趋向于提供一种思路和鼓励。不过你很有可能会发现其实大部分代码无需讲解都能看懂。最后我还会给出例子项目的素材和源码并且诚挚希望有兴趣的朋友照着亲手做一遍。</p>
 <h3>Design Tab</h3>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fha6ejztb2j31kw0zk16v.jpg" alt=""></p>
-<p>对于熟悉 Sketch 的设计师来讲看完上面这张图或许就能够大概知道 Design Tab 到底是怎么样一回事了。不仅界面布局上与 Sketch 非常类似，而且使用方法也别无二致，因此对于 Design Tab 的详细使用方法这里就不作赘述。它与 Sketch 最大的不同点在于它的「自动层级系统」、「图像剪裁」和「targeting」。</p>
+<p>对于熟悉 Sketch 的设计师来讲看完上面这张图或许就能够大概知道 Design Tab 到底是怎么样一回事了。不仅界面布局上与 Sketch 非常类似，而且使用方法也别无二致，因此对于 Design Tab 的详细使用方法这里就不作赘述。它与 Sketch 最大的不同点在于它的「自动层级系统（Automatic Hierachy）」、「图像剪裁（Clip）」和「targeting」。</p>
 <p><strong>1.自动层级系统</strong></p>
 <p>这个名词听起来非常高大上，但经过了一段时间使用之后发现，它其实是为了方便后续代码调用的一个类自动设置父子层的功能。自动设置图层之间父子级的关系与 Sketch 里面的分组看起来很类似，<strong>但并不是一回事，在 Framer 里面没有分组（Grouping）的概念。</strong></p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fha6f6vmo4g30go0b4q5e.gif" alt=""></p>
@@ -170,8 +174,33 @@
 <p><strong>3.Targeting</strong></p>
 <p>好了，在了解完「自动层级系统」和「Clip（剪裁）」和之后其实我们就对 Framer 的 Design Tab 基本使用方法就已经掌握得差不多了。在进入代码编辑之前，还有一步操作要做，就是 Targeting。</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fha6fi54vag30go0b40ur.gif" alt=""></p>
-<p>在撸起袖子准备写代码之前，需要先将需要交互的元素 Targeting 出来。我们可以只 Targeting 那些有需要的图层，那些无需添加代码控制的图层就不必 Targeting 了，让它们跟随父层运动即可。Targeting 的设计配合上之前所说的智能分组算法是整个 Design Tab 的精髓与意义所在，它们杜绝了以前 Framer{使用代码设计界面，使用代码处理图层之间的关系并最后成功将所有东西都弄得乱七八糟}的恶心境况。</p>
-<p>看到这里，请你参照文章的第一张图片来在 Design Tab 里面搭建一个一毛一样的界面，注意图层命名与图层之间的关系。</p>
+<p>在撸起袖子准备写代码之前，需要先将需要交互的元素 Targeting 出来。我们可以只 Targeting 那些有需要的图层，那些无需添加代码控制的图层就不必 Targeting 了，让它们跟随父层运动即可。Targeting 的设计配合上之前所说的「自动层级系统」是整个 Design Tab 的精髓与意义所在，它们杜绝了以前 Framer「使用代码设计界面，使用代码处理图层之间的关系并最后成功将所有东西都弄得乱七八糟」的恶心境况。</p>
+<h3>Design Tab 的使用思路</h3>
+<p>尽管 Framer 的 Design Tab 已然非常成熟，但是如果要让设计师们因此而放弃 Sketch 改为直接用 Design Tab 画图并不现实。那问题就来了，总不能让大家在 Sketch 里面画一遍，然后又在 Design Tab 画一遍吧？</p>
+<p>当然不是，这里为大家推荐一个非常简单的工作流程，让我们在不用重新画一遍之余又能充分地将 Design Tab 的各种强大属性利用起来，而且容错率还比较高。</p>
+<p>**无论使用什么软件进行制作，图层关系的编排都是动效设计非常重要的一环，可以说是一切的基础。**在搭建界面之前，我们要根据动效的样式来决定以什么样的方式来编排我们的图层，哪些地方不需要有太多的交互细节，那些地方又将会因为有大量的骚操作在里面而需要我们特殊的处理。先来看看我们的目标效果。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif" alt=""></p>
+<p>这个 Demo 主要的交互细节都在点击卡片后内容展开的那个优雅的视差效果。大圆角卡片与中间的 Spark 无人机图片之间似乎是父子关系，并且用到了 Clip，而其他图层只是一个简单的透明度的变化与位移。</p>
+<p>先将内部不会有太多交互细节的图层从 Sketch 里面直接导出来，然后放置到 Design Tab 的画板里面，比如就我这个 DEMO 而言，背景图层不存在任何交互，我就可以将一整块背景连带上 TabBar 导出来，而中间的卡片由于存在一个比较时髦的视差效果，所以我们考虑在 Design Tab 里面进行搭建，方便后续使用代码进行更细致（如变形、放大）的控制。如此，我们做到仍然使用用 Sketch 做图，但也发挥的 Design Tab 应有的功能。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fheue8fblfg30go0b4k5w.gif" alt="">
+将没有太多交互细节的图层导出并拖拽到 Design Tab 里面摆放好。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fhevlxug45g30go0b4dio.gif" alt="">
+将 Spark 无人机的图片设置为 mask 图层的子图层，并将 mask 图层的 clip 选项勾选上。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fhevrdjghjj312413uwqg.jpg" alt="">
+最后我们将会得到这样的一个静态图，请注意各图层之间的关系。</p>
+<h3>做个练习</h3>
+<p>文章最后将上面用到的源文件分享给大家，欢迎下载把玩。点这里下载
+假如你的电脑没有安装 Framer Studio，可以到 <a href="https://framer.com/" target="_blank" rel="external">Framer</a> 的官网进行下载并开始足足两周的试用,同时，Framer 的官网的设计本身也非常精致，可以逛逛看啦。</p>
+<p>下一篇关于将会与大家分享 Freestyle Code Tab 的使用方法，尽量在这周内更新吧！</p>
+<p>欢迎关注</p>
+<ul>
+<li>
+<p>个人专栏：<a href="https://zhuanlan.zhihu.com/designcoder" target="_blank" rel="external">「DesignCoder」</a>设计是一项工程；</p>
+</li>
+<li>
+<p>我的追波：<a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">Zhuyuxuan</a></p>
+</li>
+</ul>
 <h3>Code Tab</h3>
 <p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fhbax31u0cg30go0b47ev.gif" alt=""></p>
 <p>这是模仿 iOS11 新版本 App Store 【今日】页面的一个视差效果制作的一个 DEMO，接下来我们试着用 Framer 把这个效果用代码写出来。</p>
@@ -216,21 +245,21 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Design Tab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">Code Tab</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Design Tab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">Design Tab 的使用思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">做个练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">Code Tab</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/04/framercourse1/&text=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/04/framercourse1/&is_video=false&description=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=谁都能看懂的 Framer Studio 教程（1）&body=Check out this article: http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程（1）"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/04/framercourse1/&name=谁都能看懂的 Framer Studio 教程（1）&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/04/framercourse1/&text=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/04/framercourse1/&is_video=false&description=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）&body=Check out this article: http://yoursite.com/2017/07/04/framercourse1/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/04/framercourse1/&title=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/04/framercourse1/&name=谁都能看懂的 Framer Studio 教程——Design Tab的使用（1）&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
