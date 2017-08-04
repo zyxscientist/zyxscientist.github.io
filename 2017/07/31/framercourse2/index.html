@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="当我们在使用一种工具的时候，无论这个这个工具是简单是复杂，照着工具的设计者所希望的样子来去使用这件工具，很多时候都会达到事半功倍的效果。
+上一篇教程同大家分享了 Framer Studio 的 Design Tab 的使用方法，除了特别讲到的几个概念以外，使用方法与大家熟悉的 Sketch 相差无几，这几个特殊的概念之所以特殊，是因为它们都是为你即将要学习的 Code Tab 而设计的。在 Fra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Framer Studio 教程——Code Tab 很可怕？">
+<meta property="og:url" content="http://yoursite.com/2017/07/31/framercourse2/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="当我们在使用一种工具的时候，无论这个这个工具是简单是复杂，照着工具的设计者所希望的样子来去使用这件工具，很多时候都会达到事半功倍的效果。
+上一篇教程同大家分享了 Framer Studio 的 Design Tab 的使用方法，除了特别讲到的几个概念以外，使用方法与大家熟悉的 Sketch 相差无几，这几个特殊的概念之所以特殊，是因为它们都是为你即将要学习的 Code Tab 而设计的。在 Fra">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fi7t1ty9p8j304x04x0sm.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fi7n5waxapj30jc0tg42o.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fi7tkbww2pj30q10f8my4.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fi7j3shzxdj30j40lbgmb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fi7jig3wabj30kv05kt9o.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fi7oxq6iqzj30ej0480tg.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fi7sxip5pkj30k20ba763.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fi7swnca3wg30go0b47ev.gif">
+<meta property="og:updated_time" content="2017-08-04T09:32:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Framer Studio 教程——Code Tab 很可怕？">
+<meta name="twitter:description" content="当我们在使用一种工具的时候，无论这个这个工具是简单是复杂，照着工具的设计者所希望的样子来去使用这件工具，很多时候都会达到事半功倍的效果。
+上一篇教程同大家分享了 Framer Studio 的 Design Tab 的使用方法，除了特别讲到的几个概念以外，使用方法与大家熟悉的 Sketch 相差无几，这几个特殊的概念之所以特殊，是因为它们都是为你即将要学习的 Code Tab 而设计的。在 Fra">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Framer Studio 教程——Code Tab 很可怕？</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/07/04/framercourse1/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/31/framercourse2/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/31/framercourse2/&text=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/31/framercourse2/&is_video=false&description=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio 教程——Code Tab 很可怕？&body=Check out this article: http://yoursite.com/2017/07/31/framercourse2/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/31/framercourse2/&name=Framer Studio 教程——Code Tab 很可怕？&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.面向对象（Object-Oriented）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.状态的改变与事件（States&Event）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.设置动画属性（animationOptions）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">4.做个练习</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Framer Studio 教程——Code Tab 很可怕？
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-07-31T14:04:23.000Z" itemprop="datePublished">2017-07-31</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/教程/">教程</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong>当我们在使用一种工具的时候，无论这个这个工具是简单是复杂，照着工具的设计者所希望的样子来去使用这件工具，很多时候都会达到事半功倍的效果。</strong></p>
+<p>上一篇教程同大家分享了 Framer Studio 的 Design Tab 的使用方法，除了特别讲到的几个概念以外，使用方法与大家熟悉的 Sketch 相差无几，这几个特殊的概念之所以特殊，是因为它们都是为你即将要学习的 Code Tab 而设计的。在 Framer Studio 里面，我们使用一种叫 CoffeeScript 的编程语言来制作原型。关于这门语言的历史由来和有趣故事这里就不多说了，我们说说它的几个优点：1.CoffeeScript 这门编程语言写起来非常接近人类语言，抛弃了很多令人摸不着头脑的符号和不知所云的词语，易记易读易懂易写，配合 Framer Studio 是设计师尝试学习编程语言的最好选择之一。2.这门语言转译自 JavaScript，不懂转译的话没关系，你可以理解为JavaScript的超级简化版。我们常听说国外的设计师都有点编程技能树，他们大多数点的就是这门(JS)语言，CoffeeScript 的概念与思路跟 JS 不会有什么不一样。3.CoffeeScript 是一门正儿八经的编程语言，真编程、真强大。它理论上可以包容下你所有的奇思妙想，高度自由、高度准确，当然难度也更高一些咯。</p>
+<p>下面我们开始从最基础，但同时也是最紧要的概念和知识出发来学习 Framer Studio 以及它所使用的编程语言 CoffeeScript。</p>
+<h3>1.面向对象（Object-Oriented）</h3>
+<p>CoffeeScript 是一门面向对象语言。那么什么是面向对象呢？</p>
+<p>或许大家会想起不知道哪里听过这个词语，虽然不懂，但听是听过的。假如你想非常系统地了解面向对象这个概念的话可以自己去查一下资料。又假如你是一个像我一样肤浅的人，不想从历史到当今对这个概念进行地毯式了解的话，那我们就非常粗浅、简易地来了解一下这个概念好了。</p>
+<p>说出来你可能不信，我们最常用的 Sketch，这款软件，其实也是用面向对象语言写成的，所以<strong>对象</strong>的概念在 Sketch 里面是从头贯彻到尾的。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fi7t1ty9p8j304x04x0sm.jpg" alt=""></p>
+<p>假如要我们用普通话来描述这张图的话，我们会说：这是一个 175*175 像素的灰色圆形，带 1 像素粗的深灰色描边。如此描述，你组里所有的设计师在没看到这张图的情况下都能想象得出这张图是什么样的。</p>
+<p>那么 Sketch 会怎么来描述这张图呢？Sketch 会以计算机的语言来描述这张图。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fi7n5waxapj30jc0tg42o.jpg" alt=""></p>
+<p>这片乌漆嘛黑的代码就是 Sketch 描述这个圆所用的文字，除了记录 175x175 像素的大小、填充色和描边色以外，它还会记录很多在视觉上不会显示出来的，但又不可或缺的属性。计算机比较较真，一旦它们要描述，就一定要描述到最细致、最准确的地步，否则就是个错误。幸好，我们不需要理会这些东西，只管操作我们的图形化界面，代码的编写方面 Sketch 会帮我们代劳。以上插图只是 Sketch 源码文件的一小部分截图，描述一个那么简单的圆 Sketch 需要 175 行代码。这一百行代码记录着这个圆的属性，譬如说它的大小、它的透明度、它的位置、它的颜色、它是不是有阴影？假如有，阴影是怎么样的等等等等，<strong>对于计算机而言，它就是一个对象(Object)，所有这些属性共同决定了这个对象的外观。用计算机的语言来描述一个物件，此为面向对象(Object-Oriented)。</strong></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fi7tkbww2pj30q10f8my4.jpg" alt=""></p>
+<p>没错，我们在 Sketch 里面画的所有东西，计算机都会用足够多的属性来描述，<strong>每一个图形都是一个对象(Object)</strong>。我们调节一个方形的颜色，就是调节<strong>对象</strong>描述颜色的数值，我们改变它的位置，就是调节<strong>对象(Object)<strong>描述位置的数值。我们每天在进行都</strong>&quot;面向对象设计&quot;</strong>，只是我们没有察觉到而已。</p>
+<p>CoffeeScript 是一门面向对象语言，我们使用 Framer 在本质上也是对对象进行一些定义，不同的是，我们在 Framer 里面更重要的对对象进行一些<strong>动作</strong>上的定义，添加一些动作上的属性。比如说当我按这个时候，那么这个原型在三秒内向上移动 100 个像素，同时旋转 90 度，更不同的是，我们不用图形化的界面来操作，我们直接使用代码。这与工程师在实现我们的设计的时候干的活在形式和环境上上是非常接近的。在学习 Framer 之前搞清楚这个概念是必须的。</p>
+<h3>2.状态的改变与事件（States&amp;Event）</h3>
+<p>原本<strong>图层</strong>、<strong>状态</strong>与<strong>事件</strong>是 Framer 最基础也是最重要的三大概念，但新版本的 Framer 有了 Design Tab，我们得以使用鼠标键盘对图层进行直接编辑，无需再使用代码进行构建，需要用代码编辑处理的东西就只剩下了<strong>状态</strong>和**事件。**简单又易懂，但是这两位兄贵将会是你以后快速制作一个 demo 最常用到的东西。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fi7j3shzxdj30j40lbgmb.jpg" alt=""></p>
+<p>在 Design Tab 里面画一个居中的正方形，我们简略地用人类的语言描述下这个正方形目前的状态是怎么个样子：大小 200x200，位于画面中心，水平居中且垂直居中，颜色是 Framer 默认使用的颜色，有一个像素的描边儿。结合第一节学到的对象的知识，这个正方形、也就是这个对象的各个属性已经被定好了，它目前现在这个状态，也就是我们刚刚用中文描述的状态，就是它的初始状态。这个时候它是静止不动的，假如要让它动起来，我们就要为这个正方形添加一个新的状态，同个正方形在两个状态之间进行切换的时候就会产生动画啦。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fi7jig3wabj30kv05kt9o.jpg" alt=""></p>
+<p>以上是为正方形添加新状态的写法，首先我们给这个状态起一个好听的名字，然后再写在这个状态的时候，正方形的一些属性会发生什么变化。例子中，在状态 moving 之下，正方形的 y 坐标变为 100。我们使用这个状态改写了正方形的位置属性，从原本默认的状态切换到 moving 状态，就会产生一个动画效果。</p>
+<p>理论上我们能够为同一个图层添加无数个不同的状态，并以不同的名字来将各个状态**“封装”**放置好，在有需要的时候命令同个图层切换到不同的状态。**例子中我们只修改了 y 坐标的数值，而实际上属于这个对象的所有属性我们都可以加以修改，当属性发生变化，动画效果出现。**状态与状态之间相互独立，互不干扰，某个环节出错，我们只需要调节这个环节，前后衔接的状态都不会受到影响，全部数据一目了然，维护方便，不容易出现牵一发而动全身，改一个像素导致全面崩盘的现象。这也是 Framer 可以做到极度细致（粗糙的时候也可以很粗糙），变化多端的最主要原因之一。</p>
+<p>我们用三行代码为正方形添加了一个新状态，接下来的工作就是添加一个让正方形切换到这个状态的操作，以什么样的手势操作触发，是单击触发，是双击触发，是在点下之后就立即触发，还是在手指离开屏幕后才开始触发等等都由你来进行定义，这些操作条件在 Framer 里面被统称为<strong>事件（Event）</strong>。Framer 提供的事件非常丰富，连 iPhone 的 Froce Touch 重压操作都可以模拟。话不多说，我们看看怎么操作。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fi7oxq6iqzj30ej0480tg.jpg" alt=""></p>
+<p>对谁进行什么样的操作产生什么样的结果，简单来说，事件就是定义那么几样东西。例子中我们为正方形本身添加了一个单击操作事件，骚粉色的 <em>-&gt;</em> 符号后面的内容是在进行了这次操作之后会发生什么样的事情。例子中发生的事情只有一件，就是正方形会切换到 moving 状态。翻译成中文就是：对正方形进行单击操作使正方形自己切换到 moving 状态。</p>
+<p>我们为图层添加一个个属性不同的状态，再通过某个事件来出发图层切换到指定状态，**状态改写对象属性达到产生动画效果的结果。**例子虽然简单，但实际上它们机会能够承包一切你所能想象得到的效果，不过在掌握了基础的概念之后，设计出精巧美观的效果也只不过是时间问题。</p>
+<h3>3.设置动画属性（animationOptions）</h3>
+<p>前面我们用五行代码为正方形添加了一个往上位移的小动画，不过这个动画现在速度缓慢、稍显沉闷、令人提不起兴趣。现在我们就来设置一下动画的属性，对动画的运动时间、运动曲线等各个属性添加一些个性化定义吧。（好吧，添加了之后也是令人提不起兴趣，对不起我做的例子太丑了，因为太忙（逃··· ）</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fi7sxip5pkj30k20ba763.jpg" alt=""></p>
+<p>animationOptions = Animation Options 的字面意思就是动画属性，例子中我们的animaitionOptions 写在了 moving 状态的下面，意思是这套动画状态从属于 moving 状态，只有在切换到 moving 状态的时候，这套动画属性才会起作用。例子中我们使用动画设置 moving 状态定义了运动曲线与运动时长。运动时长为 0.6 秒，而运动曲线*（运动曲线动态改变对象运动的速率）*是一长串不知所云的东西，这是贝塞尔曲线的写法，它的具体计算方式非常复杂，我们需要做的就是保持几种常用的曲线，在使用的时候复制粘贴进来就好，这些个控制动画属性的代码，对于程序员，尤其是前端程序员而言几乎是可以直接使用的，比如这段曲线的参数正是由苹果官网的某个动效复制而来。那么一小段代码的意思就是，切换到 moving 状态产生的动画的时长将为 0.6 秒，且以这样一段运动曲线进行运动。</p>
+<p>在 Framer 动画属性并非必须设置，假如没有设置的话，动画会以 Framer 默认的运动时间与运动曲线进行运动。不过一般来说我们在进行设计的时候对动画的节奏都会有特定的需求，很少说就使用默认设置。适合的曲线与时间对于动画质量的提升是非常显著的，这方面的经验需要一定时间进行积累。各大平台的设计规范对于动画节奏的定义也非常细致，建议大家可以去看看 <a href="https://material.io/guidelines/motion/material-motion.html" target="_blank" rel="external">Google Material Design Guideline</a> 对一些基础知识的进行了解。</p>
+<h3>4.做个练习</h3>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fi7swnca3wg30go0b47ev.gif" alt=""></p>
+<p>上篇文章我们介绍了 Design Tab，这篇文章你学会了一些基本的 Code Tab 知识，上篇文章给出的练习的下班部分可以继续去完成了。<a href="https://pan.baidu.com/s/1dEWgqRJ" target="_blank" rel="external">这里给出下载链接</a>。</p>
+<p>Code Tab 可怕吗？相较之下确实难度更高，但是 Framer 最吸引人的一点恰恰是这一点，代码带来的自由度非常高，可以实现我们所有的想法。代码编辑的形式让复用代码、复用设计变为可能，只要是以前做过的效果，只需要将代码全套复制即可重用，偷鸡速度无敌。且 CoffeeScript 的属性又使得你在 Framer 里面所编写的代码有可以被程序员直接使用的可能性，前端产品的动画编写形式与 Framer 里面的动画编写形式在本质上并无太大区别。</p>
+<p><strong>除了 Framer 以外，市面上也还有很多其他同类型工具值得选择，选择一样趁手的工具，适合自己的才是最好的。</strong></p>
+<p>欢迎关注
+	•	个人专栏：<a href="https://zhuanlan.zhihu.com/designcoder" target="_blank" rel="external">「DesignCoder」</a>设计是一项工程；
+	•	我的追波：<a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">Zhuyuxuan</a></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1.面向对象（Object-Oriented）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.状态的改变与事件（States&Event）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.设置动画属性（animationOptions）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">4.做个练习</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/31/framercourse2/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/31/framercourse2/&text=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/31/framercourse2/&is_video=false&description=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Framer Studio 教程——Code Tab 很可怕？&body=Check out this article: http://yoursite.com/2017/07/31/framercourse2/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/31/framercourse2/&title=Framer Studio 教程——Code Tab 很可怕？"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/31/framercourse2/&name=Framer Studio 教程——Code Tab 很可怕？&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
