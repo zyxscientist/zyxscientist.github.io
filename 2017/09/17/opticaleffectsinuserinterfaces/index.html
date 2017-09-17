@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="视觉平衡会对 UI 造成什么样的影响，业界内流行的解决方案又有哪一些，本文将以超过五十个例子为你讲解。
+俗话说眼见为实，但其实我们的眼睛经常欺骗我们。眼睛通过光的反射接收信息，然后经过一次“脑补”最终形成我们所谓“看见”的图像。脑补这个过程会因为各种原因的影响导致我们对于“看见”的事物的理解产生偏差。这一点对图形化操作界面的设计影响非常。既然无法绕过，设计师就要学会如何去适配人类的视觉惯性画出“正">
+<meta property="og:type" content="article">
+<meta property="og:title" content="视觉重量对 UI 的实际影响讲解及一大堆例子">
+<meta property="og:url" content="http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="视觉平衡会对 UI 造成什么样的影响，业界内流行的解决方案又有哪一些，本文将以超过五十个例子为你讲解。
+俗话说眼见为实，但其实我们的眼睛经常欺骗我们。眼睛通过光的反射接收信息，然后经过一次“脑补”最终形成我们所谓“看见”的图像。脑补这个过程会因为各种原因的影响导致我们对于“看见”的事物的理解产生偏差。这一点对图形化操作界面的设计影响非常。既然无法绕过，设计师就要学会如何去适配人类的视觉惯性画出“正">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn0360qwqj31gs0uk3yp.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn03c0cbnj31gs0uk3yu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn03h1rioj31gs0ukq35.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn03r9e41j31gs0uk74n.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn03wlva2j31gs0ukdgl.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn042ykivj31gs0uk0su.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn047hfjtj31gs0uk74c.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn04bn9baj31gs0uk74c.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn04i6klxj31gs0ukq3a.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn04yk7gtj31gs0ukt8z.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn052gy6yj31gs0uk41g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn05905d1j31gs0ukwf1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn05k70t1j31gs0uk74p.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn05u7zq1j31gs0ukjrl.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn0602ii6j31gs0ukmx4.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn0652ibpj31gs0uk3yo.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn068xc55j31gs0ukmx4.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn06dcd0gj31gs0ukjrk.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06i3mrzj31gs0uk749.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06mucgzj31gs0ukjsq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06s5xbuj31gs0uktci.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn07kq7prj31gs0ukwib.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fjn07pr4sij31gs0ukn0z.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn07tei4cj31gs0ukjv8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn081fjujj31gs0ukq3j.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn088yhehj31gs0ukaao.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn08g566nj31gs0uk74d.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn08tw02sj31gs0ukjro.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn090mpozj31gs0ukq32.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjn094ecd4j31gs0ukq32.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn098s7zwj31gs0uk74l.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn09dalk4j31gs0ukt9d.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjn09j09b9j31gs0ukaac.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn09msntvj31gs0ukt8q.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fjn09qrqiij31gs0ukwen.jpg">
+<meta property="og:updated_time" content="2017-09-17T16:04:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="视觉重量对 UI 的实际影响讲解及一大堆例子">
+<meta name="twitter:description" content="视觉平衡会对 UI 造成什么样的影响，业界内流行的解决方案又有哪一些，本文将以超过五十个例子为你讲解。
+俗话说眼见为实，但其实我们的眼睛经常欺骗我们。眼睛通过光的反射接收信息，然后经过一次“脑补”最终形成我们所谓“看见”的图像。脑补这个过程会因为各种原因的影响导致我们对于“看见”的事物的理解产生偏差。这一点对图形化操作界面的设计影响非常。既然无法绕过，设计师就要学会如何去适配人类的视觉惯性画出“正">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>视觉重量对 UI 的实际影响讲解及一大堆例子</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/07/31/framercourse2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&text=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&is_video=false&description=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=视觉重量对 UI 的实际影响讲解及一大堆例子&body=Check out this article: http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&name=视觉重量对 UI 的实际影响讲解及一大堆例子&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1. 物理尺寸与视觉尺寸</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">记住这些点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2. 视觉对齐与形状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">记住这些点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.视觉圆角</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        视觉重量对 UI 的实际影响讲解及一大堆例子
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-09-17T09:25:41.000Z" itemprop="datePublished">2017-09-17</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>视觉平衡会对 UI 造成什么样的影响，业界内流行的解决方案又有哪一些，本文将以超过五十个例子为你讲解。</p>
+<p>俗话说眼见为实，但其实我们的眼睛经常欺骗我们。眼睛通过光的反射接收信息，然后经过一次“脑补”最终形成我们所谓“看见”的图像。脑补这个过程会因为各种原因的影响导致我们对于“看见”的事物的理解产生偏差。这一点对图形化操作界面的设计影响非常。既然无法绕过，设计师就要学会如何去<strong>适配</strong>人类的视觉惯性画出“正确”的界面。</p>
+<h2>1. 物理尺寸与视觉尺寸</h2>
+<p>长宽 400px 的正方形与长宽 400px 的圆形哪一个更大？假如这样问你的话，那么正确答案当然是一样大。但是来看看下面这张图，长宽各 400px 的两个图形看起来并不一样大。你的眼睛告诉你 400px 的正方形比 400px 的圆形更大一些。物体的物理尺寸是一样的，但视觉尺寸却有可能不一样的。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn0360qwqj31gs0uk3yp.jpg" alt=""></p>
+<p>为了更加准确地证明这个现象的存在，下面这张图给出辅助线，大家好好看看。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn03c0cbnj31gs0uk3yu.jpg" alt=""></p>
+<p>我们改变一下圆形的尺寸，看看现在这两个图形的视觉尺寸有没有更接近一些？</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn03h1rioj31gs0ukq35.jpg" alt=""></p>
+<p>每个人的感官可能都不一样，但对于我来说，调整尺寸的后的两个图形看起来才是一样大的，至少也不会像图一一样，让人第一眼就认为正方形比较大。为啥会这样？因为我将圆的直径增加了 50px。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn03r9e41j31gs0uk74n.jpg" alt=""></p>
+<p>现在我们将图形都叠起来看，看看为什么会产生这种那么明显的误差。400px 的两个图形叠在一起，你会发现整个圆形都被包裹在了正方形之内，而正方形多出的四个面积巨大的 a 区域就是造成这种视觉误差的原因。再将 400px 的正方形与 450px 的圆形叠在一起，正方形无法将整个圆形包裹在内了，圆形超出的四个 b 区域又与 正方形多出来的 a 区域在视觉上互相抵消，所以 450px 的圆形与 400px 的正方形在视觉尺寸上更接近，也就是我们常说的“一样大”。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn03wlva2j31gs0ukdgl.jpg" alt=""></p>
+<p>不仅是圆与方，所有的图形都能够造成这样的偏差。当我们追求“看起来一样大”这个目标的时候，某些形状的物理尺寸应该更大一些。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn042ykivj31gs0uk0su.jpg" alt=""></p>
+<p>这个现象对于界面造成的设计会有哪一些呢？譬如说，当绘制一套 icon 的时候，我们当然是追求每个 icon 都看起来一样大对吧？但假如我们只通过物理尺寸来进行量度的画，画出来的 icon 必然会个大个小，乌七八糟，更伤的是，这种问题经常发生，手机里随便打开个 app 都能发现这样的问题。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn047hfjtj31gs0uk74c.jpg" alt=""></p>
+<p>在画 icon 的时候，一定要把视觉尺寸这个无法用数字进行衡量的维度考虑进去。视觉重量小的元素要放大，视觉重量大的元素要缩小。建议大家可以去下载 HIG 的标注 icon 与 Material Design 的标准 icon 看看，数百个图标每一个的无理尺寸都不尽相同，但看起来全部都是一样大的，这是高水平的表现，值得细细学习与参详。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn04bn9baj31gs0uk74c.jpg" alt=""></p>
+<p>抽几个出来当做例子，大家看看</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn04i6klxj31gs0ukq3a.jpg" alt=""></p>
+<p>加个粉色等大的边框，或许你会看得更加清楚。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn04yk7gtj31gs0ukt8z.jpg" alt=""></p>
+<p>不是每个人都会有空给每个图标加个框来测量视觉尺寸的平衡，这里教个大家一个老司机才会的办法，搞个高斯模糊，如果高斯模糊之下每个图标看起来都差不多大，那么就可以说大致达成的视觉尺寸的相等。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn052gy6yj31gs0uk41g.jpg" alt=""></p>
+<p>面对那些不需要由我们画的 icon，比如那些分享到 Twitter、分享到 Instagram ，官方已有提供的的 icon，用起来也要留个心眼。下面来个例子，Facebook 和 Instagram 的 icon 是正方形的，而 Twitter 和 Pinterest 的 icon 一个是不规则图形，一个是圆形，所以为了达到视觉尺寸上的相等，当它们一起出现的时候，我们要放大 Twitter 和 Pinterest 的 icon，实际效果如图所示。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn05905d1j31gs0ukwf1.jpg" alt=""></p>
+<p>另外一个达不到视觉尺寸相等的重灾区就是表单配按钮这种常见的组合。通常是长方形的表单如果和直径相等的原型按钮摆在一起，必然也会出现圆形按钮看起来比较小的问题。处理方法相信大家也都知道了，略微放大按钮，这样整个表单和按钮才能达到视觉平衡，视觉尺寸才能相等。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn05k70t1j31gs0uk74p.jpg" alt=""></p>
+<p>对于这个现象的处理方法并没有那么简单，就拿上面那个例子来讲，有没有除了放大按钮以外的其他处理手法呢，当然是有的。条件允许的话我们可以对按钮添加一些颜色，让它看起来的视觉重量更重，这也能达成视觉尺寸相等。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn05u7zq1j31gs0ukjrl.jpg" alt=""></p>
+<h3>记住这些点</h3>
+<ul>
+<li>物体有物理尺寸，但是人眼所见，并对面积或体积自行加以理解后所认知的视觉尺寸并不会与物体的物理尺寸完全相等。</li>
+<li>正方形的视觉重量是最重的，越接近正方形的 icon 看起来也会更重，更大，反之更轻更小。</li>
+<li>规范建议的绘制 icon 的安全区域主要就是为了解决视觉尺寸对等问题留给设计师的操作空间。</li>
+</ul>
+<h2>2. 视觉对齐与形状</h2>
+<p>视觉对齐可以说是视觉尺寸这种现象的一种逻辑上的一种延伸。还是跟上半部分一样，来看张简单的图，这两个东西对齐了吗？</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn0602ii6j31gs0ukmx4.jpg" alt=""></p>
+<p>以物理尺寸的角度来看，它们绝对对起来，因为这两个长条是一样长的。但是，由视觉的角度来看，上面那一条是不是看起来比下面那一条长一点？</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn0652ibpj31gs0uk3yo.jpg" alt=""></p>
+<p>我们修改下长度再看看。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn068xc55j31gs0ukmx4.jpg" alt=""></p>
+<p>试着增加下面那条长条的长度。让下面那条长条的多出 20px，这时候它们看起来才是对齐的，达成了视觉对齐。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn06dcd0gj31gs0ukjrk.jpg" alt=""></p>
+<p>再来看看几种常见的样式。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06i3mrzj31gs0uk749.jpg" alt=""></p>
+<p>以下这种彩带样式的图相信大家都做过，要让整个图看起来平衡、整齐，就要利用上这种现象，有意识地加长需要加长的部分，才能做到对齐。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06mucgzj31gs0ukjsq.jpg" alt=""></p>
+<p>我们再看一个实验例子，带背景的文本要如何进行对齐。这时候要根据背景颜色的深浅要决定对齐的方式。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn06s5xbuj31gs0uktci.jpg" alt=""></p>
+<p>如果是浅色背景的话，我们就不需要改变文本的长度，直接添加背景，浅色的背景由于视觉重量轻，尚且不会造成什么不好的影响。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn07kq7prj31gs0ukwib.jpg" alt=""></p>
+<p>如果是深色背景的话，做法就不一样了。如图所示，我们要让黑色背景与文本对齐，而放置于黑色背景之内的文本要有一定程度的缩进，这样才能达到视觉对齐的效果。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fjn07pr4sij31gs0ukn0z.jpg" alt=""></p>
+<p>与浅色背景不同，深色背景的视觉重量本身比较重，要让文本看起来更加一体的话，就一定要这样做。否则抓眼的背景会过分突出，让看起来对齐的感觉消失。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn07tei4cj31gs0ukjv8.jpg" alt=""></p>
+<p>这种现象与排列原则最常应用于按钮与输入框。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn081fjujj31gs0ukq3j.jpg" alt=""></p>
+<p>左边的浅色背景输入框框体不会与标签文字对齐，框内文本才会与标签对齐。右侧的深色边框的输入框的框体就要与标签文字对齐，而框内容无需与标签文字对齐。再看看发送按钮，左边侧的发送圆边发送按钮与浅色背景的输入框为了达成视觉对齐故意地坐断了一点点，右边的发送按钮也因为形状的缘故被故意地做长了一点，达成视觉对齐。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn088yhehj31gs0ukaao.jpg" alt=""></p>
+<p>看起来非常简单，可是仅仅一个对齐的细节还是非常的多的对吧。现在我们单拿一个按钮出来挖掘更多细节。看看下面这个按钮，你会觉得里面的文字是完美居中的对吧。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn08g566nj31gs0uk74d.jpg" alt=""></p>
+<p>它们看起来是居中对齐的，但实际上并不是，右边箭头形状的按钮中的文字在物理上并未居中对齐，它距离左右两边的边距是不一样的，这种形状的按钮文字必须靠<strong>左</strong>一些才能看起来对齐。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn08tw02sj31gs0ukjro.jpg" alt=""></p>
+<p>说完了水平居中，垂直居中也有非常多的细节要注意。这里告诉大家一个东西，对于大部分操作系统而言或者说较为成熟的设计语言而言，垂直居中必定以按钮文字的首一位大写字母的高度开始算起，但在 Sketch 中，所有的文字都会默认地带上行距，所以在制作文字按钮时，无论是中文还是英文，一定要注意调整行距，这样才能做到你所需要的垂直居中。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn090mpozj31gs0ukq32.jpg" alt=""></p>
+<p>以次为排列原则基本上都会让文字（以首位大写字母算起）上下边距相等。大家都这样做的原因是在英文里面，有升部的字母（而大写字母的高度与升部字母的高度大体相似）（l,t,d,b,k,h）要多于有降部的字母（y,j,g,p）。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjn094ecd4j31gs0ukq32.jpg" alt=""></p>
+<p>虽然我们不常用英文，但是多指导一些小常识没有坏处。</p>
+<p>说完了文字按钮，再来说说 icon 按钮，相信这个问题你也经常看到过。看看下图，哪一个按钮看起来对齐得比较好？</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn098s7zwj31gs0uk74l.jpg" alt=""></p>
+<p>好吧，希望你能够看出来左边那颗按钮是有问题的，实际上我在画这枚按钮的时候确实点了对齐，但是为什么还会出问题呢？跟文字按钮对齐一样，对齐的方式选错了。一般来说，我们都会默认将飞机当做是一个正方形来进行对齐，但由于图形形状的缘故，这样做必然是错的，将会导致 icon 过于靠左。右边侧那枚按钮看起来就是对的，面对这种特殊的，带角的形状，一定要保证每个角距离按钮边缘的距离是一样的，而这种对齐的方式不能再将 icon 当做是一颗正方形来看。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn09dalk4j31gs0ukt9d.jpg" alt=""></p>
+<p>这就不能依赖 Sketch 的对齐工具了，你要自己画个圆形作为参考线来进行对齐。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjn09j09b9j31gs0ukaac.jpg" alt=""></p>
+<p>如下图，播放按钮也有三个角，那么做它的对齐工作也要注意啦。左边图那枚按钮就是直接点对齐的产物，看起来非常奇怪，对吧？</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn09msntvj31gs0ukt8q.jpg" alt=""></p>
+<p>记住了，有角的 icon 要保证对齐的唯一方式是保证三个角到对应边的距离相等。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fjn09qrqiij31gs0ukwen.jpg" alt=""></p>
+<h3>记住这些点</h3>
+<ul>
+<li>边缘有角的图形要拉长一些才能在视觉上与方形边缘的长度对齐。</li>
+<li>制作文字按钮时一定要记得调整行距。</li>
+<li>有角 icon 的对齐方法是保证每个角到边的距离相等。</li>
+</ul>
+<h2>3.视觉圆角</h2>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1. 物理尺寸与视觉尺寸</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">记住这些点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2. 视觉对齐与形状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">记住这些点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">3.视觉圆角</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&text=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&is_video=false&description=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=视觉重量对 UI 的实际影响讲解及一大堆例子&body=Check out this article: http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&title=视觉重量对 UI 的实际影响讲解及一大堆例子"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/09/17/opticaleffectsinuserinterfaces/&name=视觉重量对 UI 的实际影响讲解及一大堆例子&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
