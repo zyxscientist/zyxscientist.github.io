@@ -38,7 +38,14 @@ bottom navigation 适用于手机等屏幕较小的设备，pc 或平板推荐�
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjrj3reclij30k00gowel.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fjrj3xbuxcj30k00gowek.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fjrj424i7ej30k00gojrg.jpg">
-<meta property="og:updated_time" content="2017-09-21T13:58:29.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs8gmqicyj30yr0lctlq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs8h4b55wj30y50lqdrq.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fjs8jay8clj30xz0mnnb4.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fjs8qh3556j30xv0bi401.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs94hlip1j30ya1i0aee.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs97exy14j30xj277n39.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs9bu6zihj30x80tvtcj.jpg">
+<meta property="og:updated_time" content="2017-09-22T05:05:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Material Design 组件图鉴 —— Bottom navigation">
 <meta name="twitter:description" content="Bottom navigation bars make it easy to explore and switch between top-level views in a single tap.
@@ -136,7 +143,7 @@ bottom navigation 适用于手机等屏幕较小的设备，pc 或平板推荐�
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">使用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">颜色：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">一、使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">样式</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">使用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">颜色：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">一、使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">样式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">尺寸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">纵深</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -221,6 +228,66 @@ bottom navigation 适用于手机等屏幕较小的设备，pc 或平板推荐�
 <img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjrj3reclij30k00gowel.jpg" alt="">
 <img src="https://ws3.sinaimg.cn/large/006tKfTcly1fjrj3xbuxcj30k00gowek.jpg" alt="">
 <img src="https://ws1.sinaimg.cn/large/006tKfTcly1fjrj424i7ej30k00gojrg.jpg" alt=""></p>
+<h5>行为</h5>
+<p>bottom navigation 在用户快速向下滚动的时候是可以隐藏的。</p>
+<p>不应该被用在：</p>
+<ul>
+<li>单任务页面不应该出现，例如编写邮件的时候。</li>
+<li>用户偏好与设置界面也不应该使用 bottom navigaiton</li>
+</ul>
+<p>在android里面，虚拟返回按钮不能被用于 bottom navigation 的各个界面之间的返回。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs8gmqicyj30yr0lctlq.jpg" alt=""></p>
+<p>重复点击 bottom navigaiton 的 icon 可以对相应的页面进行刷新操作。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs8h4b55wj30y50lqdrq.jpg" alt=""></p>
+<p>滚动操作时可以隐藏 bottom navigation，而使用 bottom navigation 进行导航的时候不会隐藏。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fjs8jay8clj30xz0mnnb4.jpg" alt=""></p>
+<p>不能通过横向滑动来切换 view，所以 view 之间的应该使用 cross-fade 的切换动画，暗示用户不能进行这样的操作。</p>
+<h5>尺寸</h5>
+<p>icon 均分 bottom navigation 的面积，垂直方向填满，水平方向平分。所属区域均是 icon 的可触控区域。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fjs8qh3556j30xv0bi401.jpg" alt=""></p>
+<p>规范尺寸：</p>
+<ul>
+<li>
+<p>每个区域最大宽度 168 dp</p>
+</li>
+<li>
+<p>每个区域最小宽度 80 dp</p>
+</li>
+<li>
+<p>bottom navigation 高度：56 dp</p>
+</li>
+<li>
+<p>icon 24x24dp</p>
+</li>
+<li>
+<p>选中文字 14sp（Roboto）</p>
+</li>
+<li>
+<p>未选中 12sp（Roboto）</p>
+</li>
+<li>
+<p>文字与 icon 居中对齐</p>
+</li>
+<li>
+<p>选中态 padding-height 是 6dp</p>
+</li>
+<li>
+<p>未选中态 padding-height 是 8dp</p>
+</li>
+<li>
+<p>文字 padding-bottom 是 10 dp</p>
+</li>
+<li>
+<p>文字 padding-left 与 padding-right 最小是 12 dp</p>
+</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs94hlip1j30ya1i0aee.jpg" alt=""></p>
+<p>Shifting bottom navigation bar 与普通 bottom navigation bar 不一样的点是，未选中 icon padding-bottom 是 16dp。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs97exy14j30xj277n39.jpg" alt=""></p>
+<h5>纵深</h5>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fjs9bu6zihj30x80tvtcj.jpg" alt="">
+search box（2dp）、snackbar（6dp） 、 FAB（6dp） 的高度低于 Bottom navigation bar（8dp）。</p>
+<p>键盘、drawer（16dp）、bottom sheet 高于 bottom navigation bar。</p>
 
   </div>
 </article>
@@ -249,7 +316,7 @@ bottom navigation 适用于手机等屏幕较小的设备，pc 或平板推荐�
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">使用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">颜色：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">一、使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">样式</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">使用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">颜色：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">尺寸</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">一、使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">何时使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">样式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">尺寸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">纵深</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
