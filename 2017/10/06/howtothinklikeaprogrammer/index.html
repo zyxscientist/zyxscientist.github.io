@@ -18,7 +18,7 @@
 
 “我总是 get 不到怎么去编程。看着一个空白的文档的时候我的头脑一片空白，千言万语不只从何写起，到底那些程序员们是如何凭空写出那么多密密麻麻的代码的？好气，我咋就做不到呢？”
 尝试过学编程的朋友们肯定都有过这个感受，尽管你是选了一个号称对人类最友好的计算机语言，教程里面的每一个练习都跟着做好，当你面对一个空白的文档的时候也会面临这种不知从何下手">
-<meta property="og:updated_time" content="2017-10-06T05:44:58.461Z">
+<meta property="og:updated_time" content="2017-10-07T19:04:39.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何像个程序员一样思考">
 <meta name="twitter:description" content="简评：程序员到底是怎么凭空写出那一堆堆代码的呢？
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步： 改善、改进</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -242,6 +242,51 @@
 <p><strong>1. 这枚按钮的 HTML 要怎么写？</strong></p>
 <p>那既然是一颗按钮，标签就用 &lt;a&gt;，它的类名就定作 btn 吧。</p>
 <p><figure class="highlight"><figcaption><span>href="#" class="btn">Click me</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```&#10;&#10;**2. &#36825;&#26522;&#25353;&#38062;&#38271;&#20160;&#20040;&#26679;&#23376;&#65311;**&#10;&#10;&#38271;&#20160;&#20040;&#26679;&#23376;&#36825;&#20214;&#20107;&#24773;&#24403;&#28982;&#26159;&#20132;&#32473; CSS &#22788;&#29702;&#20102;&#12290;&#10;&#10;&#10;&#10;``` .btn &#123;&#10;  display: inline-block;&#10;  font-size: 2em;&#10;  padding: 0.75em 1em;&#10;  background-color: #1ce;&#10;  color: #fff;&#10;  text-transform: uppercase;&#10;  text-decoration: none;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>3.4.5.点击按钮一次两次三次，会发生什么事情？</strong></p>
+<p>按照惯用的设计，点击一次肯定就是展示菜单啦，再点击一次就是收起，第三次点击就再展示，非常简单。这个交互行为要用到 JS 了，代码的话等我们把表现层的东西构建好再说。</p>
+<p><strong>6. 侧边出来的菜单是的 HTML 要怎么写？</strong></p>
+<p>既然是个菜单，那么就把一个表单标签放到一个 div 里面去好了，这个 div 类名就定做 sidebar。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;div class=&#34;sidebar&#34;&#62;&#10;  &#60;ul&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 1&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 2&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 3&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 4&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 5&#60;/a&#62;&#60;/li&#62;&#10;  &#60;/ul&#62;&#10;&#60;/div&#62;</span><br></pre></td></tr></table></figure></p>
+<p><strong>7. 侧边菜单出来的时候怎么样的？</strong></p>
+<p>这个侧边菜单栏宽度是 300px，当他处于展开状态的时候会固定在屏幕最右边。其他样式上的小细节请看下面的 CSS。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.sidebar &#123;&#10;  position: fixed;&#10;  top: 0;&#10;  bottom: 0;&#10;  right: 0;&#10;  width: 300px;&#10;  background-color: #333;&#10;&#125;&#10;&#10;.sidebar ul &#123;&#10;  margin: 0;&#10;  padding: 0;&#10;&#125;&#10;&#10;.sidebar li &#123;&#10;  list-style: none;&#10;&#125;&#10;&#10;.sidebar li + li &#123;&#10;  border-top: 1px solid white;&#10;&#125;&#10;&#10;.sidebar a &#123;&#10;  display: block;&#10;  padding: 1em 1.5em;&#10;  color: #fff;&#10;  text-decoration: none;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>8. 侧边菜单在没有出来的时候又是怎么样的？</strong></p>
+<p>既然侧边菜单的宽度被我们定为 300px，那么想要隐藏它的做法肯定就是让它向右边再位移 300px 移动至屏幕以外的区域啦。</p>
+<p>这个问题的解答会产生两个新的问题：</p>
+<ol>
+<li>你怎么以代码的方式来界定侧边菜单展开以及收起的状态？</li>
+<li>收起菜单的 CSS 要怎么写？</li>
+</ol>
+<p><strong>第一小题：</strong>
+我们再增加一个新类 <code>.is-hidden</code> ，当这个类出现的时候，菜单就会收起。</p>
+<p><strong>第二小题：</strong>
+x轴方向从左向右位移 300px，恰恰好可以将整个菜单移出屏幕。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.sidebar.is-hidden &#123;&#10;  transform: translateX(300px);&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>9. 侧边菜单是怎么出来的？</strong>
+侧边菜单从屏幕最右边滑出来，所以我们还得给 sidebar 类添加一个简单的 CSS 动画。</p>
+<p>假如你还没学会用 CSS 写动画的话，立即去 Google 一波，了解一下大概就懂了，没那么难。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.sidebar &#123;&#10;  /* &#20840;&#37096;&#20854;&#20182;&#21442;&#25968; */&#10;  transition: transform 0.3s ease-out;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>10. 它又是怎么消失的？</strong></p>
+<p>这个问题的解答不需要写新的代码了，上面几题已经将该有的代码都写好了，让它向右边移动 300px 就好了。</p>
+<p><strong>11. 第一次加载页面的时候菜单要出来吗？</strong>
+不用，这个菜单默认是隐藏的，所以侧边菜单栏的默认类是 <code>sidebar is-hidden</code>。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;div class=&#34;sidebar is-hidden&#34;&#62;&#10;  &#60;ul&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 1&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 2&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 3&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 4&#60;/a&#62;&#60;/li&#62;&#10;    &#60;li&#62;&#60;a href=&#34;#&#34;&#62;Link 5&#60;/a&#62;&#60;/li&#62;&#10;  &#60;/ul&#62;&#10;&#60;/div&#62;</span><br></pre></td></tr></table></figure></p>
+<p>好了！所有表现层的问题都已经被逐个解决掉了，我们最后来具体解决**点击按钮一次两次三次，会发生什么事情？**这个问题。</p>
+<p>其实这些个操作会发生什么我们心里已经有数了。点一次就出现，但怎么写好呢？再点一次就收起，但怎么写好呢？</p>
+<p>下边开始写 JS 来控制整个交互，虽然很简单，我会把整个解决的思路都写下来。</p>
+<p><strong>怎么让电脑知道你点了这枚按钮？</strong></p>
+<p>如果你系统地学过了 JS，那么肯定就会只要添加 click 事件的监听了。如果不懂，由于问题的细化，Google 一下也非常方便。</p>
+<p>先在 HTML 里面找到按钮，再来给个监听。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const button = document.querySelector(&#39;.btn&#39;)&#10;&#10;button.addEventListener(&#39;click&#39;, function() &#123;&#10;  console.log(&#39;button is clicked!&#39;)&#10;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>点击一次会发生什么</strong></p>
+<p>点一次会展开侧边菜单，侧边菜单滑入屏幕，那么我们就把 is-hidden 类去掉就可以了，用 JS 来去掉某个类，我们马上想到了 <code>Element.classList.remove</code> 来去掉 <code>is-hidden</code>。这同时也意味着我们要在 HTML 里面找到侧边菜单。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const button = document.querySelector(&#39;.btn&#39;)&#10;const sidebar = document.querySelector(&#39;.sidebar&#39;)&#10;&#10;button.addEventListener(&#39;click&#39;, function() &#123;&#10;  sidebar.classList.remove(&#39;is-hidden&#39;)&#10;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>点击两次会发生什么</strong></p>
+<p>再点击一次当然就是收起菜单了，展开是去掉 is-hidden 类，那么收起肯定就是添加上 is-hidden 类啦。</p>
+<p>这里我们还要让 JS 分清当要做的是展开还是收起。比较可靠简洁的做法就是在点击的时候就进行一轮判断。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const button = document.querySelector(&#39;.btn&#39;)&#10;const sidebar = document.querySelector(&#39;.sidebar&#39;)&#10;&#10;button.addEventListener(&#39;click&#39;, function() &#123;&#10;  if (sidebar.classList.contains(&#39;is-hidden&#39;)) &#123;&#10;    sidebar.classList.remove(&#39;is-hidden&#39;)&#10;  &#125; else &#123;&#10;    sidebar.classList.add(&#39;is-hidden&#39;)&#10;  &#125;&#10;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://codepen.io/zellwk/pen/zdqmLe/" target="_blank" rel="external">代码已经全部给出，点击这里去预览一下吧。</a></p>
+<h3>第四步： 改善、改进</h3>
 
   </div>
 </article>
@@ -270,7 +315,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步： 改善、改进</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
