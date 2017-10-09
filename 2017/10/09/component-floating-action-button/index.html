@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="A floating action button represents the primary action in an application.
+FAB 按钮承载的是整个软件中最重要的动作。
+
+Floating Action Button
+FAB 常见尺寸有两种：
+
+默认尺寸（56dp）也就是最常见最典型的款。
+mini尺寸（40dp），维持视觉延续性。
+
+假如屏幕宽度小于 460dp 的话，就">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Material Design 组件图鉴 —— Floating Action Button">
+<meta property="og:url" content="http://yoursite.com/2017/10/09/component-floating-action-button/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="A floating action button represents the primary action in an application.
+FAB 按钮承载的是整个软件中最重要的动作。
+
+Floating Action Button
+FAB 常见尺寸有两种：
+
+默认尺寸（56dp）也就是最常见最典型的款。
+mini尺寸（40dp），维持视觉延续性。
+
+假如屏幕宽度小于 460dp 的话，就">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fkc3bc3o99j31kw4osnpe.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fkc3x2vap7j31kw251qeh.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fkc4hdypw4j31kw34lx58.jpg">
+<meta property="og:updated_time" content="2017-10-09T10:05:33.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Material Design 组件图鉴 —— Floating Action Button">
+<meta name="twitter:description" content="A floating action button represents the primary action in an application.
+FAB 按钮承载的是整个软件中最重要的动作。
+
+Floating Action Button
+FAB 常见尺寸有两种：
+
+默认尺寸（56dp）也就是最常见最典型的款。
+mini尺寸（40dp），维持视觉延续性。
+
+假如屏幕宽度小于 460dp 的话，就">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Material Design 组件图鉴 —— Floating Action Button</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/10/06/howtothinklikeaprogrammer/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/09/component-floating-action-button/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/09/component-floating-action-button/&text=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/09/component-floating-action-button/&is_video=false&description=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Floating Action Button&body=Check out this article: http://yoursite.com/2017/10/09/component-floating-action-button/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/09/component-floating-action-button/&name=Material Design 组件图鉴 —— Floating Action Button&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Floating Action Button</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">变形</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Material Design 组件图鉴 —— Floating Action Button
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-10-09T08:20:18.000Z" itemprop="datePublished">2017-10-09</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>A floating action button represents the primary action in an application.
+FAB 按钮承载的是整个软件中最重要的动作。</p>
+</blockquote>
+<h5>Floating Action Button</h5>
+<p>FAB 常见尺寸有两种：</p>
+<ul>
+<li>默认尺寸（56dp）也就是最常见最典型的款。</li>
+<li>mini尺寸（40dp），维持视觉延续性。</li>
+</ul>
+<p>假如屏幕宽度小于 460dp 的话，就一定要用 mini 尺寸的了。</p>
+<p>FAB 与屏幕的边缘的距离最小要为 16dp，如果是平板端、桌面端的话最小要有 24dp的边距。</p>
+<p>另外，无论 FAB 的尺寸是多大，里面的 icon 都是 24dp。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fkc3bc3o99j31kw4osnpe.jpg" alt=""></p>
+<p>FAB 只能只能只能是正向操作按钮</p>
+<p>不可以是负向或需求较小、较不重要的操作，如：</p>
+<ul>
+<li>删除、归档</li>
+<li>不明确的操作</li>
+<li>警告或错误</li>
+<li>不重要的操作如复制粘贴之类</li>
+<li>音量控制、转变字色等设置操作</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fkc3x2vap7j31kw251qeh.jpg" alt=""></p>
+<h5>行为</h5>
+<p>FAB 通常以展开的方式出现，中间的 icon 或会有一个独立的动画。</p>
+<p>由于 FAB 的特殊性，他的动画会与其他元素有些许不同。</p>
+<p>在可以横向滑动的界面内（如：带有 tab 导航的），假如每个 tab 的 FAB 是不一样的的话，那么 FAB 应该先退场，再进场，而不是跟随屏幕横向移动。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fkc4hdypw4j31kw34lx58.jpg" alt=""></p>
+<h5>变形</h5>
+<p>FAB 抢眼而且特殊，它会有非常多的变化形式。</p>
+<p>Trigger, Toolbar, Speed dial, and Morphing 等等等等的动画的样式都可以施加在 FAB 上。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Floating Action Button</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">变形</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/09/component-floating-action-button/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/09/component-floating-action-button/&text=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/09/component-floating-action-button/&is_video=false&description=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Floating Action Button&body=Check out this article: http://yoursite.com/2017/10/09/component-floating-action-button/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/09/component-floating-action-button/&title=Material Design 组件图鉴 —— Floating Action Button"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/09/component-floating-action-button/&name=Material Design 组件图鉴 —— Floating Action Button&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
