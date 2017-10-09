@@ -18,7 +18,9 @@
 
 “我总是 get 不到怎么去编程。看着一个空白的文档的时候我的头脑一片空白，千言万语不只从何写起，到底那些程序员们是如何凭空写出那么多密密麻麻的代码的？好气，我咋就做不到呢？”
 尝试过学编程的朋友们肯定都有过这个感受，尽管你是选了一个号称对人类最友好的计算机语言，教程里面的每一个练习都跟着做好，当你面对一个空白的文档的时候也会面临这种不知从何下手">
-<meta property="og:updated_time" content="2017-10-07T19:04:39.186Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fkbx0sn42sj30ao0aogml.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fkbx7rbnnkg30gq0ckk36.gif">
+<meta property="og:updated_time" content="2017-10-09T05:19:31.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何像个程序员一样思考">
 <meta name="twitter:description" content="简评：程序员到底是怎么凭空写出那一堆堆代码的呢？
@@ -111,7 +113,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步： 改善、改进</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步：改善、改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -175,7 +177,7 @@
 <li>把门盖上。</li>
 </ol>
 <p>这不就装进去了吗？</p>
-<p>图</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fkbx0sn42sj30ao0aogml.jpg" alt=""></p>
 <p>当然了，这是一个段子，**但这其实也是让你举步不前的最大原因。**说起来好像是这么个道理，打开来，放进去，关上门，但要真那么做，其实是这件事是办不到的，因为步骤并没有那么简单。</p>
 <p>虽然是个段子，但是请抛开段子属性，将大象装进冰箱里面完全是有可能的。我们来逻辑地去思考这些问题，你就会发现其实上面给出的答案并没完全将问题解答出来。</p>
 <ol>
@@ -219,7 +221,7 @@
 <h3>咱们来个真例子</h3>
 <p>假如说你想做一个菜单按钮，当你点击按钮的时候，菜单从屏幕侧边滑出来。</p>
 <p>（这里我们将会用 HTML+CSS+JS 来进行编写。）</p>
-<p>GIF</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fkbx7rbnnkg30gq0ckk36.gif" alt=""></p>
 <h5>第一步：将大问题细化、分解</h5>
 <p>就跟把大象装进冰箱里面的问题的思路一样，我们先将这个大问题大致地分解细化下：</p>
 <ol>
@@ -286,7 +288,30 @@ x轴方向从左向右位移 300px，恰恰好可以将整个菜单移出屏幕�
 <p>这里我们还要让 JS 分清当要做的是展开还是收起。比较可靠简洁的做法就是在点击的时候就进行一轮判断。</p>
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const button = document.querySelector(&#39;.btn&#39;)&#10;const sidebar = document.querySelector(&#39;.sidebar&#39;)&#10;&#10;button.addEventListener(&#39;click&#39;, function() &#123;&#10;  if (sidebar.classList.contains(&#39;is-hidden&#39;)) &#123;&#10;    sidebar.classList.remove(&#39;is-hidden&#39;)&#10;  &#125; else &#123;&#10;    sidebar.classList.add(&#39;is-hidden&#39;)&#10;  &#125;&#10;&#125;)</span><br></pre></td></tr></table></figure></p>
 <p><a href="https://codepen.io/zellwk/pen/zdqmLe/" target="_blank" rel="external">代码已经全部给出，点击这里去预览一下吧。</a></p>
-<h3>第四步： 改善、改进</h3>
+<h3>第四步：改善、改进</h3>
+<p>这里跳过了<strong>第三步：将这些个解决办法合理地组装到一起</strong>，直接来到了第四步，因为前面我们已经把组装的工作给做了。</p>
+<p>最后一步是改善与改进，改善跟改进代码是需要一点经验才办得到的事情，不然你连哪里可以改进都看不出来。</p>
+<p>所以我建议，新手们想学会细化问题的编程思路，日后积累了更多编程经验的时候再回头看看以往自己写的代码有没有可以提高的地方。</p>
+<p>就比如说上面那个例子，假如你知道 JS 里面还有 <code>toggle</code> 这个方法的话，代码可以更加简短，而且不用判断。<code>toggle</code> 会自己判断 class 里面有没有 <code>is-hidden</code>，有就去掉，没有就加上。非常合乎我们想要的交互逻辑。</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const button = document.querySelector(&#39;.btn&#39;)&#10;const sidebar = document.querySelector(&#39;.sidebar&#39;)&#10;&#10;button.addEventListener(&#39;click&#39;, function() &#123;&#10;  sidebar.classList.toggle(&#39;is-hidden&#39;)&#10;&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3>总结</h3>
+<p>程序员们就是利用这种思路，将大问题细化成小问题然后逐个解决，最后凭空写出了一行行代码，实现了想要实现的功能。</p>
+<p>在一边细化问题与解决问题的过程中可能会产生很多新的小问题，不要惊慌，这不是你的错，这些都是编程的一部分，将他们一并都解决了就好。</p>
+<p>当你将每个小问题都解决好，最大的问题，也就是你的最终目标也就解决好了。</p>
+<p>最后，你达成了你的目标，将最后的问题解决了的时候，也不要认为这就是唯一的答案，代码就像设计一样，永远都有提高的空间，学习代码也永远都有进步的余地。</p>
+<p><strong>原文链接：</strong><a href="https://medium.freecodecamp.org/how-to-think-like-a-programmer-3ae955d414cd" target="_blank" rel="external">How to think like a programmer</a></p>
+<p>欢迎关注</p>
+<ul>
+<li>
+<p>知乎专栏 「极光日报」，每天为 Makers 导读三篇优质英文文章；</p>
+</li>
+<li>
+<p>个人专栏： <a href="https://zhuanlan.zhihu.com/designcoder" target="_blank" rel="external">「DesignCoder」</a> 设计是一项工程；</p>
+</li>
+<li>
+<p>我的追波： <a href="https://dribbble.com/Zhuyuxuan" target="_blank" rel="external">Zhuyuxuan</a></p>
+</li>
+</ul>
 
   </div>
 </article>
@@ -315,7 +340,7 @@ x轴方向从左向右位移 300px，恰恰好可以将整个菜单移出屏幕�
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步： 改善、改进</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其实你也可以的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">咱们来个真例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.1.</span> <span class="toc-text">第一步：将大问题细化、分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">2.0.2.</span> <span class="toc-text">第二步：解决这些小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">第四步：改善、改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
