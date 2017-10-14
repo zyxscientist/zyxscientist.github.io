@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Data tables display sets of raw data. They usually appear in desktop enterprise products.
+数据表用于展示、操作原始数据。
+
+支持的交互方式：
+
+行悬浮（Row Hover）
+行选择
+列分类
+列悬浮
+长表头
+文字编辑
+菜单
+
+结构
+第一行是表头，下面的都是数据。
+假如用户是需要对数据进行选择与操作的话就要带上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Material Design 组件图鉴 —— Data Tables">
+<meta property="og:url" content="http://yoursite.com/2017/10/14/datatables/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="Data tables display sets of raw data. They usually appear in desktop enterprise products.
+数据表用于展示、操作原始数据。
+
+支持的交互方式：
+
+行悬浮（Row Hover）
+行选择
+列分类
+列悬浮
+长表头
+文字编辑
+菜单
+
+结构
+第一行是表头，下面的都是数据。
+假如用户是需要对数据进行选择与操作的话就要带上">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fkhuffc5xaj31kw0w6q6v.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvuty84nj31kw0j1ada.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvv7qd0dj31kw0j4q5x.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fkhvvu0qpuj31kw0jj429.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fkhvwhechqj31kw0jttce.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fkhvx8p05ej31kw0zz43z.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvq6uqbnj31kw22ggxw.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fkhvt3885nj31kw10t0y7.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fkhw1jgjyzj31kw11ogqn.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fkhw6kld7zj31kw0puwh5.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fkhwe5cxgxj31kw39g7mi.jpg">
+<meta property="og:updated_time" content="2017-10-14T09:22:41.098Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Material Design 组件图鉴 —— Data Tables">
+<meta name="twitter:description" content="Data tables display sets of raw data. They usually appear in desktop enterprise products.
+数据表用于展示、操作原始数据。
+
+支持的交互方式：
+
+行悬浮（Row Hover）
+行选择
+列分类
+列悬浮
+长表头
+文字编辑
+菜单
+
+结构
+第一行是表头，下面的都是数据。
+假如用户是需要对数据进行选择与操作的话就要带上">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Material Design 组件图鉴 —— Data Tables</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/10/10/component-cards/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/14/datatables/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/14/datatables/&text=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/14/datatables/&is_video=false&description=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Data Tables&body=Check out this article: http://yoursite.com/2017/10/14/datatables/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/14/datatables/&name=Material Design 组件图鉴 —— Data Tables&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">表与卡片</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Material Design 组件图鉴 —— Data Tables
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-10-14T07:43:29.000Z" itemprop="datePublished">2017-10-14</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>Data tables display sets of raw data. They usually appear in desktop enterprise products.
+数据表用于展示、操作原始数据。</p>
+</blockquote>
+<p>支持的交互方式：</p>
+<ul>
+<li>行悬浮（Row Hover）</li>
+<li>行选择</li>
+<li>列分类</li>
+<li>列悬浮</li>
+<li>长表头</li>
+<li>文字编辑</li>
+<li>菜单</li>
+</ul>
+<h3>结构</h3>
+<p>第一行是表头，下面的都是数据。
+假如用户是需要对数据进行选择与操作的话就要带上 checkbox。</p>
+<p>数据表包含：</p>
+<ul>
+<li>三种或以上字段</li>
+<li>相关的视觉联系</li>
+<li>拥有让用户浏览与操作数据的特点</li>
+</ul>
+<p>一般格式：</p>
+<ul>
+<li>内容 13sp roboto regular 87% black</li>
+<li>表头 12sp roboto medium 54% black</li>
+<li>纯数字与表头靠右对齐，文字与表头靠左对齐</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fkhuffc5xaj31kw0w6q6v.jpg" alt=""></p>
+<h3>交互</h3>
+<p><strong>行悬浮</strong></p>
+<p>鼠标悬浮于行任意位置，该行背景色变深。
+颜色：Grey 200（#EEEEEE）</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvuty84nj31kw0j1ada.jpg" alt=""></p>
+<p><strong>行选择</strong></p>
+<p>行被选中后显示的背景色与悬浮背景色不同
+颜色：Grey 100（#F5F5F5）</p>
+<p>checkbox 填充色用的 secondary app color。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvv7qd0dj31kw0j4q5x.jpg" alt=""></p>
+<p><strong>列排序</strong></p>
+<p>列表本身默认的排列顺序是根据表中最重要的数据进行某种规则的排序的。该数据要用 icon 和不同的颜色将自己的状态和身份标记出来。</p>
+<p>排序列表头文字：</p>
+<ul>
+<li>12sp Roboto Medium</li>
+<li>87% black</li>
+</ul>
+<p>排序 icon：</p>
+<ul>
+<li>16dp 的边框之内就好</li>
+<li>87% black</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fkhvvu0qpuj31kw0jj429.jpg" alt=""></p>
+<p><strong>列名悬浮</strong></p>
+<p>鼠标悬浮于列名之上显示对列名的进一步的说明。如果他是可以排序，显示一个浅色的排序 icon，
+浅色表示未生效。</p>
+<p>icon：
+16dp 边框
+38% black</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fkhvwhechqj31kw0jttce.jpg" alt=""></p>
+<p><strong>表头字段过长</strong></p>
+<p>如遇表头字段过长，一般来说会有这两种处理方案：</p>
+<ul>
+<li>将字段展示完，如果表过长就让它可以水平滚动。</li>
+<li>截字，当鼠标悬浮于上时才显示完全。</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fkhvx8p05ej31kw0zz43z.jpg" alt=""></p>
+<p><strong>行内编辑</strong></p>
+<p>表内数据有可能需要编辑，或支持添加评论功能，可以弹出一个对话框进行编辑，或直接就在行内进行编辑。样式见下图。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fkhvq6uqbnj31kw22ggxw.jpg" alt=""></p>
+<p><strong>行内菜单</strong></p>
+<p>就是一个 dropdowm menu。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fkhvt3885nj31kw10t0y7.jpg" alt=""></p>
+<hr>
+<h3>表与卡片</h3>
+<p>表通常与卡片一同使用。操作表格的功能会被放置到卡片的上方或下方。</p>
+<p><strong>卡片标题：</strong></p>
+<ul>
+<li>20sp Roboto Regular</li>
+<li>87% black</li>
+</ul>
+<p><strong>操作 icon：</strong></p>
+<ul>
+<li>24dp 边框之内</li>
+<li>54% black</li>
+</ul>
+<p><strong>表脚部文字</strong></p>
+<ul>
+<li>12sp Roboto Regular</li>
+<li>54% black</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fkhw1jgjyzj31kw11ogqn.jpg" alt=""></p>
+<p><strong>可选头部</strong></p>
+<p>头部有可能会放置一些操作按钮，或者在表项被选中的时候才展示操作按钮。
+样式看下图：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fkhw6kld7zj31kw0puwh5.jpg" alt=""></p>
+<p>几个要注意的点：</p>
+<p>使用文字按钮就好
+如果头部要有背景色的话，使用透明度为50%的第二主要色作为背景色</p>
+<hr>
+<p>尺寸</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fkhwe5cxgxj31kw39g7mi.jpg" alt=""></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">表与卡片</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/14/datatables/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/14/datatables/&text=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/14/datatables/&is_video=false&description=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Data Tables&body=Check out this article: http://yoursite.com/2017/10/14/datatables/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/14/datatables/&title=Material Design 组件图鉴 —— Data Tables"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/14/datatables/&name=Material Design 组件图鉴 —— Data Tables&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
