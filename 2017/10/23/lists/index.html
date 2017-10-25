@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Lists present multiple line items vertically as a single continuous element.
+
+用法
+list 清单又若干纵向排列的 row 组成，row 内放置 tiles（瓦片）。
+tiles 作为容器防止内容，它的高度是自由的。
+Lists 最适宜用于呈现类型相近的数据，例如文字与图片（短信、文件），便于用户对各类条目进行对比。
+其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Material Design 组件图鉴 —— Lists">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/lists/index.html">
+<meta property="og:site_name" content="Zyxscientist">
+<meta property="og:description" content="Lists present multiple line items vertically as a single continuous element.
+
+用法
+list 清单又若干纵向排列的 row 组成，row 内放置 tiles（瓦片）。
+tiles 作为容器防止内容，它的高度是自由的。
+Lists 最适宜用于呈现类型相近的数据，例如文字与图片（短信、文件），便于用户对各类条目进行对比。
+其">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fksiat5hy3j31kw1a1thi.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fksimoh44rj31kw17adok.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fkue48le9mj31am12ctf4.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuekr1wanj31kw0psael.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuem2xcqnj31kw0qhwjn.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuem2xcqnj31kw0qhwjn.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fkun2h9i8kj31kw30qtpk.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fkun7pnwxjj31kw1ludrj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fkune30hifj31jn6gk4qq.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fkunhhusxgj31ia6mf7wi.jpg">
+<meta property="og:updated_time" content="2017-10-25T10:07:11.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Material Design 组件图鉴 —— Lists">
+<meta name="twitter:description" content="Lists present multiple line items vertically as a single continuous element.
+
+用法
+list 清单又若干纵向排列的 row 组成，row 内放置 tiles（瓦片）。
+tiles 作为容器防止内容，它的高度是自由的。
+Lists 最适宜用于呈现类型相近的数据，例如文字与图片（短信、文件），便于用户对各类条目进行对比。
+其">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Material Design 组件图鉴 —— Lists</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css" type="text/css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/10/18/dividers/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/23/lists/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/23/lists/&text=Material Design 组件图鉴 —— Lists"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/23/lists/&is_video=false&description=Material Design 组件图鉴 —— Lists"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Lists&body=Check out this article: http://yoursite.com/2017/10/23/lists/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/23/lists/&name=Material Design 组件图鉴 —— Lists&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">尺寸</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Material Design 组件图鉴 —— Lists
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Zyxscientist</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-10-23T13:13:09.000Z" itemprop="datePublished">2017-10-23</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>Lists present multiple line items vertically as a single continuous element.</p>
+</blockquote>
+<h3>用法</h3>
+<p>list 清单又若干纵向排列的 row 组成，row 内放置 tiles（瓦片）。
+tiles 作为容器防止内容，它的高度是自由的。</p>
+<p>Lists 最适宜用于呈现类型相近的数据，例如文字与图片（短信、文件），便于用户对各类条目进行对比。</p>
+<p><strong>其他状况：</strong></p>
+<ul>
+<li>如果需要展现三行以上文字或需要展示的内容形式过多时，尝试使用卡片代替 lists。</li>
+<li>如果展示对象的图像比文字重要的话，尝试使用 grid list 作为替代。</li>
+</ul>
+<p><strong>密度</strong></p>
+<p>假如是以鼠标或键盘作为主要输入手段时，lists 的密度可以适当增加以展示更多内容。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fksiat5hy3j31kw1a1thi.jpg" alt=""></p>
+<hr>
+<h3>行为</h3>
+<p><strong>滚动</strong>
+Lists 只能纵向滚动。</p>
+<p><strong>手势</strong>
+Lists 内的 tiles 通常支持横划操作手势。
+也支持 pick &amp; drop 重新排列，跟卡片类似。</p>
+<p><strong>排序</strong>
+Lists 清单内的 tiles 默认应该按照某种规则进行排列，时间、文件大小或其他参数。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fksimoh44rj31kw17adok.jpg" alt=""></p>
+<hr>
+<h3>内容</h3>
+<p>list tiles 以具有严格一致性的方式承载内容。通过层级关系突出重点内容，方便用户找到最重要的信息，例如在邮件、信息里面，头像和文字就会比事件信息来得更加重要。</p>
+<p>List tiles 内最多有三行文字（标题，内容），如超过三行请考虑使用卡片。</p>
+<ul>
+<li>第一动作出发区域应该是最大的。</li>
+<li>区别物应该靠左放置。</li>
+<li>区别文字靠上摆放。</li>
+<li>补充/第二动作放置在右侧。</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fkue48le9mj31am12ctf4.jpg" alt=""></p>
+<hr>
+<h3>动作</h3>
+<p>第一动作与补充动作有可能会被放置在后续的 view 里面，譬如一张卡片，或者 Action Sheet，不要在 List 上使用 overflow menu。</p>
+<p><strong>第一动作</strong></p>
+<ul>
+<li>tile 必须尽量填满，不可以出现只有一枚头像后面什么都没有的情况。</li>
+<li>第一动作的触发区在同一个 List 里面要保持一致性。</li>
+</ul>
+<p><strong>补充动作</strong></p>
+<ul>
+<li>以 icon 或二级文字区域作为触发对象</li>
+<li>保持一致性</li>
+</ul>
+<p><strong>重复</strong></p>
+<ul>
+<li>避免重复</li>
+<li>Star、pin 这类勾选状态的操作除外</li>
+</ul>
+<hr>
+<h3>尺寸</h3>
+<p><strong>单行 List</strong>
+只有一行文字。</p>
+<ul>
+<li>icon 左边距：16dp</li>
+<li>list 左边距：72dp</li>
+<li>list 右边距：16dp</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuekr1wanj31kw0psael.jpg" alt=""></p>
+<p><strong>双行 List</strong></p>
+<ul>
+<li>icon 左边距：16dp</li>
+<li>list 左边距：72dp</li>
+<li>list 右边距：16dp</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuem2xcqnj31kw0qhwjn.jpg" alt=""></p>
+<p><strong>三行 List</strong></p>
+<ul>
+<li>icon 左边距：16dp</li>
+<li>list 左边距：72dp</li>
+<li>list 右边距：16dp</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fkuem2xcqnj31kw0qhwjn.jpg" alt=""></p>
+<p><strong>单行纯/带图标 List</strong></p>
+<p>其他一样，首一行上边距在原上边距的基础上增加 8dp。</p>
+<p>底部边距由文字的 baseline 开始计算起。</p>
+<ul>
+<li>一般 tile 高度：48dp</li>
+<li>带头像高度：56dp</li>
+<li>字号：16sp</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fkun2h9i8kj31kw30qtpk.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fkun7pnwxjj31kw1ludrj.jpg" alt=""></p>
+<p><strong>双行</strong></p>
+<ul>
+<li>一般 tile 高度：72dp</li>
+<li>带头像高度：72dp</li>
+<li>第一字号：16sp</li>
+<li>第二字号：14sp</li>
+<li>两行文字间距：20dp（由第一行的baseline算起）</li>
+<li>icon 与 avatar 跟文字居中对齐</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fkune30hifj31jn6gk4qq.jpg" alt=""></p>
+<p><strong>三行</strong></p>
+<ul>
+<li>一般 tile 高度：88dp</li>
+<li>带头像高度：88dp</li>
+<li>第一字号：16sp</li>
+<li>第二字号：14sp</li>
+<li>两行文字间距：20dp（由第一行的baseline算起）</li>
+<li>icon 与 avatar 跟文字居顶部对齐</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fkunhhusxgj31ia6mf7wi.jpg" alt=""></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">尺寸</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/10/23/lists/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/10/23/lists/&text=Material Design 组件图鉴 —— Lists"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/10/23/lists/&is_video=false&description=Material Design 组件图鉴 —— Lists"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Material Design 组件图鉴 —— Lists&body=Check out this article: http://yoursite.com/2017/10/23/lists/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/10/23/lists/&title=Material Design 组件图鉴 —— Lists"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/10/23/lists/&name=Material Design 组件图鉴 —— Lists&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Zhu Yuxuan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/about.html">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://dribbble.com/Zhuyuxuan">Projects</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/designcoder">知乎专栏</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-75859600-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
