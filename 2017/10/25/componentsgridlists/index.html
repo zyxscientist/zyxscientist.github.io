@@ -6,16 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Grid lists are an alternative to standard list views.">
+    <meta name="description" content="Grid lists are an alternative to standard list views.
+
+种类：
+
+只有图片
+单行文字（带 icon）
+双行文字（带 icon）
+
+Grid lists 是不允许大小不一的。
+用法
+Grid list 适合用于呈现类型一直的信息，尤其是图片为主的信息。
+最多不能超过两行文字。
+List 的个体小单位是  tiles。
+Grid 的个体小单位也是称">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Material Design 组件图鉴 —— Grid Lists">
 <meta property="og:url" content="http://yoursite.com/2017/10/25/componentsgridlists/index.html">
 <meta property="og:site_name" content="Zyxscientist">
-<meta property="og:description" content="Grid lists are an alternative to standard list views.">
-<meta property="og:updated_time" content="2017-10-25T15:29:05.296Z">
+<meta property="og:description" content="Grid lists are an alternative to standard list views.
+
+种类：
+
+只有图片
+单行文字（带 icon）
+双行文字（带 icon）
+
+Grid lists 是不允许大小不一的。
+用法
+Grid list 适合用于呈现类型一直的信息，尤其是图片为主的信息。
+最多不能超过两行文字。
+List 的个体小单位是  tiles。
+Grid 的个体小单位也是称">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fl0kqovfyfj31kw1kyb29.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fl0l8zx3ruj31kw2d27nm.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fl0ni4um7mj31kw0rlu0x.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fl1bvg8433j31kw2rqn93.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fl1bzbs517j31kw0y2e81.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fl1c4oh6fej31k36etu12.jpg">
+<meta property="og:updated_time" content="2017-10-31T04:53:02.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Material Design 组件图鉴 —— Grid Lists">
-<meta name="twitter:description" content="Grid lists are an alternative to standard list views.">
+<meta name="twitter:description" content="Grid lists are an alternative to standard list views.
+
+种类：
+
+只有图片
+单行文字（带 icon）
+双行文字（带 icon）
+
+Grid lists 是不允许大小不一的。
+用法
+Grid list 适合用于呈现类型一直的信息，尤其是图片为主的信息。
+最多不能超过两行文字。
+List 的个体小单位是  tiles。
+Grid 的个体小单位也是称">
     
     
         
@@ -102,7 +147,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">瓦片内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">尺寸</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -139,6 +184,74 @@
     <blockquote>
 <p>Grid lists are an alternative to standard list views.</p>
 </blockquote>
+<p>种类：</p>
+<ul>
+<li>只有图片</li>
+<li>单行文字（带 icon）</li>
+<li>双行文字（带 icon）</li>
+</ul>
+<p>Grid lists 是不允许大小不一的。</p>
+<h3>用法</h3>
+<p>Grid list 适合用于呈现类型一直的信息，尤其是图片为主的信息。
+最多不能超过两行文字。</p>
+<p>List 的个体小单位是  tiles。
+Grid 的个体小单位也是称为 tiles。</p>
+<ul>
+<li>List：适合呈现文字丰富，阅读为主的内容。</li>
+<li>Cards：宽容度更高，没有很高的一致性要求，形成 collection 可以摆放各式各样的内容。</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fl0kqovfyfj31kw1kyb29.jpg" alt=""></p>
+<hr>
+<h3>瓦片内容</h3>
+<p>Tiles 内放置一级内容与二级内容，通常一级内容是图片，二级内容放置文字于操作按钮。假如没有图片的话一级内容区域要放置默认图片。</p>
+<p><strong>tiles内的动作区域</strong></p>
+<p>无论是一级动作还是二级动作，都不应该被放置在一个 overflow menu 里面。更多的动作请放到由 tile 打开的二级页面里面。</p>
+<p><strong>第一动作</strong></p>
+<ul>
+<li>Gird list 的第一动作要填满 tiles 的主体，而不是用文字或小 icon 作为按钮。</li>
+<li>第一动作要保持一致性，比如说相册每个 tiles 的第一动作都是打开看大图。</li>
+</ul>
+<p><strong>第二动作</strong></p>
+<ul>
+<li>只能以文字或 icon 作为触发按钮</li>
+<li>只能在四个角落戴着，并且要保持一致性。</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fl0l8zx3ruj31kw2d27nm.jpg" alt=""></p>
+<hr>
+<h3>行为</h3>
+<p><strong>滚动</strong></p>
+<p>只能纵向滚动。</p>
+<p>不鼓励使用横向滚动来操作 Grid List。</p>
+<p>一切都要由 reading patterns（阅读模式） 出发。</p>
+<p>Gird list 一定要有 cut off 以暗喻滚动方向。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fl0ni4um7mj31kw0rlu0x.jpg" alt=""></p>
+<p><strong>手势</strong></p>
+<p>单个 tiles 的横划时不被允许的，也不鼓励用 pick-up-and-move 手势。</p>
+<p><strong>分类与过滤</strong></p>
+<p>依照一定的逻辑顺序来摆放 tiles。</p>
+<p>左上起，右下止。（与苹果的规范相反）</p>
+<p><strong>维度与大小改变</strong></p>
+<p>支持横竖屏显示。</p>
+<p>Grid list 不会因为维度改变而变为 List。</p>
+<p><strong>自适应设计</strong></p>
+<p>Grid 里面的 tiles 根据屏幕的大小按照固定的比例进行缩放。</p>
+<hr>
+<h3>尺寸</h3>
+<p><strong>单行文字 tiles 的头部与脚部</strong>
+区域高度：48dp
+文字间距：16dp
+文字大小：16sp
+二级动作 icon 靠右边摆放/头部却靠左</p>
+<p><strong>双行文字 tiles 的标题与脚部</strong>
+区域高度：68dp
+文字间距：16dp
+文字大小：16sp/12sp or 14sp/14sp
+二级动作 icon 靠左或靠右都行</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fl1bvg8433j31kw2rqn93.jpg" alt=""></p>
+<p><strong>纯图片 Grid list</strong></p>
+<p>图片padding：4dp or 1dp</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fl1bzbs517j31kw0y2e81.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fl1c4oh6fej31k36etu12.jpg" alt=""></p>
 
   </div>
 </article>
@@ -167,7 +280,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">瓦片内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">尺寸</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
